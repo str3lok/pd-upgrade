@@ -1,0 +1,1059 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <base target="_parent">
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+ <title>Админская</title>
+
+  <script src="assets/build_new/ru.playground_js-a97e9869a33174daf055.js"></script>
+  <script type="text/javascript" src="assets/build_new/inputmask/jquery.inputmask.bundle.min.js"></script>
+  <script type="text/javascript" src="assets/build_new/inputmask/jquery.inputmask-multi.min.js"></script>
+  <script type="text/javascript" src="assets/build_new/clipboard.js?v2"></script>
+  <script type="text/javascript" src="assets/build_new/jquery.scrollTo.js"></script>
+  <script type="text/javascript" src="assets/build_new/fileinput/js/fileinput.min.js"></script>
+  <script type="text/javascript" src="assets/build_new/select2.min.js"></script>
+  <script type="text/javascript">
+      var countriesList = {"WW":"220","AU":"218","AT":"217","AZ":"216","AI":"215","AR":"214","AM":"213","BY":"212","BZ":"211","BE":"210","BM":"209","BG":"208","BR":"207","GB":"206","HU":"205","VN":"204","HT":"203","GP":"202","DE":"201","NL":"200","GR":"199","GE":"198","DK":"197","EG":"196","IL":"195","IN":"194","IR":"193","IE":"192","ES":"191","IT":"190","KZ":"189","CM":"188","CA":"187","CY":"186","KG":"185","CN":"184","CR":"183","KW":"182","LV":"181","LT":"179","LU":"178","MX":"177","MD":"176","MC":"175","NZ":"174","NO":"173","PL":"172","PT":"171","RE":"170","RU":"169","SV":"168","SK":"167","SI":"166","SR":"165","US":"164","TJ":"163","TM":"162","TC":"161","TR":"160","UG":"159","UZ":"158","UA":"157","FI":"156","FR":"155","CZ":"154","CH":"153","SE":"152","EE":"151","JP":"149","HR":"148","RO":"147","HK":"146","ID":"145","JO":"144","MY":"143","SG":"142","TW":"141","BA":"140","BS":"139","CL":"138","CO":"137","IS":"136","KR":"135","MK":"134","MT":"133","PK":"132","PG":"131","PE":"130","PH":"129","SA":"128","TH":"127","AE":"126","GL":"125","VE":"124","ZW":"123","KE":"122","DZ":"121","LB":"120","BW":"119","TZ":"118","NA":"117","EC":"116","MA":"115","GH":"114","SY":"113","NP":"112","MR":"111","SC":"110","PY":"109","UY":"108","CU":"106","AL":"105","NG":"104","ZM":"103","MZ":"102","AO":"101","LK":"100","ET":"99","TN":"98","BO":"97","PA":"96","MW":"95","LI":"94","BH":"93","BB":"92","TD":"91","IM":"90","JM":"89","ML":"88","MG":"87","SN":"86","TG":"85","HN":"84","DO":"83","MN":"82","IQ":"81","ZA":"80","GI":"78","AF":"77","AD":"76","AG":"75","BD":"74","BJ":"73","BT":"72","VG":"71","BN":"70","BF":"69","BI":"68","KH":"67","CV":"66","KM":"65","CK":"63","CI":"62","GQ":"59","ER":"58","FJ":"56","GF":"55","PF":"54","GA":"53","GM":"52","GD":"51","GT":"50","GG":"49","GN":"48","GW":"47","GY":"46","JE":"45","KI":"44","LA":"43","LS":"42","LR":"41","MV":"40","MQ":"39","MU":"38","MM":"37","AN":"35","NC":"34","NI":"33","NE":"32","OM":"30","PN":"29","QA":"28","RW":"27","SH":"26","KN":"25","LC":"24","PM":"23","VC":"22","WS":"21","SM":"20","ST":"19","RS":"18","SL":"17","SB":"16","SO":"15","SD":"14","SZ":"13","TK":"12","TT":"10","TV":"9","VU":"8","WF":"7","YE":"5","PR":"4","ME":"3"},
+          fileGateHost = 'https://f.tophit.ru/';
+  </script>
+  <script src="assets/build_new/custom.js?1600378719"></script>
+  <script>
+     
+        $(function() {
+          $("table").stickyTableHeaders();
+
+          parser.check_regen_buttons();
+
+          if ($("#hottrack_process_status"))
+           {
+            // $("table").stickyTableHeaders();
+            hottracks.update_status('#hottrack_process_status');
+           }
+     $(".sortable_init").each(function(){
+        $(this).sortable()
+      })
+
+      });
+
+     
+ </script>
+
+ <link rel="stylesheet" type="text/css" href="assets/build_new/playground_styles.css" />
+ <link rel="stylesheet" type="text/css" href="assets/build_new/fileinput/css/fileinput.min.css" />
+ <link rel="stylesheet" type="text/css" href="assets/build_new/select2.min.css" />
+ <link rel="stylesheet" type="text/css" href="assets/build_new/custom_styles.css" />
+ <link rel="stylesheet" type="text/css" href="assets/build_new/style-new.css" />
+
+ <link rel="shortcut icon" href="tophit.ico" />
+</head>
+<body class="page">
+  <div style="opacity:0">
+    <?xml version="1.0" standalone="no"?>
+    <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+    "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" style="position: absolute; width: 0;height: 0;">
+         <defs>
+            <symbol id="paginator_arrow" viewBox="0 0 9 10">
+              <path d="M0.582,4.848L8.225,0.536A0.184,0.184,0,0,1,8.5.694V9.318a0.184,0.184,0,0,1-.276.158L0.582,5.164A0.181,0.181,0,0,1,.582,4.848Z"/>
+            </symbol>
+            <symbol id="paginator_rewind" viewBox="0 0 28 18">
+              <path d="M28,0.2C27.9,0,27.7-0.1,27.5,0L16,6.5V0.4c0-0.1,0-0.1,0-0.2C15.9,0,15.7-0.1,15.5,0L0.2,8.7c-0.1,0-0.1,0.1-0.1,0.1
+  C0,9,0,9.2,0.2,9.3l15.3,8.6c0.1,0,0.1,0,0.2,0c0.2,0,0.4-0.2,0.4-0.4v-6.1l11.4,6.5c0.1,0,0.1,0,0.2,0c0.2,0,0.4-0.2,0.4-0.4V0.4
+  C28,0.3,28,0.2,28,0.2z"/>
+            </symbol>
+
+         </defs>
+     </svg>
+</div>
+<div class="topmenu">
+ <div class="topmenu-inner">
+  <p>
+   
+
+<ul class="topmenu_list">
+
+    <li class="topmenu_item_item">
+        <a  class="menu_link"><b>Base&nbsp;</b></a>
+    </li>
+
+    
+
+    <li class="topmenu_item_item">
+        <a href="/performers" class="menu_link ">
+            <span>Creators</span>
+            
+        </a>
+        
+    </li>
+
+    
+
+    <li class="topmenu_item_item">
+        <a href="/users_new?KIND=owner" class="menu_link active">
+            <span>Labels</span>
+            <span title="" class="topmenu_item_bubble attention">+8</span>
+        </a>
+        
+    </li>
+
+    
+
+    <li class="topmenu_item_item">
+        <a href="/users_new?KIND=radio" class="menu_link ">
+            <span>Radio</span>
+            
+        </a>
+        
+    </li>
+
+    
+
+</ul>
+
+
+
+<ul class="topmenu_list">
+
+    <li class="topmenu_item_item">
+        <a  class="menu_link"><b>A-Content&nbsp;</b></a>
+    </li>
+
+    
+
+    <li class="topmenu_item_item">
+        <a href="https://admin.tophit.ru/admin/index.shtml?part=treck" class="menu_link ">
+            <span>Add New</span>
+            
+        </a>
+        
+        /<a href="https://admin.tophit.ru/admin/index.shtml?part=upload_track" class="menu_link "><span>Uploaded</span></a>
+        
+    </li>
+
+    
+
+    <li class="topmenu_item_item">
+        <a href="/testing/table" class="menu_link ">
+            <span>Testing</span>
+            
+        </a>
+        
+    </li>
+
+    
+
+    <li class="topmenu_item_item">
+        <a href="/hottracks" class="menu_link ">
+            <span>New Arrivals</span>
+            
+        </a>
+        
+    </li>
+
+    
+
+    <li class="topmenu_item_item">
+        <a href="https://admin.tophit.ru/admin/index.shtml?part=treck_arh&action=archive&sort=AUTOR&more=arhiving" class="menu_link ">
+            <span>Audio Archive</span>
+            
+        </a>
+        
+    </li>
+
+    
+
+    <li class="topmenu_item_item">
+        <a href="https://admin.tophit.ru/admin/index.shtml?part=treck&action=archive&more=&sort2=airs&ghosts=1&sort=AUTOR" class="menu_link ">
+            <span>Ghosts</span>
+            
+        </a>
+        
+    </li>
+
+    
+
+    <li class="topmenu_item_item">
+        <a href="/tools/unrecognized" class="menu_link ">
+            <span>Unrecognized</span>
+            
+        </a>
+        
+    </li>
+
+    
+
+    <li class="topmenu_item_item">
+        <a href="/ids" class="menu_link ">
+            <span>Artist IDs</span>
+            
+        </a>
+        
+    </li>
+
+    
+
+</ul>
+
+
+
+<ul class="topmenu_list">
+
+    <li class="topmenu_item_item">
+        <a  class="menu_link"><b>V-Content&nbsp;</b></a>
+    </li>
+
+    
+
+    <li class="topmenu_item_item">
+        <a href="https://vadmin.tophit.ru/admin/index.shtml?part=addclip" class="menu_link ">
+            <span>Add new</span>
+            
+        </a>
+        
+    </li>
+
+    
+
+    <li class="topmenu_item_item">
+        <a href="https://vadmin.tophit.ru/admin/index.shtml?part=clips_expired" class="menu_link ">
+            <span>Expired</span>
+            
+        </a>
+        
+    </li>
+
+    
+
+    <li class="topmenu_item_item">
+        <a href="https://vadmin.tophit.ru/admin/index.shtml?part=clips&action=archive&sort=DATEADD%20DESC" class="menu_link ">
+            <span>New Arrivals</span>
+            
+        </a>
+        
+    </li>
+
+    
+
+    <li class="topmenu_item_item">
+        <a href="https://vadmin.tophit.ru/admin/index.shtml?part=archive&action=archive&l=1&a=1&sort=" class="menu_link ">
+            <span>Video Archive</span>
+            
+        </a>
+        
+    </li>
+
+    
+
+</ul>
+
+
+
+<ul class="topmenu_list">
+
+    <li class="topmenu_item_item">
+        <a  class="menu_link"><b>Data&nbsp;</b></a>
+    </li>
+
+    
+
+    <li class="topmenu_item_item">
+        <a href="/pcharts" class="menu_link ">
+            <span>All Charts</span>
+            
+        </a>
+        
+    </li>
+
+    
+
+    <li class="topmenu_item_item">
+        <a href="/stat" class="menu_link ">
+            <span>Total Air</span>
+            
+        </a>
+        
+    </li>
+
+    
+
+    <li class="topmenu_item_item">
+        <a href="/airplay_reports/" class="menu_link ">
+            <span>Radio Repts</span>
+            
+        </a>
+        
+    </li>
+
+    
+
+</ul>
+
+
+
+<ul class="topmenu_list">
+
+    <li class="topmenu_item_item">
+        <a  class="menu_link"><b>Reference&nbsp;</b></a>
+    </li>
+
+    
+
+    <li class="topmenu_item_item">
+        <a href="/genres" class="menu_link ">
+            <span>Genres</span>
+            
+        </a>
+        
+    </li>
+
+    
+
+    <li class="topmenu_item_item">
+        <a href="/themes" class="menu_link ">
+            <span>Themes</span>
+            
+        </a>
+        
+    </li>
+
+    
+
+    <li class="topmenu_item_item">
+        <a href="/city_coeff" class="menu_link ">
+            <span>Audience</span>
+            
+        </a>
+        
+    </li>
+
+    
+
+    <li class="topmenu_item_item">
+        <a href="/states" class="menu_link ">
+            <span>States</span>
+            
+        </a>
+        
+    </li>
+
+    
+
+    <li class="topmenu_item_item">
+        <a href="/cities" class="menu_link ">
+            <span>Cities</span>
+            
+        </a>
+        
+    </li>
+
+    
+
+    <li class="topmenu_item_item">
+        <a href="/languages" class="menu_link ">
+            <span>Languages</span>
+            
+        </a>
+        
+    </li>
+
+    
+
+    <li class="topmenu_item_item">
+        <a href="/testnplace_stat" class="menu_link ">
+            <span>Test-Place</span>
+            
+        </a>
+        
+    </li>
+
+    
+
+</ul>
+
+
+
+  </p>
+ </div>
+</div>
+
+
+
+
+<div class="users_section_area">
+
+    <div id="table_data">
+        <div class="d-flex flex-direction-column flex-align-items-center artist-block-header mt-16">
+    <div class="d-flex artist-sort-table flex-align-items-center">
+        <h1 class="artist-main-table">UPLOADED (<span class="items_counter">8</span>)/ TESTING (<span class="items_counter">8</span>)</h1>
+        <a href="#" class="button button__small button__white" onclick="modalShow('/users_new/editrow/0/owner', 'GET', 'openDetailRadio'); return false;">Add New</a>	
+        <form action="" method="GET" class="filter_form filter_form__users auto_ajax" id="users_search" data-ajaxnode="table_data">
+            <div class="users_search_area d-flex">
+                <input type="text" name="search" value="" class="input" id="users_search_input">
+                <input type="submit" name="go_search" value="Search" class="button button__small">
+                <input type="submit" name="go_clear" value="Clear" class="button button__small" onclick="$('#users_search_input').val('')">
+            </div>
+        </form>					
+    </div>
+    <div>
+        <div class="form-filter-action d-flex flex-direction-column">	
+            <div class="sort-alphlet sort-alphlet-en text-align-center">
+                
+                    <a href="/users_new?KIND=owner&amp;lang=en&amp;letter=0" class="alphlet">A</a>
+                
+                    <a href="/users_new?KIND=owner&amp;lang=en&amp;letter=1" class="alphlet">B</a>
+                
+                    <a href="/users_new?KIND=owner&amp;lang=en&amp;letter=2" class="alphlet">C</a>
+                
+                    <a href="/users_new?KIND=owner&amp;lang=en&amp;letter=3" class="alphlet">D</a>
+                
+                    <a href="/users_new?KIND=owner&amp;lang=en&amp;letter=4" class="alphlet">E</a>
+                
+                    <a href="/users_new?KIND=owner&amp;lang=en&amp;letter=5" class="alphlet">F</a>
+                
+                    <a href="/users_new?KIND=owner&amp;lang=en&amp;letter=6" class="alphlet">G</a>
+                
+                    <a href="/users_new?KIND=owner&amp;lang=en&amp;letter=7" class="alphlet">H</a>
+                
+                    <a href="/users_new?KIND=owner&amp;lang=en&amp;letter=8" class="alphlet">I</a>
+                
+                    <a href="/users_new?KIND=owner&amp;lang=en&amp;letter=9" class="alphlet">J</a>
+                
+                    <a href="/users_new?KIND=owner&amp;lang=en&amp;letter=10" class="alphlet">K</a>
+                
+                    <a href="/users_new?KIND=owner&amp;lang=en&amp;letter=11" class="alphlet">L</a>
+                
+                    <a href="/users_new?KIND=owner&amp;lang=en&amp;letter=12" class="alphlet">M</a>
+                
+                    <a href="/users_new?KIND=owner&amp;lang=en&amp;letter=13" class="alphlet">N</a>
+                
+                    <a href="/users_new?KIND=owner&amp;lang=en&amp;letter=14" class="alphlet">O</a>
+                
+                    <a href="/users_new?KIND=owner&amp;lang=en&amp;letter=15" class="alphlet">P</a>
+                
+                    <a href="/users_new?KIND=owner&amp;lang=en&amp;letter=16" class="alphlet">Q</a>
+                
+                    <a href="/users_new?KIND=owner&amp;lang=en&amp;letter=17" class="alphlet">R</a>
+                
+                    <a href="/users_new?KIND=owner&amp;lang=en&amp;letter=18" class="alphlet">S</a>
+                
+                    <a href="/users_new?KIND=owner&amp;lang=en&amp;letter=19" class="alphlet">T</a>
+                
+                    <a href="/users_new?KIND=owner&amp;lang=en&amp;letter=20" class="alphlet">U</a>
+                
+                    <a href="/users_new?KIND=owner&amp;lang=en&amp;letter=21" class="alphlet">V</a>
+                
+                    <a href="/users_new?KIND=owner&amp;lang=en&amp;letter=22" class="alphlet">W</a>
+                
+                    <a href="/users_new?KIND=owner&amp;lang=en&amp;letter=23" class="alphlet">X</a>
+                
+                    <a href="/users_new?KIND=owner&amp;lang=en&amp;letter=24" class="alphlet">Y</a>
+                
+                    <a href="/users_new?KIND=owner&amp;lang=en&amp;letter=25" class="alphlet">Z</a>
+                
+                <a href="/users_new?KIND=owner&amp;other=1" class="alphlet ml-8">Other</a>			
+            </div>				
+            <div class="sort-alphlet sort-alphlet-rus text-align-center">
+                
+                    <a href="/users_new?KIND=owner&amp;lang=ru&amp;letter=0" class="alphlet">А</a>
+                
+                    <a href="/users_new?KIND=owner&amp;lang=ru&amp;letter=1" class="alphlet">Б</a>
+                
+                    <a href="/users_new?KIND=owner&amp;lang=ru&amp;letter=2" class="alphlet">В</a>
+                
+                    <a href="/users_new?KIND=owner&amp;lang=ru&amp;letter=3" class="alphlet">Г</a>
+                
+                    <a href="/users_new?KIND=owner&amp;lang=ru&amp;letter=4" class="alphlet">Д</a>
+                
+                    <a href="/users_new?KIND=owner&amp;lang=ru&amp;letter=5" class="alphlet">Е</a>
+                
+                    <a href="/users_new?KIND=owner&amp;lang=ru&amp;letter=6" class="alphlet">Ё</a>
+                
+                    <a href="/users_new?KIND=owner&amp;lang=ru&amp;letter=7" class="alphlet">Ж</a>
+                
+                    <a href="/users_new?KIND=owner&amp;lang=ru&amp;letter=8" class="alphlet">З</a>
+                
+                    <a href="/users_new?KIND=owner&amp;lang=ru&amp;letter=9" class="alphlet">И</a>
+                
+                    <a href="/users_new?KIND=owner&amp;lang=ru&amp;letter=10" class="alphlet">К</a>
+                
+                    <a href="/users_new?KIND=owner&amp;lang=ru&amp;letter=11" class="alphlet">Л</a>
+                
+                    <a href="/users_new?KIND=owner&amp;lang=ru&amp;letter=12" class="alphlet">М</a>
+                
+                    <a href="/users_new?KIND=owner&amp;lang=ru&amp;letter=13" class="alphlet">Н</a>
+                
+                    <a href="/users_new?KIND=owner&amp;lang=ru&amp;letter=14" class="alphlet">О</a>
+                
+                    <a href="/users_new?KIND=owner&amp;lang=ru&amp;letter=15" class="alphlet">П</a>
+                
+                    <a href="/users_new?KIND=owner&amp;lang=ru&amp;letter=16" class="alphlet">Р</a>
+                
+                    <a href="/users_new?KIND=owner&amp;lang=ru&amp;letter=17" class="alphlet">С</a>
+                
+                    <a href="/users_new?KIND=owner&amp;lang=ru&amp;letter=18" class="alphlet">Т</a>
+                
+                    <a href="/users_new?KIND=owner&amp;lang=ru&amp;letter=19" class="alphlet">У</a>
+                
+                    <a href="/users_new?KIND=owner&amp;lang=ru&amp;letter=20" class="alphlet">Ф</a>
+                
+                    <a href="/users_new?KIND=owner&amp;lang=ru&amp;letter=21" class="alphlet">Х</a>
+                
+                    <a href="/users_new?KIND=owner&amp;lang=ru&amp;letter=22" class="alphlet">Ц</a>
+                
+                    <a href="/users_new?KIND=owner&amp;lang=ru&amp;letter=23" class="alphlet">Ч</a>
+                
+                    <a href="/users_new?KIND=owner&amp;lang=ru&amp;letter=24" class="alphlet">Ш</a>
+                
+                    <a href="/users_new?KIND=owner&amp;lang=ru&amp;letter=25" class="alphlet">Щ</a>
+                
+                    <a href="/users_new?KIND=owner&amp;lang=ru&amp;letter=26" class="alphlet">Э</a>
+                
+                    <a href="/users_new?KIND=owner&amp;lang=ru&amp;letter=27" class="alphlet">Ю</a>
+                
+                    <a href="/users_new?KIND=owner&amp;lang=ru&amp;letter=28" class="alphlet">Я</a>
+                						
+            </div>					
+        </div>
+    </div>
+    <div class="flex-grow"></div>
+    <div></div>
+</div>
+        <div class="filter_form filter_form__users">
+            <form  action="" name="filter" class="filter_form filter_form__users auto_ajax d-flex flex-justify-center flex-align-items-center" method="GET" data-ajaxnode="table_data">
+                <input type="hidden" NAME="KIND" value="owner">
+                <label class="filter_form_label">Transfer:</label>
+                <select name="filter[TRANSFER]" class="filter_form_select popup-pg-select w-120">
+                    <option value="Uploaded">Uploaded </option>
+                    <option value="Testing" >Testing</option>
+																</select>
+
+																<label class="filter_form_label">Status:</label>
+																<select name="filter[STATUS]" class="filter_form_select popup-pg-select w-60">
+																	<option value="all" >ALL</option>
+																	<option value="New">New</option>
+																	<option value="Approved" selected>Approved</option>
+																	<option value="Banned">New</option>
+																	<option value="Deleted">Deleted</option>
+																</select>
+
+																<!-- Label Selector -->
+																<label class="filter_form_label">Label:</label>
+																<select name="filter[LABEL]" class="filter_form_select popup-pg-select w-120">
+																	<option value="Label">Label 1</option>
+																	<option value="Label">Label 2</option>
+																</select>
+
+																
+																<label class="filter_form_label">Language:</label>
+																<select name="filter[LANGUAGE]" class="filter_form_select popup-pg-select w-60">
+																	<option value="0">ALL</option>
+																	<option value="1">Английский</option>
+																	<option value="2">Русский</option>
+																	<option value="5">Испанский</option>
+																	<option value="6">Украинский</option>
+																	<option value="11">Французский</option>
+																</select>
+
+																<label class="filter_form_label">Genre:</label>
+																<select name="filter[GENRE]" class="filter_form_select popup-pg-select w-60">
+																	<option value="0">ALL</option>
+																</select>
+
+
+																<label class="filter_form_label">Theme:</label>
+																<select name="filter[THEME]" class="filter_form_select popup-pg-select w-60">
+																	<option value="0">ALL</option>
+																	<option value="8">8 Марта (87)</option>																
+																	<option value="2">C Рождеством и Новым годом! (855)</option>
+																	<option value="36">Top Hit Chart (4)</option>
+																	<option value="4">Весна (7)</option>
+																	<option value="9">Военная тема (34)</option>
+																	<option value="34">День Радио (15)</option>
+																	<option value="11">День рождения (0)</option>
+																	<option value="26">Евровидение (0)</option>
+																	<option value="25">Живое исполнение (0)</option>
+																	<option value="3">Зима (4)</option>
+																	<option value="15">Конкурс 5 звёзд (0)</option>
+																	<option value="5">Лето (10)</option>
+																	<option value="18">Любовь (25)</option>
+																	<option value="23">Ненормативная лексика (0)</option>
+																	<option value="27">Новинка (466)</option>
+																	<option value="20">Олимпиада (1)</option>
+																	<option value="6">Осень (2)</option>
+																	<option value="28">Представление артиста (79)</option>
+																	<option value="31">Привет Беларусь! (2)</option>
+																	<option value="32">Привет Молдова! (1)</option>
+																	<option value="29">Привет Россия! (1)</option>
+																	<option value="30">Привет Украина! (8)</option>
+																	<option value="14">Ремейк советского хита (0)</option>
+																	<option value="19">Саундтрек фильма (0)</option>
+																	<option value="22">Сексуальные сцены (0)</option>
+																	<option value="24">Семья и дети (8)</option>
+																	<option value="1">Спорт (0)</option>
+																	<option value="21">Сцены насилия (0)</option>
+																	<option value="17">Трек, загруженный радиостанцией (0)</option>
+																	<option value="7">Школа (0)</option>
+																</select>
+																<!-- Gender Selector -->
+																<label class="filter_form_label">Gender:</label>
+																<select name="filter[GENDER]" class="filter_form_select popup-pg-select w-60">
+																	<option value="Gender">Gender 1</option>
+																	<option value="Gender">Gender 2</option>
+																</select>
+																<!-- Vocal Type Selector -->
+																<label class="filter_form_label">Vocal Type:</label>
+																<select name="filter[VOCAL_TYPE]" class="filter_form_select popup-pg-select w-60">
+																	<option value="Gender">Vocal Type 1</option>
+																	<option value="Gender">Vocal Type 2</option>
+																</select>
+																<label class="filter_form_label">Parental Advisory:</label>
+																<select name="filter[AR]" class="filter_form_select popup-pg-select w-60">
+																	<option value="Off" selected>Off</option>
+																	<option value="All">All</option>
+																	<option value="Sex">Sex</option>
+																	<option value="Violance">Violance</option>
+																	<option value="Explicite Lirycs">Explicite Lirycs</option>
+																</select>
+																
+																<label class="filter_form_label">State:</label>
+																<select name="filter[STATE]" class="filter_form_select popup-pg-select w-60">
+																	<option value="0">ALL</option>
+																	<option value="169">Россия (5365)</option>
+																	<option value="157">Украина (382)</option>
+																	<option value="189">Казахстан (78)</option>
+																	<option value="212">Беларусь (61)</option>
+																	<option value="181">Латвия (21)</option>
+																	<option value="201">Германия (21)</option>
+																	<option value="176">Молдова (11)</option>
+																	<option value="151">Эстония (10)</option>
+																	<option value="158">Узбекистан (8)</option>
+																	<option value="132">Пакистан (6)</option>
+																	<option value="216">Азербайджан (6)</option>
+																	<option value="163">Таджикистан (5)</option>
+																	<option value="172">Польша (5)</option>
+																	<option value="200">Нидерланды (Голландия) (5)</option>
+																	<option value="195">Израиль (5)</option>
+																	<option value="147">Румыния (4)</option>
+																	<option value="194">Индия (4)</option>
+																	<option value="153">Швейцария (3)</option>
+																	<option value="185">Кыргызстан (3)</option>
+																	<option value="213">Армения (3)</option>
+																	<option value="193">Иран (3)</option>
+																	<option value="155">Франция (3)</option>
+																	<option value="129">Филиппины (2)</option>
+																	<option value="205">Венгрия (2)</option>
+																	<option value="160">Турция (2)</option>
+																	<option value="191">Испания (2)</option>
+																	<option value="162">Туркменистан (2)</option>
+																	<option value="154">Чехия (2)</option>
+																	<option value="77">Афганистан (2)</option>
+																	<option value="179">Литва (2)</option>
+																	<option value="207">Бразилия (1)</option>
+																	<option value="177">Мексика (1)</option>
+																	<option value="214">Аргентина (1)</option>
+																	<option value="190">Италия (1)</option>
+																	<option value="124">Венесуэла (1)</option>
+																	<option value="204">Вьетнам (1)</option>
+																	<option value="156">Финляндия (1)</option>
+																	<option value="218">Австралия (1)</option>
+																	<option value="210">Бельгия (1)</option>
+																	<option value="37">Мьянма (Бирма) (1)</option>
+																	<option value="167">Словакия (1)</option>
+																	<option value="184">Китай (1)</option>
+																	<option value="164">США (1)</option>
+																	<option value="199">Греция (1)</option>
+																	<option value="127">Таиланд (1)</option>
+																	<option value="137">Колумбия (1)</option>
+																	<option value="26">Остров Святой Елены (1)</option>
+																	<option value="206">Великобритания (1)</option>
+																	<option value="198">Грузия (1)</option>
+																	<option value="116">Эквадор (1)</option>
+																	<option value="182">Кувейт (1)</option>
+																	<option value="144">Иордания (1)</option>
+																	<option value="40">Мальдивские острова (1)</option>
+																</select>
+																<label class="filter_form_label">Admin:</label>
+																<select name="filter[MANAGER]" class="filter_form_select popup-pg-select w-60">
+																	<option value="all">ALL</option>
+																	<option value="0">n/a</option>
+																	<option value="1">igor</option>
+																	<option value="3">pasha</option>
+																	<option value="4">masha</option>
+																	<option value="6">anna</option>
+																	<option value="21">momynov</option>
+																	<option value="48">alevar88</option>
+																	<option value="49">alexlo</option>
+																	<option value="53">chililab</option>
+																	<option value="65">nastya</option>
+																	<option value="74">jana</option>
+																	<option value="75">nadya</option>
+																	<option value="76">driver01</option>
+																	<option value="77">golovin</option>
+																</select>
+                
+               
+            </div>
+        </form>
+        
+        <style>
+									/*
+            @media all and (max-width: 780px) {
+                .m_adopt1, .m_adopt2, .m_adopt3, .m_adopt5, .m_adopt8, .m_adopt10, .m_adopt11, .m_adopt12 {
+                    display: table-cell;
+                }
+
+                .m_adopt4, .m_adopt6, .m_adopt7, .m_adopt9, .m_adopt13, .m_adopt14 {
+                    display: none;
+                }
+            }
+            @media all and (max-width: 570px) {
+                .m_adopt2, .m_adopt3, .m_adopt5, .m_adopt8, .m_adopt11, .m_adopt12 {
+                    display: table-cell;
+                }
+
+                .m_adopt1, .m_adopt4, .m_adopt6, .m_adopt7, .m_adopt9, .m_adopt10 .m_adopt13, .m_adopt14 {
+                    display: none;
+                }
+												}
+												*/
+
+            table.fixed {table-layout:fixed; width:auto !important; font-size: 12px; line-height: 12px;}
+            table.fixed td {
+                overflow:hidden;
+                height: 35px;
+                overflow-wrap: break-word;
+                border-right: 1px solid #f5f3f3;
+                border-left: 1px solid #f5f3f3;
+                box-sizing: border-box;
+                padding: 3px 6px;
+												}
+												/* text-align: left; text-overflow: ellipsis; white-space: nowrap; */
+            table.fixed td:nth-of-type(1) {width:45px; max-width:45px; min-width:45px;}
+            table.fixed td:nth-of-type(2) {width:45px; min-width:45px; max-width:45px;}
+            table.fixed td:nth-of-type(3) {width:45px; min-width:45px; max-width:45px; }
+												table.fixed td:nth-of-type(4) {width:45px; min-width:45px; max-width:45px;}
+												table.fixed td:nth-of-type(5) {width:60px; min-width:60px; max-width:60px;}
+            table.fixed td:nth-of-type(6) {width:150px; min-width:150px; max-width:150px;}
+												table.fixed td:nth-of-type(7) {width:60px; min-width:60px; max-width:60px;}
+            table.fixed td:nth-of-type(8) {width:150px; min-width:150px; max-width:150px;}
+            table.fixed td:nth-of-type(9) {width:150px; min-width:150px; max-width:150px;}
+            table.fixed td:nth-of-type(10) {width:60px; min-width:60px; max-width:60px;}
+            table.fixed td:nth-of-type(11) {width:60px; min-width:60px; max-width:60px;}
+            table.fixed td:nth-of-type(12) {width:90px; min-width:90px; max-width:90px;}
+												table.fixed td:nth-of-type(13) {width:60px; min-width:60px; max-width:60px;}
+            table.fixed td:nth-of-type(14) {width:75px; min-width:75px; max-width:75px;}
+            table.fixed td:nth-of-type(15) {width:60px; min-width:60px; max-width:60px;}
+											
+
+            table.fixed th {overflow:hidden; padding: 3px 0px; background-color: #949494; color: #fff; border-right: 1px solid #9e9e9e; border-left: 1px solid #9e9e9e;}
+            table.fixed th a {color: #fff !important;}
+            table.fixed th:nth-of-type(1) {width:45px;}
+            table.fixed th:nth-of-type(2) {width:45px;}
+            table.fixed th:nth-of-type(3) {width:45px; }
+												table.fixed th:nth-of-type(4) {width:45px;}
+            table.fixed th:nth-of-type(5) {width:60px;}
+            table.fixed th:nth-of-type(6) {width:150px;}
+            table.fixed th:nth-of-type(7) {width:60px;}
+            table.fixed th:nth-of-type(8) {width:150px;}
+            table.fixed th:nth-of-type(9) {width:150px;}
+            table.fixed th:nth-of-type(10) {width:60px;}
+            table.fixed th:nth-of-type(11) {width:60px;}
+            table.fixed th:nth-of-type(12) {width:90px;}
+            table.fixed th:nth-of-type(13) {width:60px;}
+            table.fixed th:nth-of-type(14) {width:75px;}
+            table.fixed th:nth-of-type(15) {width:60px;}
+
+            .icon-show {
+                display: inline-block;
+            }
+
+            .is_desc {
+                border-bottom: 4px solid #000;
+                border-top: hidden;
+                top: -1px;
+            }
+        </style>
+        
+
+<form action="#" name="filter" class="auto_ajax" method="POST">
+	<table class="tableWithFloatingHeader table table__users fixed table-pg-style" id="users_table_content">
+		<thead>
+			<tr style="height: 50px">
+				<th class="m_adopt1">
+					<a href="/users_new?KIND=owner&filter%5BSTATUS%5D=new&page=1&sort=UID&order=DESC">TW<span class="sort icon-sort"></span></a></th>
+				<th class="m_adopt2">
+					<a href="/users_new?KIND=owner&filter%5BSTATUS%5D=new&page=1&sort=UID&order=DESC">LW<span class="sort icon-sort"></span></a></th>
+				<th class="m_adopt3">
+					<a href="/users_new?KIND=owner&filter%5BSTATUS%5D=new&page=1&sort=UID&order=DESC">PP<span class="sort icon-sort"></span></a></th>
+				<th class="m_adopt4">
+					<a href="/users_new?KIND=owner&filter%5BSTATUS%5D=new&page=1&sort=UID&order=DESC">WOC<span class="sort icon-sort"></span></a></th>
+				<th class="m_adopt5 td-align-right pr-6">ID</th>
+				<th class="m_adopt6 line-height--12 td-align-left pl-6 pr-6">
+					<a href="/users_new?KIND=owner&filter%5BSTATUS%5D=new&page=1&sort=UID&order=DESC">
+						<span class="table--separator">Title</span> 
+						<span class="table--separator">Artist</span> 
+						<span class="table--separator">Test</span>
+						<span class="sort icon-sort"></span></a>
+				</th>
+				<th class="m_adopt7 line-height--12 td-align-left pr-6">
+					<span class="table--separator">Language</span>
+					<span class="table--separator">Genre</span>
+				</th>
+				<th class="m_adopt8 td-align-left pl-6">Songwriters</th>
+				<th class="m_adopt9 line-height--12 td-align-left pl-6">
+					<span class="table--separator">Label</span>
+					<span class="table--separator">ISRC</span>
+				</th>
+				<th class="m_adopt10 line-height--12 td-align-right pr-6">
+					<span class="table--separator">
+						<a href="/users_new?KIND=owner&filter%5BSTATUS%5D=new&page=1&sort=UID&order=DESC">FM Test<span class="sort icon-sort"></span></a></span>
+					<span class="table--separator">
+						<a href="/users_new?KIND=owner&filter%5BSTATUS%5D=new&page=1&sort=UID&order=DESC">DwnLds<span class="sort icon-sort"></span></a></span>
+					<span class="table--separator"><a href="/users_new?KIND=owner&filter%5BSTATUS%5D=new&page=1&sort=UID&order=DESC">OnAir<span class="sort icon-sort"></span></a></span>
+				</th>
+				<th class="m_adopt11 line-height--12 td-align-right pr-6">
+					<span class="table--separator">
+						<a href="/users_new?KIND=owner&filter%5BSTATUS%5D=new&page=1&sort=UID&order=DESC">
+							<span class="table--separator">Fan</span>
+							<span class="table--separator">Test</span>
+							<span	class="sort icon-sort"></span></a>
+					</span>
+					<span class="table--separator"><a href="/users_new?KIND=owner&filter%5BSTATUS%5D=new&page=1&sort=UID&order=DESC">Dwnlds<span class="sort icon-sort"></span></a></span>
+					<span class="table--separator"><a href="/users_new?KIND=owner&filter%5BSTATUS%5D=new&page=1&sort=UID&order=DESC">Streams<span class="sort icon-sort"></span></a></span>
+				</th>
+
+				<th class="m_adopt12 line-height--12 td-align-right pr-6">
+					<a href="/users_new?KIND=owner&filter%5BSTATUS%5D=new&page=1&sort=UID&order=DESC">
+						<span class="table--separator">Radio Airs</span>
+						<span class="table--separator">YT Streams</span>
+						<span class="table--separator">SF Streams</span>
+						<span class="sort icon-sort"></span></a>
+				</th>
+				<th class="m_adopt14 line-height--12 td-align-right pr-0">
+					<a href="/users_new?KIND=owner&filter%5BSTATUS%5D=new&page=1&sort=UID&order=DESC">Donats<span class="sort icon-sort"></span></a></th>
+				<th class="m_adopt14 line-height--12"><a href="/users_new?KIND=owner&filter%5BSTATUS%5D=new&page=1&sort=UID&order=DESC">Dates<span class="sort icon-sort"></span></a></th>
+				<th class="m_adopt15 line-height--12">
+					<span class="table--separator">Admin</span>
+					<span class="table--separator">Moder</span>
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="m_adopt1">1</td>
+				<td class="m_adopt2 line-height--12">
+					<span class="table--separator table-color--green">+32</span>
+					<span class="table--separator table-color--red">-5</span>
+				</td>
+				<td class="m_adopt3"><span class="table--separator table-color--orange">NEW</span></td>
+				<td class="m_adopt4">23</td>
+				<td class="m_adopt5 td-align-right pr-6"><a href="/users_new?KIND=owner&amp;filter[STATUS]=all&amp;owner[]=891&amp;owner[]=974&amp;owner[]=4358"	class="link-td-label" target="_blank">195489</a></td>
+				<td class="m_adopt6 line-height--12 td-align-left pl-6 pr-6">
+					<span class="table--separator"><a href="#contentPopupPg" class="td-state-js">Под гипнозом</a></span>
+					<span class="table--separator">
+						<a href="#contentPopupPg" class="td-state-js">Artik &amp; Asti</a>
+					</span>
+					<span class="table--separator">Test</span>
+				</td>
+				<td class="m_adopt7 line-height--12 td-align-left pr-6">
+					<span class="table--separator">Language</span>
+					<span class="table--separator">Genre</span>
+				</td>
+				<td class="m_adopt8 td-align-left pl-6">Songwriters</td>
+				<td class="m_adopt9 line-height--12 td-align-left pl-6">
+					<span class="table--separator">Label</span>
+					<span class="table--separator">ISRC</span>
+				</td>
+				<td class="m_adopt10 line-height--12 td-align-right pr-6">
+					<span class="table--separator">FM Test</span>
+					<span class="table--separator">DwnLds</span>
+					<span class="table--separator">OnAir</span>
+				</td>
+				<td class="m_adopt11 line-height--12 td-align-right pr-6">
+					<span class="table--separator">Fan</span>
+					<span class="table--separator">Test</span>
+					<span class="table--separator">Dwnlds</span>
+					<span class="table--separator">Streams</span>
+				</td>
+				
+				<td class="m_adopt12 line-height--12 td-align-right">
+					<span class="table--separator">Radio Airs</span>
+					<span class="table--separator">YT Streams</span>
+					<span class="table--separator">SF Streams</span>
+				</td>
+				<td class="m_adopt14 line-height--12 td-align-right pr-0">Donats</td>
+				<td class="m_adopt14 line-height--12">Dates</td>
+				<td class="m_adopt15 line-height--12">
+					<span class="table--separator">Admin</span>
+					<span class="table--separator">Moder</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</form>
+    </div>
+
+</div>
+
+<div class="popup__container popup-container-detail-artist" id="openTrackUser"></div>
+<div class="popup__container popup-container-detail-artist" id="openVideoUser"></div>
+<div class="popup__container popup-container-detail-artist" id="openDetailRadio"></div>
+<div class="popup__container popup-container-detail-artist" id="cityLnkList"></div>
+<div class="popup__container popup-container-detail-artist" id="addMoney"></div>
+<div class="popup__container popup-container-detail-artist" id="chargeMoney"></div>
+<div class="popup__container popup-container-detail-artist" id="balanceHistory"></div>
+<div class="footer"></div>
+
+<div class="popup__container popup-container-pg" id="contentPopupPg">
+	<div class="popup__overflow">
+		<div class="popup__overflow-close"></div>
+		<div class="popup__content pb-0 popup-content-pg" id="contentPopupPg" data-tr="" tabindex="1">
+			<div class="popup__close"></div>
+			<ul class="popup-pg-list d-flex">
+				<li><a class="popup-pg-btn save-states-js" href="#">Save</a></li>
+				<li><a class="popup-pg-btn cancel-states-js" href="#">Cancel</a></li>
+				<li><a class="popup-pg-btn del-states-js" href="#">Delete</a></li>
+			</ul>
+<form id="artist-editor-form" action="/performers/editrow/16025" class="popup-pg-form" method="POST"
+	data-node-id="table_data">
+	<div class="popup-pg-control d-flex flex-direction-column">
+		<label class="popup-pg-label">Artist Name</label>
+		<input type="text" class="popup-pg-input input input-eng" name="ENG_NAME" value="#2Маши">
+	</div>
+	<div class="popup-pg-control d-flex flex-direction-column">
+		<label class="popup-pg-label">Local Name</label>
+		<input type="text" class="popup-pg-input input" name="LOCAL_NAME" value="Мария Зайцева, Мария Шейх">
+	</div>
+	<div class="popup-pg-control d-flex flex-direction-column">
+		<label class="popup-pg-label">Имя Артиста</label>
+		<input type="text" class="popup-pg-input input input-rus" name="NAME" value="#2Маши">
+	</div>
+	<div class="popup-pg-control d-flex flex-direction-column">
+		<label class="popup-pg-label">Gender</label>
+		<select class="popup-pg-select" name="GENDER_ID">
+			<option value="0">ALL</option>
+
+			<option value="1">Male</option>
+
+			<option value="2">Female</option>
+
+			<option value="3">Mixed</option>
+
+		</select>
+	</div>
+	<div class="popup-pg-control d-flex flex-direction-column">
+		<label class="popup-pg-label">Performer</label>
+		<select class="popup-pg-select" name="PERF_TYPE_ID">
+			<option value="0">ALL</option>
+
+			<option value="1">Solo</option>
+
+			<option value="2" selected="selected">Duo</option>
+
+			<option value="3">Band</option>
+
+		</select>
+	</div>
+	<div class="popup-pg-control d-flex flex-direction-column">
+		<input type="hidden" id="del-artist-creativity_id" value="" name="DELETE_CREATIVITY">
+
+		<ul class="popup-pg-list d-flex">
+			<li class="pg-list-itew-w100 d-flex flex-align-items-center "><label
+					class="popup-pg-label">Songwriter</label></li>
+			<li><a class="popup-pg-btn del-creativity-js" href="#"
+					onclick="$('#del-artist-creativity_id').val(29442); ajaxFormSubmit('artist-editor-form', 'artistPopup'); return false;">Delete</a>
+			</li>
+		</ul>
+
+		<ul class="popup-pg-list d-flex">
+			<li class="pg-list-itew-w100 d-flex flex-align-items-center "><label class="popup-pg-label">Singer</label>
+			</li>
+			<li><a class="popup-pg-btn del-creativity-js" href="#"
+					onclick="$('#del-artist-creativity_id').val(15443); ajaxFormSubmit('artist-editor-form', 'artistPopup'); return false;">Delete</a>
+			</li>
+		</ul>
+
+		<ul class="popup-pg-list d-flex">
+			<li class="pg-list-itew-w100">
+				<input type="hidden" name="ADD_CREATIVITY" id="add-artist-creativity_id" value="">
+				<select id="select-creativity" class="select-language">
+
+					<option value="1" disabled="disabled">Singer</option>
+
+					<option value="2">Instrumentalist</option>
+
+					<option value="3">DJ</option>
+
+					<option value="4">Arranger</option>
+
+					<option value="5">Producer</option>
+
+					<option value="6" disabled="disabled">Songwriter</option>
+
+					<option value="8">Director</option>
+
+				</select>
+			</li>
+			<li><a class="popup-pg-btn save-creativity-js" href="#"
+					onclick="$('#add-artist-creativity_id').val($('#select-creativity').val()); ajaxFormSubmit('artist-editor-form', 'artistPopup'); return false;">Add</a>
+			</li>
+		</ul>
+	</div>
+	<div class="popup-pg-control d-flex flex-direction-column">
+		<label class="popup-pg-label">Donation</label>
+		<select class="popup-pg-select" name="DONATION">
+			<option value="N" selected="selected">Off</option>
+			<option value="Y">On</option>
+		</select>
+	</div>
+
+</form>
+		</div>
+	</div>
+</div>
+
+	<script type="text/javascript">
+		jQuery(document).ready(function ($) {
+			function isMobile() {
+				try { document.createEvent("TouchEvent"); return true; }
+				catch (e) { return false; }
+			}
+
+
+			//модалка редактировать/удалить город
+			$('body').on('click', '.td-state-js', function (e) {
+				e.preventDefault();
+				var modalId = $(this).attr('href');
+				$(modalId).fadeIn();
+				$('body').addClass('bodyFix');
+				$(modalId).find("#contentPopupPg").focus();
+				return false;
+			});
+
+			// закрыть модалку
+			$('body').on('click', '.popup__close, .popup__overflow-close', function (e) {
+				e.preventDefault();
+				$('.popup__container').fadeOut('slow', function () {
+					$('body').removeClass('bodyFix');      
+				});
+			});  			
+
+		}); //jQuery end 
+</script>
+
+</body>
+</html>
+
+
+
