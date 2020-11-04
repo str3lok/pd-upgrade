@@ -754,40 +754,42 @@
                 padding: 3px 6px;
 												}
 												/* text-align: left; text-overflow: ellipsis; white-space: nowrap; */
-            table.fixed td:nth-of-type(1) {width:45px; max-width:45px; min-width:45px;}
-            table.fixed td:nth-of-type(2) {width:45px; min-width:45px; max-width:45px;}
-            table.fixed td:nth-of-type(3) {width:45px; min-width:45px; max-width:45px; }
-												table.fixed td:nth-of-type(4) {width:45px; min-width:45px; max-width:45px;}
-												table.fixed td:nth-of-type(5) {width:60px; min-width:60px; max-width:60px;}
-            table.fixed td:nth-of-type(6) {width:150px; min-width:150px; max-width:150px;}
-												table.fixed td:nth-of-type(7) {width:60px; min-width:60px; max-width:60px;}
-            table.fixed td:nth-of-type(8) {width:150px; min-width:150px; max-width:150px;}
+            table.fixed td:nth-of-type(1) {width:30px; max-width:30px; min-width:30px;}
+            table.fixed td:nth-of-type(2) {width:45px; max-width:45px; min-width:45px;}
+            table.fixed td:nth-of-type(3) {width:45px; min-width:45px; max-width:45px;}
+            table.fixed td:nth-of-type(4) {width:45px; min-width:45px; max-width:45px; }
+												table.fixed td:nth-of-type(5) {width:45px; min-width:45px; max-width:45px;}
+												table.fixed td:nth-of-type(6) {width:60px; min-width:60px; max-width:60px;}
+            table.fixed td:nth-of-type(7) {width:150px; min-width:150px; max-width:150px;}
+												table.fixed td:nth-of-type(8) {width:60px; min-width:60px; max-width:60px;}
             table.fixed td:nth-of-type(9) {width:150px; min-width:150px; max-width:150px;}
-            table.fixed td:nth-of-type(10) {width:60px; min-width:60px; max-width:60px;}
+            table.fixed td:nth-of-type(10) {width:150px; min-width:150px; max-width:150px;}
             table.fixed td:nth-of-type(11) {width:60px; min-width:60px; max-width:60px;}
-            table.fixed td:nth-of-type(12) {width:90px; min-width:90px; max-width:90px;}
-												table.fixed td:nth-of-type(13) {width:60px; min-width:60px; max-width:60px;}
-            table.fixed td:nth-of-type(14) {width:75px; min-width:75px; max-width:75px;}
-            table.fixed td:nth-of-type(15) {width:60px; min-width:60px; max-width:60px;}
+            table.fixed td:nth-of-type(12) {width:60px; min-width:60px; max-width:60px;}
+            table.fixed td:nth-of-type(13) {width:90px; min-width:90px; max-width:90px;}
+												table.fixed td:nth-of-type(14) {width:60px; min-width:60px; max-width:60px;}
+            table.fixed td:nth-of-type(15) {width:75px; min-width:75px; max-width:75px;}
+            table.fixed td:nth-of-type(16) {width:60px; min-width:60px; max-width:60px;}
 											
 
             table.fixed th {overflow:hidden; padding: 3px 0px; background-color: #949494; color: #fff; border-right: 1px solid #9e9e9e; border-left: 1px solid #9e9e9e;}
             table.fixed th a {color: #fff !important;}
-            table.fixed th:nth-of-type(1) {width:45px;}
+            table.fixed th:nth-of-type(1) {width:30px;}
             table.fixed th:nth-of-type(2) {width:45px;}
-            table.fixed th:nth-of-type(3) {width:45px; }
-												table.fixed th:nth-of-type(4) {width:45px;}
-            table.fixed th:nth-of-type(5) {width:60px;}
-            table.fixed th:nth-of-type(6) {width:150px;}
-            table.fixed th:nth-of-type(7) {width:60px;}
-            table.fixed th:nth-of-type(8) {width:150px;}
+            table.fixed th:nth-of-type(3) {width:45px;}
+            table.fixed th:nth-of-type(4) {width:45px; }
+												table.fixed th:nth-of-type(5) {width:45px;}
+            table.fixed th:nth-of-type(6) {width:60px;}
+            table.fixed th:nth-of-type(7) {width:150px;}
+            table.fixed th:nth-of-type(8) {width:60px;}
             table.fixed th:nth-of-type(9) {width:150px;}
-            table.fixed th:nth-of-type(10) {width:60px;}
+            table.fixed th:nth-of-type(10) {width:150px;}
             table.fixed th:nth-of-type(11) {width:60px;}
-            table.fixed th:nth-of-type(12) {width:90px;}
-            table.fixed th:nth-of-type(13) {width:60px;}
-            table.fixed th:nth-of-type(14) {width:75px;}
-            table.fixed th:nth-of-type(15) {width:60px;}
+            table.fixed th:nth-of-type(12) {width:60px;}
+            table.fixed th:nth-of-type(13) {width:90px;}
+            table.fixed th:nth-of-type(14) {width:60px;}
+            table.fixed th:nth-of-type(15) {width:75px;}
+            table.fixed th:nth-of-type(16) {width:60px;}
 
             .icon-show {
                 display: inline-block;
@@ -805,39 +807,40 @@
 	<table class="tableWithFloatingHeader table table__users fixed table-pg-style table__pg--upgrade" id="users_table_content">
 		<thead>
 			<tr style="height: 50px">
-				<th class="m_adopt1">
-					<a href="/users_new?KIND=owner&filter%5BSTATUS%5D=new&page=1&sort=UID&order=DESC">TW<span class="sort icon-sort"></span></a></th>
+				<th class="m_adopt1"></th>
 				<th class="m_adopt2">
-					<a href="/users_new?KIND=owner&filter%5BSTATUS%5D=new&page=1&sort=UID&order=DESC">LW<span class="sort icon-sort"></span></a></th>
+					<a href="/users_new?KIND=owner&filter%5BSTATUS%5D=new&page=1&sort=UID&order=DESC">TW<span class="sort icon-sort"></span></a></th>
 				<th class="m_adopt3">
-					<a href="/users_new?KIND=owner&filter%5BSTATUS%5D=new&page=1&sort=UID&order=DESC">PP<span class="sort icon-sort"></span></a></th>
+					<a href="/users_new?KIND=owner&filter%5BSTATUS%5D=new&page=1&sort=UID&order=DESC">LW<span class="sort icon-sort"></span></a></th>
 				<th class="m_adopt4">
+					<a href="/users_new?KIND=owner&filter%5BSTATUS%5D=new&page=1&sort=UID&order=DESC">PP<span class="sort icon-sort"></span></a></th>
+				<th class="m_adopt5">
 					<a href="/users_new?KIND=owner&filter%5BSTATUS%5D=new&page=1&sort=UID&order=DESC">WOC<span class="sort icon-sort"></span></a></th>
-				<th class="m_adopt5 td-align-right pr-6">ID</th>
-				<th class="m_adopt6 line-height--12 td-align-left pl-6 pr-6">
+				<th class="m_adopt6 td-align-right pr-6">ID</th>
+				<th class="m_adopt7 line-height--12 td-align-left pl-6 pr-6">
 					<a href="/users_new?KIND=owner&filter%5BSTATUS%5D=new&page=1&sort=UID&order=DESC">
 						<span class="table--separator">Title</span> 
 						<span class="table--separator">Artist</span> 
 						<span class="table--separator">Test</span>
 						<span class="sort icon-sort"></span></a>
 				</th>
-				<th class="m_adopt7 line-height--12 td-align-left pr-6">
+				<th class="m_adopt8 line-height--12 td-align-left pr-6">
 					<span class="table--separator">Language</span>
 					<span class="table--separator">Genre</span>
 				</th>
-				<th class="m_adopt8 td-align-left pl-6">Songwriters</th>
-				<th class="m_adopt9 line-height--12 td-align-left pl-6">
+				<th class="m_adopt9 td-align-left pl-6">Songwriters</th>
+				<th class="m_adopt10 line-height--12 td-align-left pl-6">
 					<span class="table--separator">Label</span>
 					<span class="table--separator">ISRC</span>
 				</th>
-				<th class="m_adopt10 line-height--12 td-align-right pr-6">
+				<th class="m_adopt11 line-height--12 td-align-right pr-6">
 					<span class="table--separator">
 						<a href="/users_new?KIND=owner&filter%5BSTATUS%5D=new&page=1&sort=UID&order=DESC">FM Test<span class="sort icon-sort"></span></a></span>
 					<span class="table--separator">
 						<a href="/users_new?KIND=owner&filter%5BSTATUS%5D=new&page=1&sort=UID&order=DESC">DwnLds<span class="sort icon-sort"></span></a></span>
 					<span class="table--separator"><a href="/users_new?KIND=owner&filter%5BSTATUS%5D=new&page=1&sort=UID&order=DESC">OnAir<span class="sort icon-sort"></span></a></span>
 				</th>
-				<th class="m_adopt11 line-height--12 td-align-right pr-6">
+				<th class="m_adopt12 line-height--12 td-align-right pr-6">
 					<span class="table--separator">
 						<a href="/users_new?KIND=owner&filter%5BSTATUS%5D=new&page=1&sort=UID&order=DESC">
 							<span class="table--separator">Fan</span>
@@ -848,7 +851,7 @@
 					<span class="table--separator"><a href="/users_new?KIND=owner&filter%5BSTATUS%5D=new&page=1&sort=UID&order=DESC">Streams<span class="sort icon-sort"></span></a></span>
 				</th>
 
-				<th class="m_adopt12 line-height--12 td-align-right pr-6">
+				<th class="m_adopt13 line-height--12 td-align-right pr-6">
 					<a href="/users_new?KIND=owner&filter%5BSTATUS%5D=new&page=1&sort=UID&order=DESC">
 						<span class="table--separator">Radio Airs</span>
 						<span class="table--separator">YT Streams</span>
@@ -857,8 +860,8 @@
 				</th>
 				<th class="m_adopt14 line-height--12 td-align-right pr-0">
 					<a href="/users_new?KIND=owner&filter%5BSTATUS%5D=new&page=1&sort=UID&order=DESC">Donats<span class="sort icon-sort"></span></a></th>
-				<th class="m_adopt14 line-height--12"><a href="/users_new?KIND=owner&filter%5BSTATUS%5D=new&page=1&sort=UID&order=DESC">Dates<span class="sort icon-sort"></span></a></th>
-				<th class="m_adopt15 line-height--12">
+				<th class="m_adopt15 line-height--12"><a href="/users_new?KIND=owner&filter%5BSTATUS%5D=new&page=1&sort=UID&order=DESC">Dates<span class="sort icon-sort"></span></a></th>
+				<th class="m_adopt16 line-height--12">
 					<span class="table--separator">Admin</span>
 					<span class="table--separator">Moder</span>
 				</th>
@@ -866,15 +869,18 @@
 		</thead>
 		<tbody>
 			<tr>
-				<td class="m_adopt1">1</td>
-				<td class="m_adopt2 line-height--12">
+				<td class="m_adopt1">
+					<input type="checkbox" />
+				</td>
+				<td class="m_adopt2">1</td>
+				<td class="m_adopt3 line-height--12">
 					<span class="table--separator table-color--green">+32</span>
 					<span class="table--separator table-color--red">-5</span>
 				</td>
-				<td class="m_adopt3"><span class="table--separator table-color--orange">NEW</span></td>
-				<td class="m_adopt4">23</td>
-				<td class="m_adopt5 td-align-right pr-6"><a href="/users_new?KIND=owner&amp;filter[STATUS]=all&amp;owner[]=891&amp;owner[]=974&amp;owner[]=4358"	class="link-td-label pg-color-grey" target="_blank">195489</a></td>
-				<td class="m_adopt6 line-height--12 td-align-left pl-6 pr-6">
+				<td class="m_adopt4"><span class="table--separator table-color--orange">NEW</span></td>
+				<td class="m_adopt5">23</td>
+				<td class="m_adopt6 td-align-right pr-6"><a href="/users_new?KIND=owner&amp;filter[STATUS]=all&amp;owner[]=891&amp;owner[]=974&amp;owner[]=4358"	class="link-td-label pg-color-grey" target="_blank">195489</a></td>
+				<td class="m_adopt7 line-height--12 td-align-left pl-6 pr-6">
 					<span class="table--separator"><a href="#contentPopupPg" class="td-state-js link-pg"><b>Под гипнозом</b></a></span>
 					<span class="table--separator">
 						<a href="#contentPopupPg" class="td-state-js link-pg link-pg--blue">Artik &amp; Asti</a>
@@ -887,40 +893,40 @@
 						</a>
 					</span>
 				</td>
-				<td class="m_adopt7 line-height--12 td-align-left pr-6">
+				<td class="m_adopt8 line-height--12 td-align-left pr-6">
 					<div class="d-flex flex-align-items-center width-100 ceil-state-icon">
 						<a href="/users/state/3131" onclick="return false;" class="icon_flag ru"></a>
 						<a href="/users/state/3131" onclick="return false;" class="icon_flag gb"></a>
 					</div>
 				</td>
-				<td class="m_adopt8 td-align-left pl-6">
+				<td class="m_adopt9 td-align-left pl-6">
 					<span class="table--separator"><a href="#" class="link-pg">21 грамм</a></span>
 					<span class="table--separator"><a href="#" class="link-pg">23 Unofficial</a></span>
 				</td>
-				<td class="m_adopt9 line-height--12 td-align-left pl-6">
+				<td class="m_adopt10 line-height--12 td-align-left pl-6">
 					<span class="table--separator">Label</span>
 					<span class="table--separator">ISRC</span>
 				</td>
-				<td class="m_adopt10 line-height--12 td-align-right pr-6">
+				<td class="m_adopt11 line-height--12 td-align-right pr-6">
 					<span class="table--separator">FM Test</span>
 					<span class="table--separator">DwnLds</span>
 					<span class="table--separator">OnAir</span>
 				</td>
-				<td class="m_adopt11 line-height--12 td-align-right pr-6">
+				<td class="m_adopt12 line-height--12 td-align-right pr-6">
 					<span class="table--separator">Fan</span>
 					<span class="table--separator">Test</span>
 					<span class="table--separator">Dwnlds</span>
 					<span class="table--separator">Streams</span>
 				</td>
 				
-				<td class="m_adopt12 line-height--12 td-align-right">
+				<td class="m_adopt13 line-height--12 td-align-right">
 					<span class="table--separator">Radio Airs</span>
 					<span class="table--separator">YT Streams</span>
 					<span class="table--separator">SF Streams</span>
 				</td>
 				<td class="m_adopt14 line-height--12 td-align-right pr-0">Donats</td>
-				<td class="m_adopt14 line-height--12">Dates</td>
-				<td class="m_adopt15 line-height--12">
+				<td class="m_adopt15 line-height--12">Dates</td>
+				<td class="m_adopt16 line-height--12">
 					<span class="table--separator">Admin</span>
 					<span class="table--separator">Moder</span>
 				</td>
