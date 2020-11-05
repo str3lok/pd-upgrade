@@ -3,7 +3,18 @@ $(function() {
  $('body').on('click', '.check-all-js', function(){
   var _this = $(this);
   checked_all('table__pg--upgrade', _this);
- })
+ });
+
+ $(".tooltip-link").on("mouseenter", function (e) {
+  $(this).closest('td').addClass('pd-td--visible');
+  $(this).parent().addClass("is-active");
+ });
+
+ //убираем курсор мыши
+ $(".tooltip-link").on("mouseleave ", function (e) {
+  $(this).closest('td').removeClass('pd-td--visible');
+  $(this).parent().removeClass("is-active");
+ }); 
 
 });
 
