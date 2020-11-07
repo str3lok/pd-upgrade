@@ -1,3 +1,14 @@
+function isMobile() {
+	try {
+		document.createEvent("TouchEvent");
+		return true;
+	} catch (e) {
+		return false;
+	}
+}
+
+if (isMobile()) $("body").addClass("mobile");
+
 $(function() {
 //выбрать все чекбоксы 
  $('body').on('click', '.check-all-js', function(){
@@ -5,16 +16,62 @@ $(function() {
   checked_all('table__pg--upgrade', _this);
  });
 
- $(".tooltip-link").on("mouseenter", function (e) {
-  $(this).closest('td').addClass('pd-td--visible');
-  $(this).parent().addClass("is-active");
- });
+ 	if (!$("body").hasClass("mobile")) {
+   $(".tooltip-link").on("mouseenter", function (e) {
+    $(this).closest('td').addClass('pd-td--visible');
+    $(this).parent().addClass("is-active");
+   });
+  
+   //убираем курсор мыши
+   $(".tooltip-link").on("mouseleave ", function (e) {
+    $(this).closest('td').removeClass('pd-td--visible');
+    $(this).parent().removeClass("is-active");
+   }); 
+ }
 
- //убираем курсор мыши
- $(".tooltip-link").on("mouseleave ", function (e) {
-  $(this).closest('td').removeClass('pd-td--visible');
-  $(this).parent().removeClass("is-active");
+
+//- tooltip по клику
+	$(".tooltip-link").on("click", function (evnTooltip) {
+		evnTooltip.preventDefault();
+		if ($("body").hasClass("mobile")) {
+			if (!$(this).parent().hasClass("is-active")) {
+				$("body")
+					.find(".pg-tooltip--box.is-active")
+					.removeClass("is-active");
+    $(this).parent().addClass("is-active");
+    $(this).closest('td').addClass('pd-td--visible');
+			} else {
+    $(this).parent().removeClass("is-active");
+    $(this).closest('td').removeClass('pd-td--visible');
+			}
+
+			evnTooltip.stopPropagation();
+		}
+	});
+
+	$(".pg-tooltip--content").on("click", function (evnTooltip) {
+		if ($("body").hasClass("mobile")) {
+			evnTooltip.stopPropagation();
+		}
+	});
+
+	$("body").on("click", function () {
+		if ($("body").hasClass("mobile")) {
+			$(".pg-tooltip--box").removeClass("is-active");
+			$(".table").find('.pd-td--visible').removeClass("pd-td--visible");
+		}
+	}); 
+
+
+ // простой пример затемненния над таблицей
+	$(".btn__pg-start-js").on("click", function (e) {
+  e.preventDefault();
+  $('#table_data').addClass('ajax_node_loader');
+  setTimeout(function() {
+   $('#table_data').removeClass('ajax_node_loader');
+  }, 1000);
  }); 
+ 
 
 });
 

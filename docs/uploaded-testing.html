@@ -519,11 +519,14 @@
                 <input type="hidden" NAME="KIND" value="owner">
                 <label class="filter_form_label">Transfer:</label>
                 <select name="filter[TRANSFER]" class="filter_form_select popup-pg-select w-90">
+                    <option value="Testing" disabled>Testing</option>
                     <option value="New Arrivals">New Arrivals</option>
                     <option value="Archive">Archive</option>
                     <option value="Ban">Ban</option>
                     <option value="Delete">Delete</option>
 																</select>
+
+																<a href="#" class="button button__small button__white btn__pg--start mr-10 btn__pg-start-js">Start</a>
 
 																<label class="filter_form_label">Status:</label>
 																<select name="filter[STATUS]" class="filter_form_select popup-pg-select w-60">
@@ -600,123 +603,6 @@
 																
 
 
-
-
-<!---
-																<label class="filter_form_label">Theme:</label>
-																<select name="filter[THEME]" class="filter_form_select popup-pg-select w-60">
-																	<option value="0">ALL</option>
-																	<option value="8">8 Марта (87)</option>																
-																	<option value="2">C Рождеством и Новым годом! (855)</option>
-																	<option value="36">Top Hit Chart (4)</option>
-																	<option value="4">Весна (7)</option>
-																	<option value="9">Военная тема (34)</option>
-																	<option value="34">День Радио (15)</option>
-																	<option value="11">День рождения (0)</option>
-																	<option value="26">Евровидение (0)</option>
-																	<option value="25">Живое исполнение (0)</option>
-																	<option value="3">Зима (4)</option>
-																	<option value="15">Конкурс 5 звёзд (0)</option>
-																	<option value="5">Лето (10)</option>
-																	<option value="18">Любовь (25)</option>
-																	<option value="23">Ненормативная лексика (0)</option>
-																	<option value="27">Новинка (466)</option>
-																	<option value="20">Олимпиада (1)</option>
-																	<option value="6">Осень (2)</option>
-																	<option value="28">Представление артиста (79)</option>
-																	<option value="31">Привет Беларусь! (2)</option>
-																	<option value="32">Привет Молдова! (1)</option>
-																	<option value="29">Привет Россия! (1)</option>
-																	<option value="30">Привет Украина! (8)</option>
-																	<option value="14">Ремейк советского хита (0)</option>
-																	<option value="19">Саундтрек фильма (0)</option>
-																	<option value="22">Сексуальные сцены (0)</option>
-																	<option value="24">Семья и дети (8)</option>
-																	<option value="1">Спорт (0)</option>
-																	<option value="21">Сцены насилия (0)</option>
-																	<option value="17">Трек, загруженный радиостанцией (0)</option>
-																	<option value="7">Школа (0)</option>
-																</select>
-								
-																<label class="filter_form_label">Gender:</label>
-																<select name="filter[GENDER]" class="filter_form_select popup-pg-select w-60">
-																	<option value="Gender">Gender 1</option>
-																	<option value="Gender">Gender 2</option>
-																</select>
-						
-																<label class="filter_form_label">Vocal Type:</label>
-																<select name="filter[VOCAL_TYPE]" class="filter_form_select popup-pg-select w-60">
-																	<option value="Gender">Vocal Type 1</option>
-																	<option value="Gender">Vocal Type 2</option>
-																</select>
-																<label class="filter_form_label">Parental Advisory:</label>
-																<select name="filter[AR]" class="filter_form_select popup-pg-select w-60">
-																	<option value="Off" selected>Off</option>
-																	<option value="All">All</option>
-																	<option value="Sex">Sex</option>
-																	<option value="Violance">Violance</option>
-																	<option value="Explicite Lirycs">Explicite Lirycs</option>
-																</select>
-																
-																<label class="filter_form_label">State:</label>
-																<select name="filter[STATE]" class="filter_form_select popup-pg-select w-60">
-																	<option value="0">ALL</option>
-																	<option value="169">Россия (5365)</option>
-																	<option value="157">Украина (382)</option>
-																	<option value="189">Казахстан (78)</option>
-																	<option value="212">Беларусь (61)</option>
-																	<option value="181">Латвия (21)</option>
-																	<option value="201">Германия (21)</option>
-																	<option value="176">Молдова (11)</option>
-																	<option value="151">Эстония (10)</option>
-																	<option value="158">Узбекистан (8)</option>
-																	<option value="132">Пакистан (6)</option>
-																	<option value="216">Азербайджан (6)</option>
-																	<option value="163">Таджикистан (5)</option>
-																	<option value="172">Польша (5)</option>
-																	<option value="200">Нидерланды (Голландия) (5)</option>
-																	<option value="195">Израиль (5)</option>
-																	<option value="147">Румыния (4)</option>
-																	<option value="194">Индия (4)</option>
-																	<option value="153">Швейцария (3)</option>
-																	<option value="185">Кыргызстан (3)</option>
-																	<option value="213">Армения (3)</option>
-																	<option value="193">Иран (3)</option>
-																	<option value="155">Франция (3)</option>
-																	<option value="129">Филиппины (2)</option>
-																	<option value="205">Венгрия (2)</option>
-																	<option value="160">Турция (2)</option>
-																	<option value="191">Испания (2)</option>
-																	<option value="162">Туркменистан (2)</option>
-																	<option value="154">Чехия (2)</option>
-																	<option value="77">Афганистан (2)</option>
-																	<option value="179">Литва (2)</option>
-																	<option value="207">Бразилия (1)</option>
-																	<option value="177">Мексика (1)</option>
-																	<option value="214">Аргентина (1)</option>
-																	<option value="190">Италия (1)</option>
-																	<option value="124">Венесуэла (1)</option>
-																	<option value="204">Вьетнам (1)</option>
-																	<option value="156">Финляндия (1)</option>
-																	<option value="218">Австралия (1)</option>
-																	<option value="210">Бельгия (1)</option>
-																	<option value="37">Мьянма (Бирма) (1)</option>
-																	<option value="167">Словакия (1)</option>
-																	<option value="184">Китай (1)</option>
-																	<option value="164">США (1)</option>
-																	<option value="199">Греция (1)</option>
-																	<option value="127">Таиланд (1)</option>
-																	<option value="137">Колумбия (1)</option>
-																	<option value="26">Остров Святой Елены (1)</option>
-																	<option value="206">Великобритания (1)</option>
-																	<option value="198">Грузия (1)</option>
-																	<option value="116">Эквадор (1)</option>
-																	<option value="182">Кувейт (1)</option>
-																	<option value="144">Иордания (1)</option>
-																	<option value="40">Мальдивские острова (1)</option>
-																</select>
-															-->
-                
                
             </div>
         </form>
@@ -880,30 +766,30 @@
 				<th class="m_adopt4"></th>
 				<th class="m_adopt5 font-size--14"><span class="table--separator">56.5</span></th>
 				<th class="m_adopt6 td-align-right"></th>
-				<th class="m_adopt7 line-height--12 td-align-left pl-15">-</th>
+				<th class="m_adopt7 line-height--10 td-align-left pl-15">-</th>
 				<th class="m_adopt8 td-align-left pl-6"></th>
-				<th class="m_adopt9 line-height--12 td-align-left pl-6">
+				<th class="m_adopt9 line-height--10 td-align-left pl-6">
 					<span class="table--separator">% Top 3</span>
 					<span class="table--separator">лейблов</span></th>
-				<th class="m_adopt10 line-height--12 td-align-left pl-6">% языков</th>
-				<th class="m_adopt11 line-height--12 td-align-right pr-6"></th>
-				<th class="m_adopt12 line-height--12 td-align-right pr-6"></th>
+				<th class="m_adopt10 line-height--10 td-align-left pl-6">% языков</th>
+				<th class="m_adopt11 line-height--10 td-align-right pr-6"></th>
+				<th class="m_adopt12 line-height--10 td-align-right pr-6"></th>
 
-				<th class="m_adopt13 line-height--12 td-align-right pr-6">
+				<th class="m_adopt13 line-height--10 td-align-right pr-6">
 					<span class="table--separator">Сумма эфиров</span>
 					<span class="table--separator">Сумма YT</span>
 					<span class="table--separator">Сумма SF</span>
 				</th>
-				<th class="m_adopt14 line-height--12 td-align-right pr-6">
+				<th class="m_adopt14 line-height--10 td-align-right pr-6">
 					<span class="table--separator">Средние</span>
 					<span class="table--separator">значения</span>
 					<span class="table--separator">в колонке</span>
 				</th>
-				<th class="m_adopt15 line-height--12">
+				<th class="m_adopt15 line-height--10">
 					<span class="table--separator">Кол-во</span>
 					<span class="table--separator">недель</span>
 				</th>
-				<th class="m_adopt16 line-height--12"></th>
+				<th class="m_adopt16 line-height--10"></th>
 			</tr>
 
 		</thead>
@@ -917,7 +803,7 @@
 				<td class="m_adopt3 pr-0 pl-0">
 					<span class="table--separator table-color--green pg-text-nowrap font-size--14">+32</span>
 				</td>
-				<td class="m_adopt4 pr-0 pl-0"><span class="table--separator table-color--orange pg-text-nowrap">NEW</span></td>
+				<td class="m_adopt4 pr-0 pl-0">2</td>
 				<td class="m_adopt5 pr-0 pl-0 font-size--14">23</td>
 				<td class="m_adopt6 td-align-right pr-0">
 					<span class="table--separator table-color--orange">
@@ -926,7 +812,7 @@
 					</span>
 					<span class="table--separator table-color--orange">
 						<a href="/users_new?KIND=owner&amp;filter[STATUS]=all&amp;owner[]=891&amp;owner[]=974&amp;owner[]=4358"
-							class="link-td-label pg-color-grey" target="_blank">1254</a>
+							class="link-td-label pg-color-grey" target="_blank">9</a>
 					</span>
 				</td>
 				<td class="m_adopt7 line-height--12 td-align-left pl-15 pr-0 pt-5">
@@ -1012,11 +898,11 @@
 				<td class="m_adopt1 pr-0 pl-0">
 					<input type="checkbox" class="table__pg--checkbox check-pg-js" />
 				</td>
-				<td class="m_adopt2 pr-0 pl-0 font-size--14">-</td>
+				<td class="m_adopt2 pr-0 pl-0 font-size--14">—</td>
 				<td class="m_adopt3 line-height--12 pr-0 pl-0">
 					<span class="table--separator table-color--red pg-text-nowrap font-size--14">-5</span>
 				</td>
-				<td class="m_adopt4 pr-0 pl-0"><span class="table--separator table-color--red pg-text-nowrap">RE</span></td>
+				<td class="m_adopt4 pr-0 pl-0">5</td>
 				<td class="m_adopt5 pr-0 pl-0 font-size--14">45</td>
 				<td class="m_adopt6 td-align-right pr-0">
 					<span class="table--separator table-color--orange">
@@ -1089,9 +975,9 @@
 				</td>
 				<td class="m_adopt2 pr-0 pl-0 font-size--14">2</td>
 				<td class="m_adopt3 line-height--12 pr-0 pl-0">
-					<span class="table--separator pg-text-nowrap font-size--14">-</span>
+					<span class="table--separator table-color--orange pg-text-nowrap">NEW</span>
 				</td>
-				<td class="m_adopt4 pr-0 pl-0"><span class="table--separator table-color--orange pg-text-nowrap">NEW</span></td>
+				<td class="m_adopt4 pr-0 pl-0">—</td>
 				<td class="m_adopt5 pr-0 pl-0 font-size--14">33</td>
 				<td class="m_adopt6 td-align-right pr-0">
 					<span class="table--separator table-color--orange">
@@ -1164,9 +1050,9 @@
 				</td>
 				<td class="m_adopt2 pr-0 pl-0 font-size--14">89</td>
 				<td class="m_adopt3 line-height--12 pr-0 pl-0">
-					<span class="table--separator pg-text-nowrap font-size--14">-</span>
+					<span class="table--separator table-color--red pg-text-nowrap">RE</span>
 				</td>
-				<td class="m_adopt4 pr-0 pl-0"><span class="table--separator table-color--red pg-text-nowrap">RE</span></td>
+				<td class="m_adopt4 pr-0 pl-0">3</td>
 				<td class="m_adopt5 pr-0 pl-0 font-size--14">12</td>
 				<td class="m_adopt6 td-align-right pr-0">
 					<span class="table--separator table-color--orange">
