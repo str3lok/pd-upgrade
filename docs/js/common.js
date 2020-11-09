@@ -64,9 +64,17 @@ $(function() {
 		$("body").on("click", '.pg-artist-tooltip-js', function (evnTooltip) {
 			if ($("body").hasClass("mobile")) {
 				evnTooltip.preventDefault();
-				$('.table').find('.pg-artist-tooltip--visible').removeClass('pg-artist-tooltip--visible');
+				
+				var paretd_td = 	$(this).closest('td');
+				
+				if($(paretd_td).hasClass('pg-artist-tooltip--visible')) {
+					$(paretd_td).removeClass('pg-artist-tooltip--visible');
+				}
+				else {
+					$('.table').find('.pg-artist-tooltip--visible').removeClass('pg-artist-tooltip--visible');
+					$(this).closest('td').addClass('pd-td--visible').addClass('pg-artist-tooltip--visible');
+				}
 
-				$(this).closest('td').addClass('pd-td--visible').addClass('pg-artist-tooltip--visible');
 				try {
 					$('.table').find('.pg-tooltip--box.is-active').removeClass('is-active')
 				} catch (e) {}			
