@@ -17,21 +17,24 @@ $(function() {
  });
 
  	if (!$("body").hasClass("mobile")) {
-   $(".tooltip-link").on("mouseenter", function (e) {
+   $("body").on("mouseenter", '.tooltip-link', function (e) {
     $(this).closest('td').addClass('pd-td--visible');
     $(this).parent().addClass("is-active");
    });
   
    //убираем курсор мыши
-   $(".tooltip-link").on("mouseleave ", function (e) {
+   $("body").on("mouseleave ", '.tooltip-link', function (e) {
     $(this).closest('td').removeClass('pd-td--visible');
     $(this).parent().removeClass("is-active");
-   }); 
- }
+			}); 
+			
+
+	}//- not mobile
+	
 
 
 //- tooltip по клику
-	$(".tooltip-link").on("click", function (evnTooltip) {
+	$("body").on("click", '.tooltip-link', function (evnTooltip) {
 		evnTooltip.preventDefault();
 		if ($("body").hasClass("mobile")) {
 			if (!$(this).parent().hasClass("is-active")) {
@@ -39,7 +42,9 @@ $(function() {
 					.find(".pg-tooltip--box.is-active")
 					.removeClass("is-active");
     $(this).parent().addClass("is-active");
-    $(this).closest('td').addClass('pd-td--visible');
+				$(this).closest('td').addClass('pd-td--visible');
+				
+				$('.pg-artist-tooltip--visible').removeClass("pg-artist-tooltip--visible");
 			} else {
     $(this).parent().removeClass("is-active");
     $(this).closest('td').removeClass('pd-td--visible');
@@ -49,18 +54,38 @@ $(function() {
 		}
 	});
 
-	$(".pg-tooltip--content").on("click", function (evnTooltip) {
+	$("body").on("click", '.pg-tooltip--content', function (evnTooltip) {
 		if ($("body").hasClass("mobile")) {
 			evnTooltip.stopPropagation();
 		}
 	});
 
+		// artist tooltip 
+		$("body").on("click", '.pg-artist-tooltip-js', function (evnTooltip) {
+			if ($("body").hasClass("mobile")) {
+				evnTooltip.preventDefault();
+				$('.table').find('.pg-artist-tooltip--visible').removeClass('pg-artist-tooltip--visible');
+
+				$(this).closest('td').addClass('pd-td--visible').addClass('pg-artist-tooltip--visible');
+				try {
+					$('.table').find('.pg-tooltip--box.is-active').removeClass('is-active')
+				} catch (e) {}			
+			}
+			evnTooltip.stopPropagation();
+	}); 
+
+
 	$("body").on("click", function () {
 		if ($("body").hasClass("mobile")) {
-			$(".pg-tooltip--box").removeClass("is-active");
-			$(".table").find('.pd-td--visible').removeClass("pd-td--visible");
+			try {
+				$(".pg-tooltip--box").removeClass("is-active");
+				$(".table").find('.pd-td--visible').removeClass("pd-td--visible");
+				$('.pg-artist-tooltip--visible').removeClass("pg-artist-tooltip--visible");
+			} catch (e) {}			
 		}
 	}); 
+
+
 
 
  // простой пример затемненния над таблицей
@@ -70,7 +95,10 @@ $(function() {
   setTimeout(function() {
    $('#table_data').removeClass('ajax_node_loader');
   }, 1000);
- }); 
+	}); 
+	
+
+
  
 
 });
