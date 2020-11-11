@@ -402,10 +402,10 @@
 				<div class="d-flex artist-sort-table flex-align-items-center">
 					<h1 class="artist-main-table">UPLOADED(<span class="items_counter">8</span>)/TESTING(<span
 							class="items_counter">8</span>)</h1>
-					<a href="#" class="button button__small button__white"
+					<a href="#" class="button button__small button__white pg-sm-hidden"
 						onclick="modalShow('/users_new/editrow/0/owner', 'GET', 'openDetailRadio'); return false;">Add
 						New</a>
-					<form action="" method="GET" class="filter_form filter_form__users auto_ajax" id="users_search"
+					<form action="" method="GET" class="filter_form filter_form__users auto_ajax pg-sm-hidden" id="users_search"
 						data-ajaxnode="table_data">
 						<div class="users_search_area d-flex">
 							<input type="text" name="search" value="" class="input" id="users_search_input">
@@ -415,7 +415,7 @@
 						</div>
 					</form>
 				</div>
-				<div>
+				<div class="pg-sm-hidden">
 					<div class="form-filter-action d-flex flex-direction-column">
 						<div class="sort-alphlet sort-alphlet-en text-align-center">
 							<a href="/users_new?KIND=owner&amp;lang=en&amp;letter=0" class="alphlet">A</a>
@@ -524,7 +524,7 @@
 				<div class="flex-grow"></div>
 				<div></div>
 			</div>
-			<div class="filter_form filter_form__users">
+			<div class="filter_form filter_form__users pg-xs-hidden">
 				<form action="" name="filter"
 					class="filter_form filter_form__users auto_ajax d-flex flex-justify-center flex-align-items-center filter__form--upgrade"
 					method="GET" data-ajaxnode="table_data">
@@ -541,8 +541,8 @@
 					<a href="#"
 						class="button button__small button__white btn__pg--start mr-10 btn__pg-start-js">Start</a>
 
-					<label class="filter_form_label">Status:</label>
-					<select name="filter[STATUS]" class="filter_form_select popup-pg-select w-60">
+					<label class="filter_form_label pg-sm-hidden">Status:</label>
+					<select name="filter[STATUS]" class="filter_form_select popup-pg-select w-60 pg-sm-hidden">
 						<option value="all">ALL</option>
 						<option value="New">New</option>
 						<option value="Approved" selected>Approved</option>
@@ -551,8 +551,8 @@
 					</select>
 
 					<!-- новый код -->
-					<label class="filter_form_label">Artist:</label>
-					<select name="filter[ARTIST]" class="filter_form_select popup-pg-select w-90">
+					<label class="filter_form_label pg-sm-hidden">Artist:</label>
+					<select name="filter[ARTIST]" class="filter_form_select popup-pg-select w-90 pg-sm-hidden">
 						<option value="ALL">ALL</option>
 						<option value="Artist 1">Artist 1</option>
 						<option value="Artist 2">Artist 2</option>
@@ -561,8 +561,8 @@
 						<option value="Artist 5">Artist 5</option>
 					</select>
 
-					<label class="filter_form_label">Songwriter:</label>
-					<select name="filter[SONGWRITER]" class="filter_form_select popup-pg-select w-90">
+					<label class="filter_form_label pg-sm-hidden">Songwriter:</label>
+					<select name="filter[SONGWRITER]" class="filter_form_select popup-pg-select w-90 pg-sm-hidden">
 						<option value="ALL">ALL</option>
 						<option value="А. Э. Арсеньев">А. Э. Арсеньев</option>
 						<option value="Абика">Абика</option>
@@ -579,8 +579,8 @@
 						<option value="Label">Label 2</option>
 					</select>
 
-					<label class="filter_form_label">Language:</label>
-					<select name="filter[LANGUAGE]" class="filter_form_select popup-pg-select w-60">
+					<label class="filter_form_label pg-sm-hidden">Language:</label>
+					<select name="filter[LANGUAGE]" class="filter_form_select popup-pg-select w-60 pg-sm-hidden">
 						<option value="0">ALL</option>
 						<option value="1">Английский</option>
 						<option value="2">Русский</option>
@@ -589,8 +589,8 @@
 						<option value="11">Французский</option>
 					</select>
 
-					<label class="filter_form_label">Genre:</label>
-					<select name="filter[GENRE]" class="filter_form_select popup-pg-select w-60">
+					<label class="filter_form_label pg-sm-hidden">Genre:</label>
+					<select name="filter[GENRE]" class="filter_form_select popup-pg-select w-60 pg-sm-hidden">
 						<option value="0">ALL</option>
 					</select>
 
@@ -619,231 +619,6 @@
 
 			</div>
 			</form>
-
-			<style>
-				/*
-            @media all and (max-width: 780px) {
-                .m_adopt1, .m_adopt2, .m_adopt3, .m_adopt5, .m_adopt8, .m_adopt10, .m_adopt11, .m_adopt12 {
-                    display: table-cell;
-                }
-
-                .m_adopt4, .m_adopt6, .m_adopt7, .m_adopt9, .m_adopt13, .m_adopt14 {
-                    display: none;
-                }
-            }
-            @media all and (max-width: 570px) {
-                .m_adopt2, .m_adopt3, .m_adopt5, .m_adopt8, .m_adopt11, .m_adopt12 {
-                    display: table-cell;
-                }
-
-                .m_adopt1, .m_adopt4, .m_adopt6, .m_adopt7, .m_adopt9, .m_adopt10 .m_adopt13, .m_adopt14 {
-                    display: none;
-                }
-												}
-												*/
-
-				table.fixed {
-					table-layout: fixed;
-					width: auto !important;
-					font-size: 12px;
-					line-height: 12px;
-				}
-
-				table.fixed td {
-					overflow: hidden;
-					height: 35px;
-					overflow-wrap: break-word;
-					border-right: 1px solid #f5f3f3;
-					border-left: 1px solid #f5f3f3;
-					box-sizing: border-box;
-					padding: 3px 6px;
-				}
-
-				/* text-align: left; text-overflow: ellipsis; white-space: nowrap; */
-				table.fixed td:nth-of-type(1) {
-					width: 30px;
-					max-width: 30px;
-					min-width: 30px;
-				}
-
-				table.fixed td:nth-of-type(2) {
-					width: 30px;
-					max-width: 30px;
-					min-width: 30px;
-				}
-
-				table.fixed td:nth-of-type(3) {
-					width: 30px;
-					min-width: 30px;
-					max-width: 30px;
-				}
-
-				table.fixed td:nth-of-type(4) {
-					width: 30px;
-					min-width: 30px;
-					max-width: 30px;
-				}
-
-				table.fixed td:nth-of-type(5) {
-					width: 30px;
-					min-width: 30px;
-					max-width: 30px;
-				}
-
-				table.fixed td:nth-of-type(6) {
-					width: 60px;
-					min-width: 60px;
-					max-width: 60px;
-				}
-
-				table.fixed td:nth-of-type(7) {
-					width: 240px;
-					min-width: 240px;
-					max-width: 240px;
-				}
-
-				table.fixed td:nth-of-type(8) {
-					width: 150px;
-					min-width: 150px;
-					max-width: 150px;
-				}
-
-				table.fixed td:nth-of-type(9) {
-					width: 150px;
-					min-width: 150px;
-					max-width: 150px;
-				}
-
-				table.fixed td:nth-of-type(10) {
-					width: 60px;
-					min-width: 60px;
-					max-width: 60px;
-				}
-
-				table.fixed td:nth-of-type(11) {
-					width: 75px;
-					min-width: 75px;
-					max-width: 75px;
-				}
-
-				table.fixed td:nth-of-type(12) {
-					width: 75px;
-					min-width: 75px;
-					max-width: 75px;
-				}
-
-				table.fixed td:nth-of-type(13) {
-					width: 90px;
-					min-width: 90px;
-					max-width: 90px;
-				}
-
-				table.fixed td:nth-of-type(14) {
-					width: 60px;
-					min-width: 60px;
-					max-width: 60px;
-				}
-
-				table.fixed td:nth-of-type(15) {
-					width: 75px;
-					min-width: 75px;
-					max-width: 75px;
-				}
-
-				table.fixed td:nth-of-type(16) {
-					width: 60px;
-					min-width: 60px;
-					max-width: 60px;
-				}
-
-
-				table.fixed th {
-					overflow: hidden;
-					padding: 3px 0px;
-					background-color: #949494;
-					color: #fff;
-					border-right: 1px solid #9e9e9e;
-					border-left: 1px solid #9e9e9e;
-				}
-
-				table.fixed th a {
-					color: #fff !important;
-				}
-
-				table.fixed th:nth-of-type(1) {
-					width: 30px;
-				}
-
-				table.fixed th:nth-of-type(2) {
-					width: 30px;
-				}
-
-				table.fixed th:nth-of-type(3) {
-					width: 30px;
-				}
-
-				table.fixed th:nth-of-type(4) {
-					width: 30px;
-				}
-
-				table.fixed th:nth-of-type(5) {
-					width: 30px;
-				}
-
-				table.fixed th:nth-of-type(6) {
-					width: 60px;
-				}
-
-				table.fixed th:nth-of-type(7) {
-					width: 240px;
-				}
-
-				table.fixed th:nth-of-type(8) {
-					width: 150px;
-				}
-
-				table.fixed th:nth-of-type(9) {
-					width: 150px;
-				}
-
-				table.fixed th:nth-of-type(10) {
-					width: 60px;
-				}
-
-				table.fixed th:nth-of-type(11) {
-					width: 75px;
-				}
-
-				table.fixed th:nth-of-type(12) {
-					width: 75px;
-				}
-
-				table.fixed th:nth-of-type(13) {
-					width: 90px;
-				}
-
-				table.fixed th:nth-of-type(14) {
-					width: 60px;
-				}
-
-				table.fixed th:nth-of-type(15) {
-					width: 75px;
-				}
-
-				table.fixed th:nth-of-type(16) {
-					width: 60px;
-				}
-
-				.icon-show {
-					display: inline-block;
-				}
-
-				.is_desc {
-					border-bottom: 4px solid #000;
-					border-top: hidden;
-					top: -1px;
-				}
-			</style>
 
 
 			<form action="#" name="filter" class="auto_ajax" method="POST">
@@ -884,7 +659,7 @@
 								<span class="table--separator">Label</span>
 								<span class="table--separator">ISRC</span>
 							</th>
-							<th class="m_adopt10 line-height--12 td-align-left pl-6">
+							<th class="m_adopt10 line-height--12 td-align-left pl-4">
 								<span class="table--separator">Language</span>
 								<span class="table--separator">Genre</span>
 							</th>
@@ -899,7 +674,7 @@
 										href="/users_new?KIND=owner&filter%5BSTATUS%5D=new&page=1&sort=UID&order=DESC">FM
 										OnAir<span class="sort icon-sort"></span></a></span>
 							</th>
-							<th class="m_adopt12 line-height--12 td-align-right pr-6">
+							<th class="m_adopt12 line-height--12 td-align-right pr-5">
 								<span class="table--separator">
 									<a href="/users_new?KIND=owner&filter%5BSTATUS%5D=new&page=1&sort=UID&order=DESC">
 										<span class="table--separator">Fan Tests</span>
@@ -944,7 +719,7 @@
 							<th class="m_adopt9 line-height--10 td-align-left pl-6">
 								<span class="table--separator">% Top 3</span>
 								<span class="table--separator">лейблов</span></th>
-							<th class="m_adopt10 line-height--10 td-align-left pl-6">% языков</th>
+							<th class="m_adopt10 line-height--10 td-align-left pl-4">% языков</th>
 							<th class="m_adopt11 line-height--10 td-align-right pr-6"></th>
 							<th class="m_adopt12 line-height--10 td-align-right pr-6"></th>
 
@@ -1064,7 +839,7 @@
 								<span class="table--separator"><a href="link-pg"><span
 											class="table-color--green">UA</span>1234567890</a></span>
 							</td>
-							<td class="m_adopt10 line-height--12 td-align-left pr-0 ">
+							<td class="m_adopt10 line-height--12 td-align-left pr-0 pl-4">
 								<div class="d-flex flex-align-items-center width-100 ceil-state-icon">
 									<a href="/users/state/3131" onclick="return false;" class="icon_flag gb"></a>
 								</div>
@@ -1076,7 +851,7 @@
 								<span class="table--separator">78</span>
 								<span class="table--separator">251</span>
 							</td>
-							<td class="m_adopt12 line-height--12 td-align-right pr-6 pl-0">
+							<td class="m_adopt12 line-height--12 td-align-right pr-5 pl-0">
 								<span class="table--separator">5572</span>
 								<span class="table--separator">787</span>
 								<span class="table--separator">9810</span>
@@ -1146,7 +921,7 @@
 								<span class="table--separator"><a href="link-pg"><span
 											class="table-color--green">UA</span>1234567890</a></span>
 							</td>
-							<td class="m_adopt10 line-height--12 td-align-left pr-0">
+							<td class="m_adopt10 line-height--12 td-align-left pr-0 pl-4">
 								<div class="d-flex flex-align-items-center width-100 ceil-state-icon">
 									<a href="/users/state/3131" onclick="return false;" class="icon_flag ru"></a>
 								</div>
@@ -1158,7 +933,7 @@
 								<span class="table--separator">78</span>
 								<span class="table--separator">251</span>
 							</td>
-							<td class="m_adopt12 line-height--12 td-align-right pr-6 pl-0">
+							<td class="m_adopt12 line-height--12 td-align-right pr-5 pl-0">
 								<span class="table--separator">5572</span>
 								<span class="table--separator">787</span>
 								<span class="table--separator">9810</span>
@@ -1228,7 +1003,7 @@
 								<span class="table--separator"><a href="link-pg"><span
 											class="table-color--green">UA</span>1234567890</a></span>
 							</td>
-							<td class="m_adopt10 line-height--12 td-align-left pr-0">
+							<td class="m_adopt10 line-height--12 td-align-left pr-0 pl-4">
 								<div class="d-flex flex-align-items-center width-100 ceil-state-icon">
 									<a href="/users/state/3131" onclick="return false;" class="icon_flag ru"></a>
 								</div>
@@ -1239,7 +1014,7 @@
 								<span class="table--separator">78</span>
 								<span class="table--separator">251</span>
 							</td>
-							<td class="m_adopt12 line-height--12 td-align-right pr-6 pl-0">
+							<td class="m_adopt12 line-height--12 td-align-right pr-5 pl-0">
 								<span class="table--separator">5572</span>
 								<span class="table--separator">787</span>
 								<span class="table--separator">9810</span>
@@ -1306,7 +1081,7 @@
 								<span class="table--separator"><a href="link-pg"><span
 											class="table-color--green">UA</span>1234567890</a></span>
 							</td>
-							<td class="m_adopt10 line-height--12 td-align-left pr-0">
+							<td class="m_adopt10 line-height--12 td-align-left pr-0 pl-4">
 								<div class="d-flex flex-align-items-center width-100 ceil-state-icon">
 									<a href="/users/state/3131" onclick="return false;" class="icon_flag ru"></a>
 								</div>
@@ -1317,7 +1092,7 @@
 								<span class="table--separator">78</span>
 								<span class="table--separator">251</span>
 							</td>
-							<td class="m_adopt12 line-height--12 td-align-right pr-6 pl-0">
+							<td class="m_adopt12 line-height--12 td-align-right pr-5 pl-0">
 								<span class="table--separator">5572</span>
 								<span class="table--separator">787</span>
 								<span class="table--separator">9810</span>
