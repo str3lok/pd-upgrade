@@ -91,7 +91,12 @@ $(function() {
 				$('.pg-artist-tooltip--visible').removeClass("pg-artist-tooltip--visible");
 			} catch (e) {}			
 		}
-	}); 
+
+		try {
+			$('.pg-input-date').inputmask("99-99-99"); 
+			$('.pg-input-time').inputmask("99:99"); 
+		} catch (e) {}	
+	}); //-end ready
 
 
 
@@ -105,7 +110,38 @@ $(function() {
   }, 1000);
 	}); 
 	
+	// открыть модалку даты
+	$('body').on('click', '.pg-date-update-js', function (e) {
+		e.preventDefault();
+		var modalId = $(this).attr('data-modal');
+		$('#'+modalId).fadeIn();
+		$('body').addClass('bodyFix');
 
+		var time, date, input_date, input_time;
+
+		input_date = $('#'+modalId).find('.pg-input-date-upload');
+		input_time = $('#'+modalId).find('.pg-input-time-upload');
+
+		time = $(this).find('.pg-date-time').text();
+		date = $(this).find('.pg-date-text').text();
+
+		if(date.length >=2 ) {
+			input_date.val(date);
+		}
+		else {
+			input_date.val(" ");
+		}
+
+		if(time.length >=2 ) {
+			input_time.val(time);
+		}
+		else {
+			input_time.val(" ");
+		}
+		return false;
+	});	
+
+	
 
  
 
