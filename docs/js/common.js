@@ -141,11 +141,47 @@ $(function() {
 		return false;
 	});	
 
-	
+// play/pause
+$('body').on('click', '.pg-audio-js', function (e) {
+		e.preventDefault();
+		var _this = $(this);
+		var id_audio = $(this).attr('data-audio');
+
+  if (!$(_this).hasClass('is-pause')) {
+
+			var playing_audio = $('.table__pg--upgrade').find('.is-pause');
+			if($(playing_audio).length >= 1) {
+				var playing_audio_id = $(playing_audio).attr('data-audio');
+				playpause(playing_audio_id);
+				$(playing_audio).removeClass('is-pause');
+				$(playing_audio).closest('td').removeClass('pg-td-audio');
+				$(_this).addClass('is-pause');
+				$(_this).closest('td').addClass('pg-td-audio');
+			}
+			else {
+				$(_this).closest('td').addClass('pg-td-audio');
+				$(_this).addClass('is-pause');
+			}
+
+  } else {
+			$(_this).closest('td').removeClass('pg-td-audio');
+			$(_this).removeClass('is-pause');
+		}
+
+  playpause(id_audio);
+});
+
+//убрать фон под плеером на тач устройствах 
+$('body').on('click', '.audio-close-js', function (e) {
+	e.preventDefault();
+	$(this).closest('td').removeClass('pg-td-audio');
+});
+
 
  
 
-});
+}); //- end ready
+
 
 //- выделить всё
 function checked_all(block, event) {
