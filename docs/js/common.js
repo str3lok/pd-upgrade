@@ -150,20 +150,25 @@ $('body').on('click', '.pg-audio-js', function (e) {
   if (!$(_this).hasClass('is-pause')) {
 
 			var playing_audio = $('.table__pg--upgrade').find('.is-pause');
+			// если есть запущенный трек ставим его на паузу
 			if($(playing_audio).length >= 1) {
 				var playing_audio_id = $(playing_audio).attr('data-audio');
 				playpause(playing_audio_id);
 				$(playing_audio).removeClass('is-pause');
 				$(playing_audio).closest('td').removeClass('pg-td-audio');
+				$(playing_audio).closest('tr').removeClass('is-now-playing');
 				$(_this).addClass('is-pause');
 				$(_this).closest('td').addClass('pg-td-audio');
+				$(_this).closest('tr').addClass('is-now-playing');
 			}
 			else {
 				$(_this).closest('td').addClass('pg-td-audio');
+				$(_this).closest('tr').addClass('is-now-playing');
 				$(_this).addClass('is-pause');
 			}
 
   } else {
+			$(_this).closest('tr').removeClass('is-now-playing');
 			$(_this).closest('td').removeClass('pg-td-audio');
 			$(_this).removeClass('is-pause');
 		}
@@ -176,6 +181,79 @@ $('body').on('click', '.audio-close-js', function (e) {
 	e.preventDefault();
 	$(this).closest('td').removeClass('pg-td-audio');
 });
+
+// scan
+$('body').on('click', '.pg-audio-scan-js', function (e) {
+	e.preventDefault();
+	if(!$(this).hasClass('is-active')) {
+		$(this).addClass('is-active');
+		// всем трекам ставим стоп
+		// воспроизводим с самого начала
+	}
+	else {
+		$(this).removeClass('is-active');
+	}
+});
+
+// показать форма файла на тач устройствах
+$('body').on('click', '.format-btn-js', function (e) {
+	e.preventDefault();
+	// if ($("body").hasClass("mobile")) {
+		var parent_format = $(this).closest('.pg__audio-format');
+		var drop_block = $(parent_format).find('.pg__audio-format--dropdown');
+
+		if( drop_block.is(':hidden') ) {
+			var dropdown_visible =  $('.table__pg--upgrade').find('.pg__audio-format--dropdown:visible');
+			var dropdown_visible_count =  $(dropdown_visible).length;
+			if(dropdown_visible_count >= 1) {
+				$(dropdown_visible).hide();
+			}
+
+			$(drop_block).show();
+		}
+		else {
+			$(drop_block).hide();
+		}
+	// }
+});
+
+// like
+$('body').on('click', '.pg-audio-plus-js', function (e) {
+	e.preventDefault();
+	var parent_tr = $(this).closest('tr');
+	if((!$(this).hasClass('is-active')) &&  (!$(this).hasClass('is-disabled'))) {
+		$(this).addClass('is-active');
+		// если поставили лайк, то дизлайк меняем на пнопку следующий трек
+		$(parent_tr).find('.pg-audio-minus-js').addClass('is-active');
+	}
+	else {
+		// $(this).removeClass('is-active');
+		// $(parent_tr).find('.pg-audio-minus-js').removeClass('is-active');
+	}
+});
+
+// diz like
+$('body').on('click', '.pg-audio-minus-js', function (e) {
+	e.preventDefault();
+	var parent_tr = $(this).closest('tr');
+	if(!$(this).hasClass('is-active')) {
+		$(this).addClass('is-active');
+		$(parent_tr).find('.pg-audio-plus-js').addClass('is-disabled');
+	}
+	else {
+		//переключаем на следующй трек
+		// var audio_id = $('.table__pg--upgrade').find('.is-now-playing + tr').attr('data-audio');
+		var audio_id = $(parent_tr).next('tr').attr('data-audio');
+		// if(audio_id == "undefined") {
+			// var audio_id_first = $('.table__pg--upgrade').find('tbody tr:first-chlid').attr('data-audio');
+		// }
+		// console.log(audio_id_first);
+		// console.log(audio_id);
+		$('.pg-audio-js.'+audio_id).trigger('click');
+	}
+});
+
+
 
 
  

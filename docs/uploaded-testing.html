@@ -399,13 +399,13 @@
 
 		<div id="table_data">
 			<div class="d-flex flex-direction-column flex-align-items-center artist-block-header mt-16">
-				<div class="d-flex artist-sort-table flex-align-items-center">
+				<div class="d-flex artist-sort-table flex-align-items-center pg-sm-hidden">
 					<h1 class="artist-main-table">UPLOADED(<span class="items_counter">8</span>)/TESTING(<span
 							class="items_counter">8</span>)</h1>
-					<a href="#" class="button button__small button__white pg-sm-hidden"
+					<a href="#" class="button button__small button__white "
 						onclick="modalShow('/users_new/editrow/0/owner', 'GET', 'openDetailRadio'); return false;">Add
 						New</a>
-					<form action="" method="GET" class="filter_form filter_form__users auto_ajax pg-sm-hidden" id="users_search"
+					<form action="" method="GET" class="filter_form filter_form__users auto_ajax" id="users_search"
 						data-ajaxnode="table_data">
 						<div class="users_search_area d-flex">
 							<input type="text" name="search" value="" class="input" id="users_search_input">
@@ -745,7 +745,7 @@
 					</thead>
 					<tbody>
 
-						<tr class="pg__tr-color__yellow--one">
+						<tr class="pg__tr-color__yellow--one" data-audio="pg_a1">
 							<td class="m_adopt1 pr-0 pl-0">
 								<input type="checkbox" class="table__pg--checkbox check-pg-js" />
 							</td>
@@ -753,17 +753,28 @@
 								<div class="pg__audio--block">
 									<div class="pg__audio">
 										<div class="pg__audio--content">
+											<a href="#" class="pg__audio-like--plus pg__audio-like--btn pg-audio-plus-js"></a>
 											<div class="pg__audio--action">
-												<a href="#" data-audio="pg_a1" class="pg__audio--btn pg-audio-js"></a>
+												<a href="#" data-audio="pg_a1" class="pg__audio--btn pg-audio-js pg_a1"></a>
 												<audio id="pg_a1" preload="none" src="https://tophit.ru/ru/tracks/119835/play" class="pg__audio--player"></audio>
 											</div>
 											<div class="pg__audio-like">
-												<a href="#" class="pg__audio-like--plus pg__audio-like--btn"></a>
-												<a href="#" class="pg__audio-like--minus pg__audio-like--btn"></a>
+												<a href="#" class="pg__audio-scan pg-audio-scan-js pg__audio-like--btn">
+													<svg class="icon-scan"><use xlink:href="images/sprites.svg#icon-scan"></use></svg>
+												</a>
+												<a href="#" class="pg__audio-like--minus pg__audio-like--btn pg-audio-minus-js"></a>
 											</div>
 											<div class="pg__audio-format">
-												<a href="#" class="pg__audio-format--link">mp3</a>
-												<a href="#" class="pg__audio-format--link">wav</a>
+												<a href="#" class="pg__audio-format--btn format-btn-js"></a>
+												<div class="pg__audio-format--dropdown">
+													<div class="pg__audio-format--box">
+														<a href="#" class="pg__audio-format--link" title="mp3">mp3</a>
+														<a href="#" class="pg__audio-format--link" title="wav">wav</a>
+													</div>
+												</div>
+											</div>
+											<div class="pg__audio-yt">
+													<a href="https://www.youtube.com/watch?v=aqsgyOhrRMY" data-fancybox="" class="pg__audio-yt--play yt-play-js"></a>
 											</div>
 											<div class="pg__audio--close audio-close-js"></div>
 										</div>	
@@ -878,7 +889,7 @@
 							</td>
 						</tr>
 
-						<tr class="pg__tr-color__yellow--two">
+						<tr class="pg__tr-color__yellow--two" data-audio="pg_a2">
 							<td class="m_adopt1 pr-0 pl-0">
 								<input type="checkbox" class="table__pg--checkbox check-pg-js" />
 							</td>
@@ -886,21 +897,32 @@
 								<div class="pg__audio--block">
 									<div class="pg__audio">
 										<div class="pg__audio--content">
+											<a href="#" class="pg__audio-like--plus pg__audio-like--btn pg-audio-plus-js"></a>
 											<div class="pg__audio--action">
-												<a href="#" data-audio="pg_a2" class="pg__audio--btn pg-audio-js"></a>
+												<a href="#" data-audio="pg_a2" class="pg__audio--btn pg-audio-js pg_a2"></a>
 												<audio id="pg_a2" preload="none" src="https://tophit.ru/ru/tracks/124466/play" class="pg__audio--player"></audio>
 											</div>
 											<div class="pg__audio-like">
-												<a href="#" class="pg__audio-like--plus pg__audio-like--btn"></a>
-												<a href="#" class="pg__audio-like--minus pg__audio-like--btn"></a>
+												<a href="#" class="pg__audio-scan pg-audio-scan-js pg__audio-like--btn">
+													<svg class="icon-scan"><use xlink:href="images/sprites.svg#icon-scan"></use></svg>
+												</a>
+												<a href="#" class="pg__audio-like--minus pg__audio-like--btn pg-audio-minus-js"></a>
 											</div>
 											<div class="pg__audio-format">
-												<a href="#" class="pg__audio-format--link">mp3</a>
-												<a href="#" class="pg__audio-format--link">wav</a>
+												<a href="#" class="pg__audio-format--btn format-btn-js"></a>
+												<div class="pg__audio-format--dropdown">
+													<div class="pg__audio-format--box">
+														<a href="#" class="pg__audio-format--link" title="mp3">mp3</a>
+														<a href="#" class="pg__audio-format--link" title="wav">wav</a>
+													</div>
+												</div>
+											</div>
+											<div class="pg__audio-yt">
+													<a href="https://www.youtube.com/watch?v=GxqEiWneRng" data-fancybox="" class="pg__audio-yt--play yt-play-js"></a>
 											</div>
 											<div class="pg__audio--close audio-close-js"></div>
-										</div>
-									</div>
+										</div>	
+									</div>								
 								</div>
 							</td>
 							<td class="m_adopt3 pr-0 pl-0 font-size--14">—</td>
@@ -982,7 +1004,7 @@
 							</td>
 						</tr>
 
-						<tr class="pg__tr-color__yellow--one">
+						<tr class="pg__tr-color__yellow--one" data-audio="pg_a3">
 							<td class="m_adopt1 pr-0 pl-0">
 								<input type="checkbox" class="table__pg--checkbox check-pg-js" />
 							</td>
@@ -990,21 +1012,32 @@
 								<div class="pg__audio--block">
 									<div class="pg__audio">
 										<div class="pg__audio--content">
+											<a href="#" class="pg__audio-like--plus pg__audio-like--btn pg-audio-plus-js"></a>
 											<div class="pg__audio--action">
-												<a href="#" data-audio="pg_a3" class="pg__audio--btn pg-audio-js"></a>
+												<a href="#" data-audio="pg_a3" class="pg__audio--btn pg-audio-js pg_a3"></a>
 												<audio id="pg_a3" preload="none" src="https://tophit.ru/ru/tracks/125452/play" class="pg__audio--player"></audio>
 											</div>
 											<div class="pg__audio-like">
-												<a href="#" class="pg__audio-like--plus pg__audio-like--btn"></a>
-												<a href="#" class="pg__audio-like--minus pg__audio-like--btn"></a>
+												<a href="#" class="pg__audio-scan pg-audio-scan-js pg__audio-like--btn">
+													<svg class="icon-scan"><use xlink:href="images/sprites.svg#icon-scan"></use></svg>
+												</a>
+												<a href="#" class="pg__audio-like--minus pg__audio-like--btn pg-audio-minus-js"></a>
 											</div>
 											<div class="pg__audio-format">
-												<a href="#" class="pg__audio-format--link">mp3</a>
-												<a href="#" class="pg__audio-format--link">wav</a>
+												<a href="#" class="pg__audio-format--btn format-btn-js"></a>
+												<div class="pg__audio-format--dropdown">
+													<div class="pg__audio-format--box">
+														<a href="#" class="pg__audio-format--link" title="mp3">mp3</a>
+														<a href="#" class="pg__audio-format--link" title="wav">wav</a>
+													</div>
+												</div>
+											</div>
+											<div class="pg__audio-yt">
+													<a href="https://www.youtube.com/watch?v=fIZihckPUB4" data-fancybox="" class="pg__audio-yt--play yt-play-js"></a>
 											</div>
 											<div class="pg__audio--close audio-close-js"></div>
-										</div>
-									</div>
+										</div>	
+									</div>								
 								</div>
 							</td>
 							<td class="m_adopt3 pr-0 pl-0 font-size--14">2</td>
@@ -1085,7 +1118,7 @@
 							</td>
 						</tr>
 
-						<tr class="pg__tr-color__yellow--two">
+						<tr class="pg__tr-color__yellow--two" data-audio="pg_a4">
 							<td class="m_adopt1 pr-0 pl-0">
 								<input type="checkbox" class="table__pg--checkbox check-pg-js" />
 							</td>
@@ -1093,21 +1126,32 @@
 								<div class="pg__audio--block">
 									<div class="pg__audio">
 										<div class="pg__audio--content">
+											<a href="#" class="pg__audio-like--plus pg__audio-like--btn pg-audio-plus-js"></a>
 											<div class="pg__audio--action">
-												<a href="#" data-audio="pg_a4" class="pg__audio--btn pg-audio-js"></a>
+												<a href="#" data-audio="pg_a4" class="pg__audio--btn pg-audio-js pg_a4"></a>
 												<audio id="pg_a4" preload="none" src="https://tophit.ru/ru/tracks/125114/play" class="pg__audio--player"></audio>
 											</div>
 											<div class="pg__audio-like">
-												<a href="#" class="pg__audio-like--plus pg__audio-like--btn"></a>
-												<a href="#" class="pg__audio-like--minus pg__audio-like--btn"></a>
+												<a href="#" class="pg__audio-scan pg-audio-scan-js pg__audio-like--btn">
+													<svg class="icon-scan"><use xlink:href="images/sprites.svg#icon-scan"></use></svg>
+												</a>
+												<a href="#" class="pg__audio-like--minus pg__audio-like--btn pg-audio-minus-js"></a>
 											</div>
 											<div class="pg__audio-format">
-												<a href="#" class="pg__audio-format--link">mp3</a>
-												<a href="#" class="pg__audio-format--link">wav</a>
+												<a href="#" class="pg__audio-format--btn format-btn-js"></a>
+												<div class="pg__audio-format--dropdown">
+													<div class="pg__audio-format--box">
+														<a href="#" class="pg__audio-format--link" title="mp3">mp3</a>
+														<a href="#" class="pg__audio-format--link" title="wav">wav</a>
+													</div>
+												</div>
+											</div>
+											<div class="pg__audio-yt">
+													<a href="https://www.youtube.com/watch?v=fIZihckPUB4" data-fancybox="" class="pg__audio-yt--play yt-play-js"></a>
 											</div>
 											<div class="pg__audio--close audio-close-js"></div>
-										</div>
-									</div>
+										</div>	
+									</div>								
 								</div>
 							</td>
 							<td class="m_adopt3 pr-0 pl-0 font-size--14">89</td>
@@ -1185,7 +1229,7 @@
 						</tr>
 
 						<!-- 2й цвет -->
-						<tr class="pg__tr-color__green--one">
+						<tr class="pg__tr-color__green--one" data-audio="pg_a5">
 							<td class="m_adopt1 pr-0 pl-0">
 								<input type="checkbox" class="table__pg--checkbox check-pg-js" />
 							</td>
@@ -1193,21 +1237,32 @@
 								<div class="pg__audio--block">
 									<div class="pg__audio">
 										<div class="pg__audio--content">
+											<a href="#" class="pg__audio-like--plus pg__audio-like--btn pg-audio-plus-js"></a>
 											<div class="pg__audio--action">
-												<a href="#" data-audio="pg_a5" class="pg__audio--btn pg-audio-js"></a>
+												<a href="#" data-audio="pg_a5" class="pg__audio--btn pg-audio-js pg_a5"></a>
 												<audio id="pg_a5" preload="none" src="https://tophit.ru/ru/tracks/125120/play" class="pg__audio--player"></audio>
 											</div>
 											<div class="pg__audio-like">
-												<a href="#" class="pg__audio-like--plus pg__audio-like--btn"></a>
-												<a href="#" class="pg__audio-like--minus pg__audio-like--btn"></a>
+												<a href="#" class="pg__audio-scan pg-audio-scan-js pg__audio-like--btn">
+													<svg class="icon-scan"><use xlink:href="images/sprites.svg#icon-scan"></use></svg>
+												</a>
+												<a href="#" class="pg__audio-like--minus pg__audio-like--btn pg-audio-minus-js"></a>
 											</div>
 											<div class="pg__audio-format">
-												<a href="#" class="pg__audio-format--link">mp3</a>
-												<a href="#" class="pg__audio-format--link">wav</a>
+												<a href="#" class="pg__audio-format--btn format-btn-js"></a>
+												<div class="pg__audio-format--dropdown">
+													<div class="pg__audio-format--box">
+														<a href="#" class="pg__audio-format--link" title="mp3">mp3</a>
+														<a href="#" class="pg__audio-format--link" title="wav">wav</a>
+													</div>
+												</div>
+											</div>
+											<div class="pg__audio-yt">
+													<a href="https://www.youtube.com/watch?v=7tThYxp5kmk" data-fancybox="" class="pg__audio-yt--play yt-play-js"></a>
 											</div>
 											<div class="pg__audio--close audio-close-js"></div>
-										</div>
-									</div>
+										</div>	
+									</div>								
 								</div>
 							</td>
 							<td class="m_adopt3 pr-0 pl-0 font-size--14">—</td>
@@ -1289,7 +1344,7 @@
 							</td>
 						</tr>
 
-						<tr class="pg__tr-color__green--two">
+						<tr class="pg__tr-color__green--two" data-audio="pg_a6">
 							<td class="m_adopt1 pr-0 pl-0">
 								<input type="checkbox" class="table__pg--checkbox check-pg-js" />
 							</td>
@@ -1297,21 +1352,32 @@
 								<div class="pg__audio--block">
 									<div class="pg__audio">
 										<div class="pg__audio--content">
+											<a href="#" class="pg__audio-like--plus pg__audio-like--btn pg-audio-plus-js"></a>
 											<div class="pg__audio--action">
-												<a href="#" data-audio="pg_a6" class="pg__audio--btn pg-audio-js"></a>
+												<a href="#" data-audio="pg_a6" class="pg__audio--btn pg-audio-js pg_a6"></a>
 												<audio id="pg_a6" preload="none" src="https://tophit.ru/ru/tracks/t124234/play" class="pg__audio--player"></audio>
 											</div>
 											<div class="pg__audio-like">
-												<a href="#" class="pg__audio-like--plus pg__audio-like--btn"></a>
-												<a href="#" class="pg__audio-like--minus pg__audio-like--btn"></a>
+												<a href="#" class="pg__audio-scan pg-audio-scan-js pg__audio-like--btn">
+													<svg class="icon-scan"><use xlink:href="images/sprites.svg#icon-scan"></use></svg>
+												</a>
+												<a href="#" class="pg__audio-like--minus pg__audio-like--btn pg-audio-minus-js"></a>
 											</div>
 											<div class="pg__audio-format">
-												<a href="#" class="pg__audio-format--link">mp3</a>
-												<a href="#" class="pg__audio-format--link">wav</a>
+												<a href="#" class="pg__audio-format--btn format-btn-js"></a>
+												<div class="pg__audio-format--dropdown">
+													<div class="pg__audio-format--box">
+														<a href="#" class="pg__audio-format--link" title="mp3">mp3</a>
+														<a href="#" class="pg__audio-format--link" title="wav">wav</a>
+													</div>
+												</div>
+											</div>
+											<div class="pg__audio-yt">
+													<a href="https://www.youtube.com/watch?v=1jCQ1q-c7NI" data-fancybox="" class="pg__audio-yt--play yt-play-js"></a>
 											</div>
 											<div class="pg__audio--close audio-close-js"></div>
-										</div>
-									</div>
+										</div>	
+									</div>								
 								</div>
 							</td>
 							<td class="m_adopt3 pr-0 pl-0 font-size--14">2</td>
@@ -1392,7 +1458,7 @@
 							</td>
 						</tr>
 
-						<tr class="pg__tr-color__green--one">
+						<tr class="pg__tr-color__green--one" data-audio="pg_a7">
 							<td class="m_adopt1 pr-0 pl-0">
 								<input type="checkbox" class="table__pg--checkbox check-pg-js" />
 							</td>
@@ -1400,21 +1466,32 @@
 								<div class="pg__audio--block">
 									<div class="pg__audio">
 										<div class="pg__audio--content">
+											<a href="#" class="pg__audio-like--plus pg__audio-like--btn pg-audio-plus-js"></a>
 											<div class="pg__audio--action">
-												<a href="#" data-audio="pg_a7" class="pg__audio--btn pg-audio-js"></a>
+												<a href="#" data-audio="pg_a7" class="pg__audio--btn pg-audio-js pg_a7"></a>
 												<audio id="pg_a7" preload="none" src="https://tophit.ru/ru/tracks/t125473/play" class="pg__audio--player"></audio>
 											</div>
 											<div class="pg__audio-like">
-												<a href="#" class="pg__audio-like--plus pg__audio-like--btn"></a>
-												<a href="#" class="pg__audio-like--minus pg__audio-like--btn"></a>
+												<a href="#" class="pg__audio-scan pg-audio-scan-js pg__audio-like--btn">
+													<svg class="icon-scan"><use xlink:href="images/sprites.svg#icon-scan"></use></svg>
+												</a>
+												<a href="#" class="pg__audio-like--minus pg__audio-like--btn pg-audio-minus-js"></a>
 											</div>
 											<div class="pg__audio-format">
-												<a href="#" class="pg__audio-format--link">mp3</a>
-												<a href="#" class="pg__audio-format--link">wav</a>
+												<a href="#" class="pg__audio-format--btn format-btn-js"></a>
+												<div class="pg__audio-format--dropdown">
+													<div class="pg__audio-format--box">
+														<a href="#" class="pg__audio-format--link" title="mp3">mp3</a>
+														<a href="#" class="pg__audio-format--link" title="wav">wav</a>
+													</div>
+												</div>
+											</div>
+											<div class="pg__audio-yt">
+													<a href="https://www.youtube.com/watch?v=Yg9GE54YEM4" data-fancybox="" class="pg__audio-yt--play yt-play-js"></a>
 											</div>
 											<div class="pg__audio--close audio-close-js"></div>
-										</div>
-									</div>
+										</div>	
+									</div>								
 								</div>
 							</td>
 							<td class="m_adopt3 pr-0 pl-0 font-size--14">89</td>
@@ -1493,7 +1570,7 @@
 
 
 						<!-- 3й цвет -->
-						<tr class="pg__tr-color__blue--two">
+						<tr class="pg__tr-color__blue--two" data-audio="pg_a8">
 							<td class="m_adopt1 pr-0 pl-0">
 								<input type="checkbox" class="table__pg--checkbox check-pg-js" />
 							</td>
@@ -1501,21 +1578,32 @@
 								<div class="pg__audio--block">
 									<div class="pg__audio">
 										<div class="pg__audio--content">
+											<a href="#" class="pg__audio-like--plus pg__audio-like--btn pg-audio-plus-js"></a>
 											<div class="pg__audio--action">
-												<a href="#" data-audio="pg_a8" class="pg__audio--btn pg-audio-js"></a>
+												<a href="#" data-audio="pg_a8" class="pg__audio--btn pg-audio-js pg_a8"></a>
 												<audio id="pg_a8" preload="none" src="https://tophit.ru/ru/tracks/t124701/play" class="pg__audio--player"></audio>
 											</div>
 											<div class="pg__audio-like">
-												<a href="#" class="pg__audio-like--plus pg__audio-like--btn"></a>
-												<a href="#" class="pg__audio-like--minus pg__audio-like--btn"></a>
+												<a href="#" class="pg__audio-scan pg-audio-scan-js pg__audio-like--btn">
+													<svg class="icon-scan"><use xlink:href="images/sprites.svg#icon-scan"></use></svg>
+												</a>
+												<a href="#" class="pg__audio-like--minus pg__audio-like--btn pg-audio-minus-js"></a>
 											</div>
 											<div class="pg__audio-format">
-												<a href="#" class="pg__audio-format--link">mp3</a>
-												<a href="#" class="pg__audio-format--link">wav</a>
+												<a href="#" class="pg__audio-format--btn format-btn-js"></a>
+												<div class="pg__audio-format--dropdown">
+													<div class="pg__audio-format--box">
+														<a href="#" class="pg__audio-format--link" title="mp3">mp3</a>
+														<a href="#" class="pg__audio-format--link" title="wav">wav</a>
+													</div>
+												</div>
+											</div>
+											<div class="pg__audio-yt">
+													<a href="https://www.youtube.com/watch?v=nCg3ufihKyU" data-fancybox="" class="pg__audio-yt--play yt-play-js"></a>
 											</div>
 											<div class="pg__audio--close audio-close-js"></div>
-										</div>
-									</div>
+										</div>	
+									</div>								
 								</div>
 							</td>
 							<td class="m_adopt3 pr-0 pl-0 font-size--14">—</td>
@@ -1597,7 +1685,7 @@
 							</td>
 						</tr>
 
-						<tr class="pg__tr-color__blue--one">
+						<tr class="pg__tr-color__blue--one" data-audio="pg_a9">
 							<td class="m_adopt1 pr-0 pl-0">
 								<input type="checkbox" class="table__pg--checkbox check-pg-js" />
 							</td>
@@ -1605,21 +1693,32 @@
 								<div class="pg__audio--block">
 									<div class="pg__audio">
 										<div class="pg__audio--content">
+											<a href="#" class="pg__audio-like--plus pg__audio-like--btn pg-audio-plus-js"></a>
 											<div class="pg__audio--action">
-												<a href="#" data-audio="pg_a9" class="pg__audio--btn pg-audio-js"></a>
+												<a href="#" data-audio="pg_a9" class="pg__audio--btn pg-audio-js pg_a9"></a>
 												<audio id="pg_a9" preload="none" src="https://tophit.ru/ru/tracks/t124894/play" class="pg__audio--player"></audio>
 											</div>
 											<div class="pg__audio-like">
-												<a href="#" class="pg__audio-like--plus pg__audio-like--btn"></a>
-												<a href="#" class="pg__audio-like--minus pg__audio-like--btn"></a>
+												<a href="#" class="pg__audio-scan pg-audio-scan-js pg__audio-like--btn">
+													<svg class="icon-scan"><use xlink:href="images/sprites.svg#icon-scan"></use></svg>
+												</a>
+												<a href="#" class="pg__audio-like--minus pg__audio-like--btn pg-audio-minus-js"></a>
 											</div>
 											<div class="pg__audio-format">
-												<a href="#" class="pg__audio-format--link">mp3</a>
-												<a href="#" class="pg__audio-format--link">wav</a>
+												<a href="#" class="pg__audio-format--btn format-btn-js"></a>
+												<div class="pg__audio-format--dropdown">
+													<div class="pg__audio-format--box">
+														<a href="#" class="pg__audio-format--link" title="mp3">mp3</a>
+														<a href="#" class="pg__audio-format--link" title="wav">wav</a>
+													</div>
+												</div>
+											</div>
+											<div class="pg__audio-yt">
+													<a href="https://www.youtube.com/watch?v=8RvAKRoIDqU" data-fancybox="" class="pg__audio-yt--play yt-play-js"></a>
 											</div>
 											<div class="pg__audio--close audio-close-js"></div>
-										</div>
-									</div>
+										</div>	
+									</div>								
 								</div>
 							</td>
 							<td class="m_adopt3 pr-0 pl-0 font-size--14">2</td>
@@ -1700,7 +1799,7 @@
 							</td>
 						</tr>
 
-						<tr class="pg__tr-color__blue--two">
+						<tr class="pg__tr-color__blue--two" data-audio="pg_a10">
 							<td class="m_adopt1 pr-0 pl-0">
 								<input type="checkbox" class="table__pg--checkbox check-pg-js" />
 							</td>
@@ -1708,21 +1807,32 @@
 								<div class="pg__audio--block">
 									<div class="pg__audio">
 										<div class="pg__audio--content">
+											<a href="#" class="pg__audio-like--plus pg__audio-like--btn pg-audio-plus-js"></a>
 											<div class="pg__audio--action">
-												<a href="#" data-audio="pg_a10" class="pg__audio--btn pg-audio-js"></a>
+												<a href="#" data-audio="pg_a10" class="pg__audio--btn pg-audio-js pg_a10"></a>
 												<audio id="pg_a10" preload="none" src="https://tophit.ru/ru/tracks/t124976/play" class="pg__audio--player"></audio>
 											</div>
 											<div class="pg__audio-like">
-												<a href="#" class="pg__audio-like--plus pg__audio-like--btn"></a>
-												<a href="#" class="pg__audio-like--minus pg__audio-like--btn"></a>
+												<a href="#" class="pg__audio-scan pg-audio-scan-js pg__audio-like--btn">
+													<svg class="icon-scan"><use xlink:href="images/sprites.svg#icon-scan"></use></svg>
+												</a>
+												<a href="#" class="pg__audio-like--minus pg__audio-like--btn pg-audio-minus-js"></a>
 											</div>
 											<div class="pg__audio-format">
-												<a href="#" class="pg__audio-format--link">mp3</a>
-												<a href="#" class="pg__audio-format--link">wav</a>
+												<a href="#" class="pg__audio-format--btn format-btn-js"></a>
+												<div class="pg__audio-format--dropdown">
+													<div class="pg__audio-format--box">
+														<a href="#" class="pg__audio-format--link" title="mp3">mp3</a>
+														<a href="#" class="pg__audio-format--link" title="wav">wav</a>
+													</div>
+												</div>
+											</div>
+											<div class="pg__audio-yt">
+													<a href="https://www.youtube.com/watch?v=xeUjl6v6KZY" data-fancybox="" class="pg__audio-yt--play yt-play-js"></a>
 											</div>
 											<div class="pg__audio--close audio-close-js"></div>
-										</div>
-									</div>
+										</div>	
+									</div>								
 								</div>
 							</td>
 							<td class="m_adopt3 pr-0 pl-0 font-size--14">89</td>
@@ -2057,7 +2167,7 @@
 
 	<script type="text/javascript" src="js/play.js"></script>
 	<script type="text/javascript" src="js/common.js"></script>
-
+	
 	<!-- данный css код не переносить на сервер он нужет только для демонстрации -->
 	<style type="text/css">
 		.icon_flag {
@@ -2094,6 +2204,8 @@
 
 		}); //jQuery end 
 	</script>
+	<link rel="stylesheet" href="css/jquery.fancybox.min.css">
+	<script src="js/jquery.fancybox.min.js"></script>
 
 </body>
 

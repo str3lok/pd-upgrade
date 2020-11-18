@@ -47,7 +47,8 @@ function fadeIn(audio, rampTime, targetVolume, tick) {
 
   if(seconds == curtime) {
   	$('.pg-audio-js.is-pause').removeClass('is-pause');
-  	$('.pg-td-audio').removeClass('pg-td-audio');
+			$('.pg-td-audio').removeClass('pg-td-audio');
+			$('.is-now-playing').removeClass('is-now-playing');
   }
  });
 
