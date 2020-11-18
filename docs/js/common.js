@@ -253,6 +253,21 @@ $('body').on('click', '.pg-audio-minus-js', function (e) {
 	}
 });
 
+// пауза треков при воспроизведении видео ролика
+$('body').on('click', '.yt-play-js', function (e) {
+			var playing_audio = $('.table__pg--upgrade').find('.is-pause');
+			// если есть запущенный трек ставим его на паузу
+			if($(playing_audio).length >= 1) {
+				var playing_audio_id = $(playing_audio).attr('data-audio');
+				playpause(playing_audio_id);
+				$(playing_audio).removeClass('is-pause');
+				$(playing_audio).closest('td').removeClass('pg-td-audio');
+				$(playing_audio).closest('tr').removeClass('is-now-playing');
+			}	
+});
+
+
+
 
 
 
