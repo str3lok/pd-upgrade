@@ -176,17 +176,42 @@ $('body').on('click', '.pg-audio-js', function (e) {
   playpause(id_audio);
 });
 
-//убрать фон под плеером на тач устройствах 
-$('body').on('click', '.audio-close-js', function (e) {
-	e.preventDefault();
-	$(this).closest('td').removeClass('pg-td-audio');
-});
 
 // scan
 $('body').on('click', '.pg-audio-scan-js', function (e) {
 	e.preventDefault();
 	if(!$(this).hasClass('is-active')) {
+		$('.table__pg--upgrade').find('.pg-audio-scan-js.is-active').removeClass('is-active');
+
+
 		$(this).addClass('is-active');
+		var track_ids = [];
+		
+		var track_id = $(this).closest('tr').attr('data-audio');
+		// var count_string =  $('.table__pg--upgrade tbody').find('tr').length;
+		
+		// создаем массив треков с id
+		$('.table__pg--upgrade tbody tr').each(function(){
+			track_ids.push($(this).attr('data-audio'));
+		});		
+
+		//определяем item 
+		// var start_track_item = track_ids.find(item => item == track_id);
+		// //определяем item 
+		// var start_track_index = track_ids.indexOf(start_track_item);
+
+		// const items = [
+		// 		...track_ids.slice(start_track_index),
+		// 		...track_ids.slice(0, start_track_index)
+		// ];		
+		// создаем новый массив с id трков, для воспроизведения начиная с текущего, по кругу
+			const idx = track_ids.findIndex((item) => item === track_id);
+			const play_track_ids = [
+					...track_ids.slice(idx),
+					...track_ids.slice(0,idx)
+			];	
+			// console.log(play_track_ids);	
+
 		// всем трекам ставим стоп
 		// воспроизводим с самого начала
 	}
@@ -219,15 +244,17 @@ $('body').on('click', '.format-btn-js', function (e) {
 
 // like
 $('body').on('click', '.pg-audio-plus-js', function (e) {
-	e.preventDefault();
-	var parent_tr = $(this).closest('tr');
 	if((!$(this).hasClass('is-active')) &&  (!$(this).hasClass('is-disabled'))) {
+		e.preventDefault();
+		var parent_tr = $(this).closest('tr');
 		$(this).addClass('is-active');
 		// если поставили лайк, то дизлайк меняем на пнопку следующий трек
 		$(parent_tr).find('.pg-audio-minus-js').addClass('is-active');
 	}
 	else {
-		// $(this).removeClass('is-active');
+		if((!$(this).hasClass('is-donate')) &&  ($(this).hasClass('is-active'))) {
+			e.preventDefault();
+		}
 		// $(parent_tr).find('.pg-audio-minus-js').removeClass('is-active');
 	}
 });
@@ -242,19 +269,21 @@ $('body').on('click', '.pg-audio-minus-js', function (e) {
 	}
 	else {
 		//переключаем на следующй трек
-		// var audio_id = $('.table__pg--upgrade').find('.is-now-playing + tr').attr('data-audio');
 		var audio_id = $(parent_tr).next('tr').attr('data-audio');
-		// if(audio_id == "undefined") {
-			// var audio_id_first = $('.table__pg--upgrade').find('tbody tr:first-chlid').attr('data-audio');
-		// }
-		// console.log(audio_id_first);
-		// console.log(audio_id);
-		$('.pg-audio-js.'+audio_id).trigger('click');
+		
+		if(audio_id !== undefined) {
+			$('.pg-audio-js.'+audio_id).trigger('click');
+		}
+		else {
+			var audio_id_first = $('.table__pg--upgrade').find('tbody tr:first-child').attr('data-audio');
+			$('.pg-audio-js.'+audio_id_first).trigger('click');
+		}
 	}
 });
 
 // пауза треков при воспроизведении видео ролика
 $('body').on('click', '.yt-play-js', function (e) {
+	e.preventDefault();
 			var playing_audio = $('.table__pg--upgrade').find('.is-pause');
 			// если есть запущенный трек ставим его на паузу
 			if($(playing_audio).length >= 1) {
@@ -264,6 +293,7 @@ $('body').on('click', '.yt-play-js', function (e) {
 				$(playing_audio).closest('td').removeClass('pg-td-audio');
 				$(playing_audio).closest('tr').removeClass('is-now-playing');
 			}	
+			$.fancybox.open({ src : $(this).attr("href") });		
 });
 
 
