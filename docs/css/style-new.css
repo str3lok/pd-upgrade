@@ -236,11 +236,17 @@ table.fixed th:nth-of-type(16) {
 .table-color--red {
   color: #cc0000 !important; }
 
+.table-color--red2 {
+  color: #ff0000 !important; }
+
 .table-color--orange {
   color: #ff9900 !important; }
 
 .table-color-red--dark {
   color: #a61c00 !important; }
+
+.table-color--blue {
+  color: #0C91D8 !important; }
 
 .pg-color-grey {
   color: #999999 !important; }
