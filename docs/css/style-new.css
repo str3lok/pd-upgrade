@@ -1010,6 +1010,12 @@ body:not(.mobile) .pg__audio--block:hover {
   body:not(.mobile) .pg__audio--block:hover .pg__audio-like--plus {
     visibility: visible;
     opacity: 1; }
+  body:not(.mobile) .pg__audio--block:hover .pg__audio--btn:not(.is-pause) {
+    text-indent: -99999px;
+    background: url("../images/sprites/svg/icon-play.svg") no-repeat center;
+    -webkit-background-size: 16px 23px;
+       -moz-background-size: 16px 23px;
+            background-size: 16px 23px; }
 
 body.mobile .pg-td-audio .pg__audio--block {
   overflow: visible; }
