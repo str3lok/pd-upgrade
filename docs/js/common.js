@@ -223,7 +223,7 @@ $('body').on('click', '.pg-audio-scan-js', function (e) {
 // показать форма файла на тач устройствах
 $('body').on('click', '.format-btn-js', function (e) {
 	e.preventDefault();
-	// if ($("body").hasClass("mobile")) {
+	if ($("body").hasClass("mobile")) {
 		var parent_format = $(this).closest('.pg__audio-format');
 		var drop_block = $(parent_format).find('.pg__audio-format--dropdown');
 
@@ -239,24 +239,56 @@ $('body').on('click', '.format-btn-js', function (e) {
 		else {
 			$(drop_block).hide();
 		}
-	// }
+	}
 });
 
 // like
 $('body').on('click', '.pg-audio-plus-js', function (e) {
-	if((!$(this).hasClass('is-active')) &&  (!$(this).hasClass('is-disabled'))) {
+	
+	if($(this).hasClass('is-disabled')) {
 		e.preventDefault();
-		var parent_tr = $(this).closest('tr');
-		$(this).addClass('is-active');
-		// если поставили лайк, то дизлайк меняем на пнопку следующий трек
-		$(parent_tr).find('.pg-audio-minus-js').addClass('is-active');
-	}
+		// если запрещен лайк, отмена действий
+		return false;
+ }
 	else {
-		if((!$(this).hasClass('is-donate')) &&  ($(this).hasClass('is-active'))) {
+
+		// если есть класс is-donate - т.е. есть кнопка для оплаты, 
+		// donate-pay оплатили выполняем воспроизведение трека сначала
+		if(
+			($(this).hasClass('is-donate')) &&
+			($(this).hasClass('donate-pay')) &&
+			($(this).hasClass('is-active'))
+		) {
+				e.preventDefault();
+				return false;
+			}
+
+		// если впревые нажимаем на кнопку like 
+		if((!$(this).hasClass('is-active'))) {
 			e.preventDefault();
+			var parent_tr = $(this).closest('tr');
+			$(this).addClass('is-active');
+			// если поставили лайк, то дизлайк меняем на пнопку следующий трек
+			$(parent_tr).find('.pg-audio-minus-js').addClass('is-active');
 		}
-		// $(parent_tr).find('.pg-audio-minus-js').removeClass('is-active');
-	}
+		// если поставили лайк и нет кнопки оплатить, клик отменяем.
+		if( ($(this).hasClass('is-active')) && (!$(this).hasClass('is-donate'))	) {
+					e.preventDefault();
+			}
+
+
+}
+
+
+	
+
+	// else {
+	// 	if((!$(this).hasClass('is-donate')) &&  ($(this).hasClass('is-active'))) {
+	// 		e.preventDefault();
+	// 		console.log('2222');
+	// 	}
+	// 	// $(parent_tr).find('.pg-audio-minus-js').removeClass('is-active');
+	// }
 });
 
 // diz like
