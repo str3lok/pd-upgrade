@@ -260,6 +260,7 @@ $('body').on('click', '.pg-audio-plus-js', function (e) {
 			($(this).hasClass('is-active'))
 		) {
 				e.preventDefault();
+				
 				return false;
 			}
 
@@ -274,6 +275,31 @@ $('body').on('click', '.pg-audio-plus-js', function (e) {
 		// если поставили лайк и нет кнопки оплатить, клик отменяем.
 		if( ($(this).hasClass('is-active')) && (!$(this).hasClass('is-donate'))	) {
 					e.preventDefault();
+
+					// если воспроизведен данный трек, запускаем его сначала
+					// var parentTr =  $(this).closest('tr');
+					// if($(parentTr).hasClass('is-now-playing')) {
+					// 	var playing_track_id = $(parentTr).attr('data-audio');
+					// }
+
+					// если воспроизведен другой трек, ставим его на паузу воспроизводим данный сначала. 
+
+
+/*
+				var playing_audio = $('.table__pg--upgrade').find('.is-pause');			
+				if($(playing_audio).length >= 1) {
+					var playing_audio_id = $(playing_audio).attr('data-audio');
+					playpause(playing_audio_id);
+					$(playing_audio).removeClass('is-pause');
+					$(playing_audio).closest('td').removeClass('pg-td-audio');
+					$(playing_audio).closest('tr').removeClass('is-now-playing');
+					$(_this).addClass('is-pause');
+					$(_this).closest('td').addClass('pg-td-audio');
+					$(_this).closest('tr').addClass('is-now-playing');
+				}
+
+				*/
+
 			}
 
 
