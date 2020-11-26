@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg xmlns="http://www.w3.org/2000/svg">
-	<defs>
-		<clipPath id="clip0">
-			<path fill="#fff" d="M0 0h14v14H0z" transform="translate(0 .5)"/>
-		</clipPath>
-	</defs>
 <symbol id="icon-diz-like" viewBox="0 0 18 18">
 	<mask id="icon-diz-like-a" fill="#fff">
 		<path fill-rule="evenodd" d="M9.52 1.502l1.749.634a2 2 0 011.318 1.88v4.697c0 .466-.146.918-.414 1.282-.868 1.179-.7.816-1.755 1.665-.753.606-1.182 1.138-1.563 2.077-.161.4-.14.841-.057 1.264.236 1.197.004 2.371-1.512 1.61-1.79-.9-.964-3.998-.964-5.632 0-1.123-1.773-.368-2.574-.291-1.632.155-2.732-.15-2.795-.94-.115-1.431.845-1.075.1-2.357-.33-.567.166-1.006.413-1.424.326-.55-.26-1.296.074-1.842.155-.254.352-.446.517-.6.216-.202.253-.194.328-.48.176-.666.53-1.635 1.213-1.722 1.977-.25 4.312-.362 5.923.18z" clip-rule="evenodd"/>
@@ -39,12 +34,10 @@
 <symbol id="icon-prev" viewBox="0 0 11 14">
 	<path stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="M10 .5L2.663 7 10 13.5M1 .557v12.886"/>
 </symbol>
-<symbol id="icon-scan" viewBox="0 0 14 15">
-	<g stroke="#000" stroke-linecap="round" stroke-linejoin="round" clip-path="url(#clip0)">
-		<path d="M.536 1.08l9 6.42-9 6.42"/>
-		<path d="M4.466 1.08l9 6.42-9 6.42"/>
-	</g>
-
+<symbol id="icon-scan" viewBox="0 0 18 14">
+	<path stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="M.536.58l9 6.42-9 6.42"/>
+	<path stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="M4.466.58l9 6.42-9 6.42"/>
+	<path stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="M8 .58L17 7l-9 6.42"/>
 </symbol>
 <symbol id="icon-yt" viewBox="0 0 20 15">
 	<path fill="red" d="M19.572 2.69A2.504 2.504 0 0017.811.929C16.247.5 9.99.5 9.99.5S3.738.5 2.174.912c-.84.23-1.531.922-1.761 1.779C0 4.255 0 7.5 0 7.5s0 3.261.412 4.81c.23.856.905 1.531 1.76 1.762 1.581.428 7.82.428 7.82.428s6.255 0 7.819-.412a2.504 2.504 0 001.761-1.762c.412-1.565.412-4.81.412-4.81s.016-3.26-.412-4.825z"/>
