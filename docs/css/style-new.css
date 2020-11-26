@@ -853,8 +853,8 @@ body.mobile .pg__audio--btn:not(.is-pause) {
           animation: rainbow 1s linear 1s infinite; }
 
 .icon-scan {
-  width: 14px;
-  height: 15px;
+  width: 18px;
+  height: 14px;
   -webkit-background-size: cover;
      -moz-background-size: cover;
           background-size: cover;
@@ -1001,6 +1001,9 @@ body:not(.mobile) .pg__audio-format:hover .pg__audio-format--dropdown {
      -moz-background-size: 20px 15px;
           background-size: 20px 15px; }
 
+.td-opacity-0 {
+  opacity: 0 !important; }
+
 body:not(.mobile) .pg__audio--block:hover {
   overflow: visible; }
   body:not(.mobile) .pg__audio--block:hover .pg__audio {
@@ -1032,6 +1035,9 @@ body.mobile .pg-td-audio .pg__audio--block {
 
 body.mobile .pg__audio--close {
   display: block; }
+
+body.mobile .is-now-playing .m_adopt6 {
+  opacity: 0 !important; }
 
 .pg__audio--close {
   width: 18px;
