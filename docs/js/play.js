@@ -108,3 +108,15 @@ function playpause(id_audio) {
 
 	return false;
 }
+function stop_track (id_audio) {
+	var track_id = document.getElementById(id_audio);
+	track_id.pause();
+	track_id.currentTime = 0.0;
+	return false;
+}
+
+// HTMLAudioElement.prototype.stop_track = function() {
+// 	this.pause();
+// 	this.currentTime = 0.0;
+// }
+

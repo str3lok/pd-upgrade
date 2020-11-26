@@ -13,7 +13,7 @@ $(function() {
 //выбрать все чекбоксы 
  $('body').on('click', '.check-all-js', function(){
   var _this = $(this);
-  checked_all('table__pg--upgrade', _this);
+  checked_all('table-pg-audio', _this);
  });
 
  	if (!$("body").hasClass("mobile")) {
@@ -148,32 +148,57 @@ $('body').on('click', '.pg-audio-js', function (e) {
 		var id_audio = $(this).attr('data-audio');
 
   if (!$(_this).hasClass('is-pause')) {
-
-			var playing_audio = $('.table__pg--upgrade').find('.is-pause');
+			var playing_audio = $('.table-pg-audio').find('.is-pause');
+			var track_prev = $('.table-pg-audio').find('tbody').attr('data-track-play');
 			// если есть запущенный трек ставим его на паузу
 			if($(playing_audio).length >= 1) {
 				var playing_audio_id = $(playing_audio).attr('data-audio');
-				playpause(playing_audio_id);
+				stop_track(playing_audio_id);
 				$(playing_audio).removeClass('is-pause');
 				$(playing_audio).closest('td').removeClass('pg-td-audio');
 				$(playing_audio).closest('tr').removeClass('is-now-playing');
 				$(_this).addClass('is-pause');
 				$(_this).closest('td').addClass('pg-td-audio');
 				$(_this).closest('tr').addClass('is-now-playing');
+
+				// Если мы перешли с нашего трека на другой, исхоный трек при возвращении к нему воспроизводится С НАЧАЛА.
+				if(track_prev == id_audio) {
+					playpause(id_audio);
+				}
+				else {
+					stop_track(id_audio);
+					setTimeout(function() {
+						playpause(id_audio);
+					}, 10);
+				}
+				$('.table-pg-audio').find('tbody').attr('data-track-play', id_audio);
+
 			}
 			else {
 				$(_this).closest('td').addClass('pg-td-audio');
 				$(_this).closest('tr').addClass('is-now-playing');
 				$(_this).addClass('is-pause');
-			}
 
+				// Если мы перешли с нашего трека на другой, исхоный трек при возвращении к нему воспроизводится С НАЧАЛА.
+				if(track_prev == id_audio) {
+					playpause(id_audio);
+				}
+				else {
+					stop_track(id_audio);
+					setTimeout(function() {
+						playpause(id_audio);
+					}, 10);
+				}
+				$('.table-pg-audio').find('tbody').attr('data-track-play', id_audio);
+			}
+			
   } else {
 			$(_this).closest('tr').removeClass('is-now-playing');
 			$(_this).closest('td').removeClass('pg-td-audio');
 			$(_this).removeClass('is-pause');
+			playpause(id_audio);
 		}
-
-  playpause(id_audio);
+		
 });
 
 
@@ -181,7 +206,7 @@ $('body').on('click', '.pg-audio-js', function (e) {
 $('body').on('click', '.pg-audio-scan-js', function (e) {
 	e.preventDefault();
 	if(!$(this).hasClass('is-active')) {
-		$('.table__pg--upgrade').find('.pg-audio-scan-js.is-active').removeClass('is-active');
+		$('.table-pg-audio').find('.pg-audio-scan-js.is-active').removeClass('is-active');
 
 
 		$(this).addClass('is-active');
@@ -191,7 +216,7 @@ $('body').on('click', '.pg-audio-scan-js', function (e) {
 		// var count_string =  $('.table__pg--upgrade tbody').find('tr').length;
 		
 		// создаем массив треков с id
-		$('.table__pg--upgrade tbody tr').each(function(){
+		$('.table-pg-audio tbody tr').each(function(){
 			track_ids.push($(this).attr('data-audio'));
 		});		
 
@@ -228,7 +253,7 @@ $('body').on('click', '.format-btn-js', function (e) {
 		var drop_block = $(parent_format).find('.pg__audio-format--dropdown');
 
 		if( drop_block.is(':hidden') ) {
-			var dropdown_visible =  $('.table__pg--upgrade').find('.pg__audio-format--dropdown:visible');
+			var dropdown_visible =  $('.table-pg-audio').find('.pg__audio-format--dropdown:visible');
 			var dropdown_visible_count =  $(dropdown_visible).length;
 			if(dropdown_visible_count >= 1) {
 				$(dropdown_visible).hide();
@@ -328,12 +353,13 @@ $('body').on('click', '.pg-audio-minus-js', function (e) {
 	else {
 		//переключаем на следующй трек
 		var audio_id = $(parent_tr).next('tr').attr('data-audio');
-		
+		// если не undefined значит это не последний трек в таблице
 		if(audio_id !== undefined) {
 			$('.pg-audio-js.'+audio_id).trigger('click');
 		}
 		else {
-			var audio_id_first = $('.table__pg--upgrade').find('tbody tr:first-child').attr('data-audio');
+			// если undefined значит последний трек переключаем на первый 
+			var audio_id_first = $('.table-pg-audio').find('tbody tr:first-child').attr('data-audio');
 			$('.pg-audio-js.'+audio_id_first).trigger('click');
 		}
 	}
@@ -342,7 +368,7 @@ $('body').on('click', '.pg-audio-minus-js', function (e) {
 // пауза треков при воспроизведении видео ролика
 $('body').on('click', '.yt-play-js', function (e) {
 	e.preventDefault();
-			var playing_audio = $('.table__pg--upgrade').find('.is-pause');
+			var playing_audio = $('.table-pg-audio').find('.is-pause');
 			// если есть запущенный трек ставим его на паузу
 			if($(playing_audio).length >= 1) {
 				var playing_audio_id = $(playing_audio).attr('data-audio');
@@ -355,8 +381,19 @@ $('body').on('click', '.yt-play-js', function (e) {
 });
 
 
-
-
+	// скрываем данные в столбце Track Artist IDs по ховеру на проигрыватель
+	$('body').on('mouseenter', '.pg__audio--block', function(e) {
+		if (!$("body").hasClass("mobile")) {
+			$(this).closest('tr').find('.m_adopt6').addClass('td-opacity-0');
+		}
+	});
+	
+	// ховер уходит с проигрывателя отображаем данные в столбце Track Artist IDs
+	$('body').on('mouseleave', '.pg__audio--block', function(e) {
+		if (!$("body").hasClass("mobile")) {
+			$(this).closest('tr').find('.m_adopt6').removeClass('td-opacity-0');
+		}
+	});
 
 
  
@@ -395,7 +432,7 @@ function checked_all_load(block, btn_checkbox) {
 
 function loadPage() {
  if($('.table__pg-checkbox--all')) {
-  checked_all_load('table__pg--upgrade', 'table__pg-checkbox--all');
+  checked_all_load('table-pg-audio', 'table__pg-checkbox--all');
  }
 }//end loadPage
 window.addEventListener("load", loadPage);
