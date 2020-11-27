@@ -166,14 +166,14 @@ $('body').on('click', '.format-btn-js', function (e) {
 	// скрываем данные в столбце Track Artist IDs по ховеру на проигрыватель
 	$('body').on('mouseenter', '.pg__audio--block', function(e) {
 		if (!$("body").hasClass("mobile")) {
-			$(this).closest('tr').find('.m_adopt6').addClass('td-opacity-0');
+			$(this).closest('tr').addClass('is-hover-audio');
 		}
 	});
 	
 	// ховер уходит с проигрывателя отображаем данные в столбце Track Artist IDs
 	$('body').on('mouseleave', '.pg__audio--block', function(e) {
 		if (!$("body").hasClass("mobile")) {
-			$(this).closest('tr').find('.m_adopt6').removeClass('td-opacity-0');
+			$(this).closest('tr').removeClass('is-hover-audio');
 		}
 	});
 
