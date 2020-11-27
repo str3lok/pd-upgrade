@@ -7,6 +7,10 @@ function init_audio_items(table){
 	var scan_mode = false ; 
 	var scan_thresh = 10; //s before jump to next track
 	
+	var fade_in_ms = 100;
+	var fade_out_ms = 300;
+	var cross_fade_ms = 2000;
+	
 	var interval ;
 	var audio_playing ;// plain html audio
 
@@ -15,16 +19,28 @@ function init_audio_items(table){
 			return ;
 		}
 		// переход к следующему треку
-		var current_time = parseInt(audio_playing.currentTime);
-		var duration = parseInt(audio_playing.duration);
-		if( current_time >= ( scan_mode ? scan_thresh : duration ) ){
-			play(playing_now.next());
+		var current_time = audio_playing.currentTime;
+		var duration = audio_playing.duration;
+		
+		var limit_duration = duration - ( fade_out_ms /1000);
+		if( scan_mode ){
+			limit_duration = scan_thresh - (( cross_fade_ms + fade_out_ms ) /1000);
+		}
+		if( current_time >= limit_duration ){
+			// start new track
+			var copy = playing_now ;
+			var unplay_delay;
+			if( scan_mode ){
+				unplay_delay = cross_fade_ms;
+			}
+			unplay(copy, unplay_delay);// "delayed" unplay XXX
+			play(copy.next());
 			return;
 		}
 		update_progressbar(audio_playing.currentTime, audio_playing.duration );
 	}
 	function update_progressbar(x,all){
-		// console.log(x+'s elapsed of '+ all+ 's');
+		//console.log(x+'s elapsed of '+ all+ 's');
 		// тут можно обновлять прогрессбар
 	}
 	function bind_progress_handler(tr){
@@ -43,8 +59,7 @@ function init_audio_items(table){
 	
 	function reset_classes(tr){
 		// reset all classes to default
-		tr.removeClass('is-now-playing');
-		tr.removeClass('is-scan-active');
+		tr.removeClass('is-now-playing is-scan-active');
 		tr.find('td:eq(1)').removeClass('pg-td-audio');
 		tr.find('.pg-audio-js.is-pause').removeClass('is-pause');
 		// scan
@@ -52,17 +67,15 @@ function init_audio_items(table){
 	}
 	
 	function play(tr){
-		// потушить
-		if( playing_now ){
-			unplay(playing_now);
-		}
 		if( ! tr.length ){
 			tr = table.find('tr[data-audio]:eq(0)');
 			console.log('jump to first track');
-			console.log(tr);
 		}
 		// добавить классы
 		tr.addClass('is-now-playing');
+		if(scan_mode){
+			tr.addClass('is-scan-active');
+		}
 		tr.find('td:eq(1)').addClass('pg-td-audio'); // XXX
 		tr.find('.pg-audio-js').addClass('is-pause'); //
 
@@ -73,7 +86,7 @@ function init_audio_items(table){
 		var audio = tr.find('audio').first();
 		audio.prop('volume', 0);
 		audio.trigger('play');
-		audio.animate({ volume: 1 }, 300);
+		audio.animate({ volume: 1 }, ( fade_in_ms || 300 ));
 
 		bind_progress_handler(tr);
 
@@ -83,17 +96,14 @@ function init_audio_items(table){
 	
 	function pause(tr){
 		// change classes
-		
 		if(scan_mode){
 			tr.find('.pg-audio-scan-js').removeClass('is-active').addClass("is-scan-pause");
 		}
-		
 		tr.find('.pg-audio-js').removeClass('is-pause');
 		tr.removeClass('is-now-playing');
-		
 		// pause audio
 		var audio = tr.find('audio').first();
-		audio.animate({ volume: 0 }, 300, function(){
+		audio.animate({ volume: 0 }, ( fade_out_ms || 300 ) , function(){
 			audio.trigger('pause');
 		});
 	}
@@ -102,18 +112,26 @@ function init_audio_items(table){
 			tr.find('.pg-audio-scan-js').addClass('is-active').removeClass("is-scan-pause");
 		}
 		tr.find('.pg-audio-js').addClass('is-pause');
+		tr.addClass('is-now-playing');
+		if(scan_mode){
+			tr.addClass('is-scan-active');
+		}
+
 		var audio = tr.find('audio').first();
 		audio.prop('volume', 0);
 		audio.trigger('play');
-		audio.animate({ volume: 1 }, 300);	
+		audio.animate({ volume: 1 }, ( fade_in_ms || 300 ));	
 	}
-	function unplay(tr){
+	// run before play! XXX
+	function unplay(tr, delay){
 		// all classes to defaults
 		reset_classes(tr);
 		unbind_progressbar(tr);
 		// stop audio
 		var audio = tr.find('audio').first();
-		audio.animate({ volume: 0 }, 300, function(){
+		console.log('starting fade out')
+		audio.delay(delay || 0).animate({ volume: 0 }, ( fade_out_ms || 300 ), function(){
+			console.log('end fade out')
 			audio.trigger('pause');
 			audio.prop('currentTime', 0);
 		});
@@ -122,15 +140,14 @@ function init_audio_items(table){
 	}
 	function scan(tr){
 		// add classes
-		tr.find('.pg-audio-scan-js').addClass("is-active");
-		tr.addClass("is-scan-active");
-		scan_mode = true ;
+		var button_class = is_pause_button(tr) ? "is-active" : "is-scan-pause" ;
+		tr.addClass('is-scan-active');
+		tr.find('.pg-audio-scan-js').addClass( button_class );
 	}
 	function unscan(tr){
 		// remove classes
 		tr.find('.pg-audio-scan-js').removeClass("is-active is-scan-pause");
-		tr.removeClass("is-scan-active");
-		scan_mode = false ;
+		tr.removeClass('is-scan-active');
 	}
 	function is_playing(tr){
 		if ( playing_now && playing_now.data('audio') == tr.data('audio') ){
@@ -176,7 +193,6 @@ function init_audio_items(table){
 	// left button - лайк, донат или переход к предыдущему
 	table.find('.pg-audio-plus-js').click(function(){
 		var tr = $(this).closest('tr');
-		
 		console.log('left button pressed')
 		// это лайк?
 		if(is_like_button(tr)){
@@ -195,6 +211,7 @@ function init_audio_items(table){
 		console.log('prev button pressed')
 		// переход вперед только если играет этот трек
 		if(is_playing(tr)){
+			unplay(tr);
 			play(tr.prev());
 		}
 
@@ -211,6 +228,7 @@ function init_audio_items(table){
 		// это переход вправо
 		console.log('next button pressed')
 		if(is_playing(tr)){
+			unplay(tr);
 			play(tr.next());
 		}
 		return false ;
@@ -234,6 +252,10 @@ function init_audio_items(table){
 		}
 
 		// запустить аудио
+		// потушить другой
+		if( playing_now ){
+			unplay(playing_now);
+		}
 		play(tr);
 		return false ;
 	});
@@ -243,12 +265,18 @@ function init_audio_items(table){
 		console.log('scan pressed');
 		// если еще не играет именно этот трек
 		if(! is_playing(tr)){
+			// потушить другой
+			if( playing_now ){
+				unplay(playing_now);
+			}
 			play(tr);
 		}
 		if(scan_mode){
 			unscan(tr);
+			scan_mode = false ;
 			return false ;
 		}
+		scan_mode = true ;
 		scan(tr);
 		return false;
 	});
