@@ -727,6 +727,7 @@ body:not(.mobile) .pg-artist-tooltip:hover {
   display: block; }
   .pg__audio--btn:not(.is-pause) {
     /*
+		//---
 			text-indent: -99999px;
 			background: url("../images/sprites/svg/icon-play.svg") no-repeat center;
 			background-size: 16px 23px;		 
@@ -1086,6 +1087,9 @@ body:not(.mobile) .pg__audio-format:hover .pg__audio-format--dropdown {
           background-size: 20px 15px; }
 
 .td-opacity-0 {
+  opacity: 0 !important; }
+
+.is-now-playing .pg-tw-val {
   opacity: 0 !important; }
 
 body:not(.mobile) .pg__audio--block:hover {
