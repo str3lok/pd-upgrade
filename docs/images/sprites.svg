@@ -34,6 +34,9 @@
 <symbol id="icon-prev" viewBox="0 0 11 14">
 	<path stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="M10 .5L2.663 7 10 13.5M1 .557v12.886"/>
 </symbol>
+<symbol id="icon-scan-arrow" viewBox="0 0 8 12">
+	<path stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="M.855.74L6.792 6 .854 11.26"/>
+</symbol>
 <symbol id="icon-scan" viewBox="0 0 18 14">
 	<path stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="M.536.58l9 6.42-9 6.42"/>
 	<path stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="M4.466.58l9 6.42-9 6.42"/>
