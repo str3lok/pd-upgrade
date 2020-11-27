@@ -1089,7 +1089,24 @@ body:not(.mobile) .pg__audio-format:hover .pg__audio-format--dropdown {
 .td-opacity-0 {
   opacity: 0 !important; }
 
-.is-now-playing .pg-tw-val {
+.is-now-playing .pg__audio--btn:not(.is-pause), .is-scan-active .pg__audio--btn:not(.is-pause) {
+  text-indent: -99999px;
+  background: url("../images/sprites/svg/icon-play.svg") no-repeat center;
+  -webkit-background-size: 16px 23px;
+     -moz-background-size: 16px 23px;
+          background-size: 16px 23px; }
+
+.is-now-playing .pg__audio--btn.is-pause, .is-scan-active .pg__audio--btn.is-pause {
+  text-indent: -99999px;
+  background: url("../images/sprites/svg/icon-pause.svg") no-repeat center;
+  -webkit-background-size: 15px 19px;
+     -moz-background-size: 15px 19px;
+          background-size: 15px 19px; }
+
+.is-now-playing .pg-tw-val, .is-scan-active .pg-tw-val {
+  opacity: 0 !important; }
+
+.is-hover-audio .text-hide-audio__active {
   opacity: 0 !important; }
 
 body:not(.mobile) .pg__audio--block:hover {
@@ -1108,23 +1125,23 @@ body:not(.mobile) .pg__audio--block:hover {
        -moz-background-size: 16px 23px;
             background-size: 16px 23px; }
 
-body.mobile .pg-td-audio .pg__audio--block {
+body.mobile .pg-td-audio .pg__audio--block, .is-scan-active .pg-td-audio .pg__audio--block {
   overflow: visible; }
-  body.mobile .pg-td-audio .pg__audio--block .pg__audio {
+  body.mobile .pg-td-audio .pg__audio--block .pg__audio, .is-scan-active .pg-td-audio .pg__audio--block .pg__audio {
     background: #FFFFFF;
     -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
        -moz-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
             box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
     width: 245px;
     z-index: 1; }
-  body.mobile .pg-td-audio .pg__audio--block .pg__audio-like--plus {
+  body.mobile .pg-td-audio .pg__audio--block .pg__audio-like--plus, .is-scan-active .pg-td-audio .pg__audio--block .pg__audio-like--plus {
     visibility: visible;
     opacity: 1; }
 
-body.mobile .pg__audio--close {
+body.mobile .pg__audio--close, .is-scan-active .pg__audio--close {
   display: block; }
 
-body.mobile .is-now-playing .m_adopt6 {
+body.mobile .is-now-playing .text-hide-audio__active, body.mobile .is-hover-audio .text-hide-audio__active, .is-scan-active .is-now-playing .text-hide-audio__active, .is-scan-active .is-hover-audio .text-hide-audio__active {
   opacity: 0 !important; }
 
 .pg__audio--close {
