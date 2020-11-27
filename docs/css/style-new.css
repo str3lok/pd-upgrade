@@ -613,10 +613,13 @@ body:not(.mobile) .pg-artist-tooltip:hover {
   background: #d2e2f2 !important; }
 
 .pg__audio--block {
-  position: relative !important;
   display: block;
   height: 35px;
   width: 100%;
+  left: 0;
+  top: 9px;
+  position: absolute;
+  z-index: 1;
   overflow: hidden; }
 
 .pg__audio {
@@ -749,6 +752,9 @@ body.mobile .pg__audio--btn:not(.is-pause) {
   -webkit-background-size: 16px 23px;
      -moz-background-size: 16px 23px;
           background-size: 16px 23px; }
+
+body.mobile .pg-tw-val {
+  opacity: 0; }
 
 .pg__audio-like {
   display: -webkit-box;
