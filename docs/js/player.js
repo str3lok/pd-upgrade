@@ -44,6 +44,7 @@ function init_audio_items(table){
 	function reset_classes(tr){
 		// reset all classes to default
 		tr.removeClass('is-now-playing');
+		tr.removeClass('is-scan-active');
 		tr.find('td:eq(1)').removeClass('pg-td-audio');
 		tr.find('.pg-audio-js.is-pause').removeClass('is-pause');
 		// scan
@@ -88,6 +89,7 @@ function init_audio_items(table){
 		}
 		
 		tr.find('.pg-audio-js').removeClass('is-pause');
+		tr.removeClass('is-now-playing');
 		
 		// pause audio
 		var audio = tr.find('audio').first();
@@ -121,11 +123,13 @@ function init_audio_items(table){
 	function scan(tr){
 		// add classes
 		tr.find('.pg-audio-scan-js').addClass("is-active");
+		tr.addClass("is-scan-active");
 		scan_mode = true ;
 	}
 	function unscan(tr){
 		// remove classes
 		tr.find('.pg-audio-scan-js').removeClass("is-active is-scan-pause");
+		tr.removeClass("is-scan-active");
 		scan_mode = false ;
 	}
 	function is_playing(tr){
