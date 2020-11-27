@@ -9,7 +9,7 @@ function init_audio_items(table){
 	
 	var fade_in_ms = 100;
 	var fade_out_ms = 300;
-	var cross_fade_ms = 0;
+	var cross_fade_ms = 1000;
 
 	var preload_thresh = 5; //s preload next track when x seconds left to play
 	var preload_triggered = {};
@@ -73,7 +73,7 @@ function init_audio_items(table){
 		update_progressbar(audio_playing.currentTime, audio_playing.duration );
 	}
 	function update_progressbar(x,all){
-		console.log(x+'s elapsed of '+ all+ 's');
+		//console.log(x+'s elapsed of '+ all+ 's');
 		// тут можно обновлять прогрессбар
 	}
 	function bind_progress_handler(tr){
