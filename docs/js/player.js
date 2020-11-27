@@ -9,8 +9,10 @@ function init_audio_items(table){
 	
 	var fade_in_ms = 100;
 	var fade_out_ms = 300;
-	var cross_fade_ms = 2000;
-	
+	var cross_fade_ms = 0;
+
+	var preload_thresh = 5; //s preload next track when x seconds left to play
+	var preload_triggered = {};
 	var interval ;
 	var audio_playing ;// plain html audio
 
@@ -21,26 +23,57 @@ function init_audio_items(table){
 		// переход к следующему треку
 		var current_time = audio_playing.currentTime;
 		var duration = audio_playing.duration;
-		
-		var limit_duration = duration - ( fade_out_ms /1000);
-		if( scan_mode ){
-			limit_duration = scan_thresh - (( cross_fade_ms + fade_out_ms ) /1000);
-		}
-		if( current_time >= limit_duration ){
-			// start new track
-			var copy = playing_now ;
-			var unplay_delay;
-			if( scan_mode ){
-				unplay_delay = cross_fade_ms;
+
+		var limit_duration = ( scan_mode ? Math.min( scan_thresh, duration ) : duration ) - (Math.max( cross_fade_ms, fade_out_ms ) /1000);
+
+		// если до конца осталось мало времени, дернуть load у следующего аудио
+		if( ( limit_duration - preload_thresh) > 0 && current_time >= limit_duration - preload_thresh ){
+			var next = playing_now.next();
+			var au_id = next.data('audio');
+			if( next.length && !preload_triggered[au_id] ){
+				console.log('triggered preload');
+				next.find('audio').first().prop('preload', 'auto');
+				preload_triggered[au_id] = true ;
 			}
-			unplay(copy, unplay_delay);// "delayed" unplay XXX
-			play(copy.next());
-			return;
+		}
+		// время старта нового 
+		// время начала завершения нового
+		if( current_time >= limit_duration ){
+			var copy = playing_now ;
+			if( cross_fade_ms > fade_out_ms ){
+				// delay unplay
+				console.log('delayed unplay')
+				var unplay_delay = cross_fade_ms - fade_out_ms;
+				unplay(copy, unplay_delay);// "delayed" unplay XXX
+				play(copy.next());
+				return;
+			}
+			else if( cross_fade_ms < fade_out_ms ){
+				// delay play
+				var play_delay = fade_out_ms - cross_fade_ms;
+				console.log('delayed play')
+				unplay(copy);
+				setTimeout(function(){
+					// на случай если юзер вдруг успел запустить другой трек (паранойя)
+					if(audio_playing){
+						unplay(audio_playing);
+					}
+					console.log('delayed play triggered')
+					play(copy.next());
+				}, play_delay);
+				return;
+			}
+			else {
+				console.log('undelayed play')
+				unplay(copy);
+				play(copy.next()); 
+				return ;
+			}
 		}
 		update_progressbar(audio_playing.currentTime, audio_playing.duration );
 	}
 	function update_progressbar(x,all){
-		//console.log(x+'s elapsed of '+ all+ 's');
+		console.log(x+'s elapsed of '+ all+ 's');
 		// тут можно обновлять прогрессбар
 	}
 	function bind_progress_handler(tr){
