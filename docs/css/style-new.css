@@ -131,7 +131,8 @@ table.fixed th {
   background-color: #949494;
   color: #fff;
   border-right: 1px solid #9e9e9e;
-  border-left: 1px solid #9e9e9e; }
+  border-left: 1px solid #9e9e9e;
+  position: relative; }
 
 table.fixed th a {
   color: #fff !important; }
@@ -1109,6 +1110,27 @@ body:not(.mobile) .pg__audio-format:hover .pg__audio-format--dropdown {
 .is-now-playing .pg-tw-val, .is-scan-active .pg-tw-val {
   opacity: 0 !important; }
 
+.table-pg-audio {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0; }
+  .table-pg-audio .tableFloatingHeaderOriginal .pg__audio--block {
+    display: none; }
+  @media (min-width: 800px) {
+    .table-pg-audio .tableFloatingHeaderOriginal .text-hide-audio__active {
+      opacity: 1 !important; }
+    .table-pg-audio .tableFloatingHeaderOriginal[style*="fixed"] .pg__audio--block {
+      display: block; }
+    .table-pg-audio .tableFloatingHeaderOriginal[style*="fixed"] .text-hide-audio__active {
+      opacity: 0 !important; } }
+  @media (max-width: 799px) {
+    .table-pg-audio .tableFloatingHeaderOriginal .text-hide-audio__active {
+      opacity: 1 !important; } }
+
+/*.table-pg-audio*/
+.is-scan-active .text-hide-audio__active {
+  opacity: 0; }
+
 .is-hover-audio .text-hide-audio__active {
   opacity: 0 !important; }
 
@@ -1177,6 +1199,64 @@ body.mobile .is-now-playing .text-hide-audio__active, body.mobile .is-hover-audi
         -ms-transform: rotate(45deg);
          -o-transform: rotate(45deg);
             transform: rotate(45deg); }
+
+.pg__thead--audio .pg__audio--block {
+  overflow: visible; }
+  .pg__thead--audio .pg__audio--block .pg__audio {
+    background: #FFFFFF;
+    width: 245px;
+    z-index: 1; }
+  .pg__thead--audio .pg__audio--block .pg__audio-like--plus {
+    visibility: visible;
+    opacity: 1; }
+  .pg__thead--audio .pg__audio--block .pg__audio--btn:not(.is-pause) {
+    text-indent: -99999px;
+    background: url("../images/sprites/svg/icon-play.svg") no-repeat center;
+    -webkit-background-size: 16px 23px;
+       -moz-background-size: 16px 23px;
+            background-size: 16px 23px; }
+
+.pg__tr--header th {
+  border-top: 0; }
+
+.pg__tr--progress td {
+  height: 18px !important;
+  background: #d8d8d8 !important;
+  padding: 0 !important;
+  border: 0 !important; }
+
+.audio__progress {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 18px; }
+
+.audio__progress--text {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 18px;
+  cursor: pointer;
+  position: absolute;
+  z-index: 2;
+  font: 12px/18px "ConsolasBold" !important;
+  color: #FFFFFF;
+  padding-left: 13px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box; }
+
+.audio__progress--bar {
+  display: block;
+  height: 18px;
+  background: #0C91D8; }
+
+.audio__progress-text--line {
+  display: inline-block;
+  margin: 0 7px; }
 
 /* START 1023px */
 @media (max-width: 1023px) {
