@@ -195,15 +195,44 @@
 				</div>
 				<table class="tableWithFloatingHeader table table__users fixed table-pg-style table__pg--upgrade table-pg-audio" id="users_table_content">
 					<thead>
-						<tr style="height: 55px">
+						<tr class="pg__tr--progress">
+							<td colspan="16">
+								<div class="audio__progress">
+									<div class="audio__progress--text"><span class="audio__progress-text--start">00:12 </span><span class="audio__progress-text--line">/</span><span class="audio__progress-text--end">00:18</span></div>
+									<div class="audio__progress--bar" style="width: 15%;"></div>
+								</div>
+							</td>
+						</tr>
+						<tr class="pg__tr--header" style="height: 55px">
 							<th class="m_adopt1">
 								<input class="check-all-js table__pg-checkbox--all" type="checkbox">
 							</th>
-							<th class="m_adopt2"><a class="font-size--14" href="/users_new?KIND=owner&amp;filter%5BSTATUS%5D=new&amp;page=1&amp;sort=UID&amp;order=DESC">TW<span class="sort icon-sort"></span></a></th>
+							<th class="m_adopt2 pg__audio--visible p__relative pg__thead--audio"><a class="font-size--14 pg-tw-val text-hide-audio__active" href="/users_new?KIND=owner&amp;filter%5BSTATUS%5D=new&amp;page=1&amp;sort=UID&amp;order=DESC">TW<span class="sort icon-sort"></span></a>
+										<div class="pg__audio--block">
+											<div class="pg__audio">
+												<div class="pg__audio--content">
+													<div class="pg__audio--left"><a class="is-donate donate-pay pg__audio-like--plus pg__audio-like--btn pg-audio-plus-js" href="https://tophit.ru/ru/donate/Filatov_&amp;_Karas" target="_blank"></a>
+														<div class="pg__audio--action"><a class="pg__audio--btn pg-audio-js pg_a1" href="#" data-audio="pg_a1"><span></span></a>
+															<audio class="pg__audio--player" preload="none" src="https://tophit.ru/ru/tracks/119835/play" id="pg_a1"></audio>
+														</div>
+													</div>
+													<div class="pg__audio--right"><a class="pg__audio-like--minus pg__audio-like--btn pg-audio-minus-js" href="#"></a><a class="pg__audio-scan pg-audio-scan-js pg__audio-like--btn" href="#">
+															<div class="icon-scan"><span></span><span></span><span></span></div></a>
+														<div class="pg__audio-format"><a class="pg__audio-format--btn format-btn-js" href="#"></a>
+															<div class="pg__audio-format--dropdown">
+																<div class="pg__audio-format--box"><a class="pg__audio-format--link" href="#" title="mp3">mp3</a><a class="pg__audio-format--link" href="#" title="wav">wav</a></div>
+															</div>
+														</div>
+														<div class="pg__audio-yt"><a class="pg__audio-yt--play yt-play-js" href="https://www.youtube.com/watch?v=aqsgyOhrRMY"></a></div>
+													</div>
+												</div>
+											</div>
+										</div>
+							</th>
 							<th class="m_adopt3"><a class="font-size--14" href="/users_new?KIND=owner&amp;filter%5BSTATUS%5D=new&amp;page=1&amp;sort=UID&amp;order=DESC">LW<span class="sort icon-sort"></span></a></th>
 							<th class="m_adopt4"><a class="font-size--14" href="/users_new?KIND=owner&amp;filter%5BSTATUS%5D=new&amp;page=1&amp;sort=UID&amp;order=DESC">PP<span class="sort icon-sort"></span></a></th>
 							<th class="m_adopt5"><a class="font-size--14" href="/users_new?KIND=owner&amp;filter%5BSTATUS%5D=new&amp;page=1&amp;sort=UID&amp;order=DESC">WOC<span class="sort icon-sort"></span></a></th>
-							<th class="m_adopt6 td-align-right"><span class="table--separator">Track</span><span class="table--separator"><span class="font-size--10">Artist</span></span><span class="table--separator">IDs</span></th>
+							<th class="m_adopt6 td-align-right"><span class="table--separator text-hide-audio__active">Track</span><span class="table--separator text-hide-audio__active"><span class="font-size--10">Artist</span></span><span class="table--separator text-hide-audio__active">IDs</span></th>
 							<th class="m_adopt7 line-height--12 td-align-left pl-15"><a href="/users_new?KIND=owner&amp;filter%5BSTATUS%5D=new&amp;page=1&amp;sort=UID&amp;order=DESC"><span class="table--separator">Title</span><span class="table--separator">Artist</span><span class="table--separator">Rating</span><span class="sort icon-sort"></span></a></th>
 							<th class="m_adopt8 td-align-left pl-6">Songwriters</th>
 							<th class="m_adopt9 line-height--12 td-align-left pl-6"><span class="table--separator">Label</span><span class="table--separator pg-sm-hidden">ISRC</span></th>
