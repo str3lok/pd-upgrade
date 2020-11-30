@@ -852,10 +852,11 @@ body.mobile .pg-tw-val {
       display: none !important; }
 
 .pg__audio-scan.is-active .icon-scan span {
-  -webkit-animation: arrow-7 2s infinite;
-     -moz-animation: arrow-7 2s infinite;
-       -o-animation: arrow-7 2s infinite;
-          animation: arrow-7 2s infinite; }
+  background: url("../images/sprites/svg/icon-scan-arrow-orange.svg") no-repeat;
+  -webkit-animation: arrow-7 1s infinite;
+     -moz-animation: arrow-7 1s infinite;
+       -o-animation: arrow-7 1s infinite;
+          animation: arrow-7 1s infinite; }
   .pg__audio-scan.is-active .icon-scan span:nth-child(2) {
     -webkit-animation-delay: -0.2s;
        -moz-animation-delay: -0.2s;
@@ -868,11 +869,13 @@ body.mobile .pg-tw-val {
             animation-delay: -0.4s; }
 
 .pg__audio-scan.is-scan-pause {
-  webkit-animation: rainbow 2s linear 2s infinite;
-  -webkit-animation: rainbow 2s linear 2s infinite;
-     -moz-animation: rainbow 2s linear 2s infinite;
-       -o-animation: rainbow 2s linear 2s infinite;
-          animation: rainbow 2s linear 2s infinite; }
+  webkit-animation: rainbow 1s linear 1s infinite;
+  -webkit-animation: rainbow 1s linear 1s infinite;
+     -moz-animation: rainbow 1s linear 1s infinite;
+       -o-animation: rainbow 1s linear 1s infinite;
+          animation: rainbow 1s linear 1s infinite; }
+  .pg__audio-scan.is-scan-pause span {
+    background: url("../images/sprites/svg/icon-scan-arrow-orange.svg") no-repeat; }
 
 .icon-scan {
   display: -webkit-box;
