@@ -177,8 +177,17 @@ $('body').on('click', '.format-btn-js', function (e) {
 		}
 	});
 
+	// show/hide menu mobile
+	$('body').on('click', '.mobile-nav-js', function (e) {
+		e.preventDefault();
 
- 
+		if($(this).hasClass('is-active')) {
+			$(this).removeClass('is-active');
+		}
+		else {
+			$(this).addClass('is-active');
+		}
+	}); 
 
 }); //- end ready
 
