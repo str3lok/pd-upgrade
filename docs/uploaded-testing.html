@@ -25,6 +25,7 @@
 		<link rel="stylesheet" type="text/css" href="assets/build_new/select2.min.css">
 		<link rel="stylesheet" type="text/css" href="assets/build_new/custom_styles.css">
 		<link rel="stylesheet" type="text/css" href="css/style-new.css">
+		<link rel="stylesheet" type="text/css" href="css/player.css">
 		<link rel="shortcut icon" href="tophit.ico">
 		<link rel="stylesheet" href="css/jquery.fancybox.min.css">
 		<style type="text/css">
@@ -91,9 +92,39 @@
 				</p>
 			</div>
 		</div>
-		<div class="users_section_area">
+		<div class="header__mobile">
+			<div class="header__mobile-content">
+				<div class="header__mobile--left">
+					<div class="header__mobile-left--burger"><a class="mobile__nav-btn mobile-nav-js" href="#"><span></span><span></span><span></span></a></div>
+					<div class="header__mobile-left--player">
+								<div class="pg__audio--block">
+									<div class="pg__audio">
+										<div class="pg__audio--content">
+											<div class="pg__audio--left"><a class="pg__audio-like--plus pg__audio-like--btn pg-audio-plus-js" href="https://tophit.ru/ru/donate/Filatov_&amp;_Karas" target="_blank"></a>
+												<div class="pg__audio--action"><a class="pg__audio--btn pg-audio-js pg_a12" href="#" data-audio="pg_a12"><span></span></a>
+													<audio class="pg__audio--player" preload="none" src="https://tophit.ru/ru/tracks/t125473/play" id="pg_a12"></audio>
+												</div>
+											</div>
+											<div class="pg__audio--right"><a class="pg__audio-like--minus pg__audio-like--btn pg-audio-minus-js" href="#"></a><a class="pg__audio-scan pg-audio-scan-js pg__audio-like--btn" href="#">
+													<div class="icon-scan"><span></span><span></span><span></span></div></a>
+												<div class="pg__audio-format"><a class="pg__audio-format--btn format-btn-js" href="#"></a>
+													<div class="pg__audio-format--dropdown">
+														<div class="pg__audio-format--box"><a class="pg__audio-format--link" href="#" title="mp3">mp3</a><a class="pg__audio-format--link" href="#" title="wav">wav</a></div>
+													</div>
+												</div>
+												<div class="pg__audio-yt"><a class="pg__audio-yt--play yt-play-js" href="https://www.youtube.com/watch?v=aqsgyOhrRMY"></a></div>
+											</div>
+										</div>
+									</div>
+								</div>
+					</div>
+				</div>
+				<div class="header__mobile--right"></div>
+			</div>
+		</div>
+		<div class="users_section_area wrapper__upgrade">
 			<div id="table_data">
-				<div class="d-flex flex-direction-column flex-align-items-center artist-block-header mt-16">
+				<div class="d-flex flex-direction-column flex-align-items-center artist-block-header mt-16 pg-xs-hidden">
 					<div class="d-flex artist-sort-table flex-align-items-center pg-sm-hidden">
 						<h1 class="artist-main-table">UPLOADED(<span class="items_counter">8</span>)/TESTING(<span class="items_counter">8</span>)</h1><a class="button button__small button__white" href="#" onclick="modalShow('/users_new/editrow/0/owner', 'GET', 'openDetailRadio'); return false;">
 							Add
@@ -212,8 +243,8 @@
 											<div class="pg__audio">
 												<div class="pg__audio--content">
 													<div class="pg__audio--left"><a class="is-donate donate-pay pg__audio-like--plus pg__audio-like--btn pg-audio-plus-js" href="https://tophit.ru/ru/donate/Filatov_&amp;_Karas" target="_blank"></a>
-														<div class="pg__audio--action"><a class="pg__audio--btn pg-audio-js pg_a1" href="#" data-audio="pg_a1"><span></span></a>
-															<audio class="pg__audio--player" preload="none" src="https://tophit.ru/ru/tracks/119835/play" id="pg_a1"></audio>
+														<div class="pg__audio--action"><a class="pg__audio--btn pg-audio-js pg_a11" href="#" data-audio="pg_a11"><span></span></a>
+															<audio class="pg__audio--player" preload="none" src="https://tophit.ru/ru/tracks/119835/play" id="pg_a11"></audio>
 														</div>
 													</div>
 													<div class="pg__audio--right"><a class="pg__audio-like--minus pg__audio-like--btn pg-audio-minus-js" href="#"></a><a class="pg__audio-scan pg-audio-scan-js pg__audio-like--btn" href="#">
