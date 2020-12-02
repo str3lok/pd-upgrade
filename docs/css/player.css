@@ -524,19 +524,39 @@ body:not(.mobile) .pg__audio-format:hover .pg__audio-format--dropdown {
 .table-pg-audio {
   border-top: 0;
   border-left: 0;
-  border-right: 0; }
-  .table-pg-audio .tableFloatingHeaderOriginal .pg__audio--block {
-    display: none; }
-  @media (min-width: 800px) {
-    .table-pg-audio .tableFloatingHeaderOriginal .text-hide-audio__active {
-      opacity: 1 !important; }
-    .table-pg-audio .tableFloatingHeaderOriginal[style*="fixed"] .pg__audio--block {
-      display: block; }
-    .table-pg-audio .tableFloatingHeaderOriginal[style*="fixed"] .text-hide-audio__active {
-      opacity: 0 !important; } }
-  @media (max-width: 799px) {
-    .table-pg-audio .tableFloatingHeaderOriginal .text-hide-audio__active {
-      opacity: 1 !important; } }
+  border-right: 0;
+  /*
+	.tableFloatingHeaderOriginal {
+		.pg__audio--block {
+			display: none;
+		}
+
+		
+		@media (min-width: 800px) {			
+			.text-hide-audio__active {
+				opacity: 1 !important;
+			}
+
+			&[style*="fixed"] {
+				.pg__audio--block {
+					display: block;
+				}			
+
+				.text-hide-audio__active {
+					opacity: 0 !important;
+				}
+
+			}
+		}
+
+		@media (max-width: 799px) {
+			.text-hide-audio__active {
+				opacity: 1 !important;
+			}
+		}
+
+	}
+	*/ }
 
 /*.table-pg-audio*/
 .is-scan-active .text-hide-audio__active {
@@ -639,11 +659,76 @@ body.mobile .is-now-playing .text-hide-audio__active, body.mobile .is-hover-audi
     padding: 0 !important;
     border: 0 !important; }
 
+.audio__progress--container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%; }
+
+.audio__progress--player {
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 255px;
+  border-right: 2px solid #828282; }
+  .audio__progress--player .pg__audio--block {
+    overflow: visible;
+    position: relative !important;
+    top: 0 !important;
+    height: 24px; }
+    .audio__progress--player .pg__audio--block .pg__audio {
+      background: #f2f2f2 !important;
+      width: 100% !important;
+      z-index: 1;
+      height: 100% !important;
+      left: 0 !important;
+      -webkit-border-radius: 0 !important;
+         -moz-border-radius: 0 !important;
+              border-radius: 0 !important;
+      -webkit-box-shadow: none !important;
+         -moz-box-shadow: none !important;
+              box-shadow: none !important; }
+    .audio__progress--player .pg__audio--block .pg__audio-like--plus {
+      visibility: visible;
+      opacity: 1; }
+    .audio__progress--player .pg__audio--block .pg__audio--btn:not(.is-pause) {
+      text-indent: -99999px;
+      background: url("../images/sprites/svg/icon-play.svg") no-repeat center;
+      -webkit-background-size: 16px 23px;
+         -moz-background-size: 16px 23px;
+              background-size: 16px 23px; }
+  .audio__progress--player .pg__audio-like--btn,
+  .audio__progress--player .pg__audio--btn,
+  .audio__progress--player .pg__audio-format--btn,
+  .audio__progress--player .pg__audio-yt--play {
+    height: 24px !important; }
+  .audio__progress--player .pg__audio-format--box {
+    background: #f2f2f2 !important; }
+  .audio__progress--player .pg__audio-format--link {
+    line-height: 10px !important; }
+  .audio__progress--player .pg__audio-like--btn::before {
+    top: 2px !important; }
+  .audio__progress--player .pg__audio-like--btn.pg__audio-like--minus::before {
+    top: 5px !important; }
+
 .audio__progress {
   display: block;
   position: relative;
-  width: 100%;
+  min-width: 1px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+     -moz-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   height: 18px; }
+  @media (min-width: 800px) {
+    .audio__progress {
+      height: 24px; } }
 
 .audio__progress--text {
   display: -webkit-box;
@@ -663,7 +748,17 @@ body.mobile .is-now-playing .text-hide-audio__active, body.mobile .is-hover-audi
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box; }
+  @media (min-width: 800px) {
+    .audio__progress--text {
+      height: 24px;
+      line-height: 24px !important; } }
 
+/*
+{
+	transform: scaleX(0); увеличивается до 1
+	transform: translateX(-100%); уменьшается до 0
+}
+*/
 .audio__progress-time {
   display: -webkit-box;
   display: -webkit-flex;
@@ -714,12 +809,15 @@ body.mobile .is-now-playing .text-hide-audio__active, body.mobile .is-hover-audi
 
 .audio__progress--bar {
   display: block;
-  height: 18px;
   background: #0C91D8;
   -webkit-transition: width .3s ease;
   -o-transition: width .3s ease;
   -moz-transition: width .3s ease;
-  transition: width .3s ease; }
+  transition: width .3s ease;
+  height: 18px; }
+  @media (min-width: 800px) {
+    .audio__progress--bar {
+      height: 24px; } }
 
 .audio__progress-text--line {
   display: inline-block;
@@ -1259,7 +1357,9 @@ body.mobile .is-now-playing .text-hide-audio__active, body.mobile .is-hover-audi
 /* START 799px */
 @media (max-width: 799px) {
   .header__mobile {
-    display: block !important; } }
+    display: block !important; }
+  .audio__progress--player {
+    display: none !important; } }
 
 /* END 799px */
 /* START 499px */
