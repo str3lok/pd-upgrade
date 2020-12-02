@@ -183,13 +183,55 @@ $('body').on('click', '.format-btn-js', function (e) {
 
 		if($(this).hasClass('is-active')) {
 			$(this).removeClass('is-active');
+			$('.header__mobile').removeClass('is-active');
 		}
 		else {
 			$(this).addClass('is-active');
+			$('.header__mobile').addClass('is-active');
 		}
 	}); 
 
+	// закрыть мобильное меню
+	$('body').on('click', '.header__mobile--close', function (e) {
+		e.preventDefault();
+		$('.mobile-nav-js').removeClass('is-active');
+		$('.header__mobile').removeClass('is-active');
+	}); 	
+
 }); //- end ready
+
+
+// function progress_text_color()
+// {
+
+// 	//получаем ширину progress-bar на данный момент
+// 	var progress_width = $('.audio__progress').outerWidth();
+// 	var progress_bar_width = $('.audio__progress--bar').outerWidth();
+// 	var progress_time_width = $('.audio__progress-time').outerWidth();
+
+// 	(progress_time_width + 31)
+// 	var progress_track_width = $('.audio__progress-track').outerWidth();
+// 	(progress_track_width - 28)
+
+/*
+	//получаем ширину контейнера в котрой находится progress-bar
+	var prWidth = $('.progress__box').width();
+
+	//получаем ширину блока значений (процент, выработанные часы и лимит часов)
+	var prTextWidth = $('.progress-absolute span').width();
+
+	//получаем отступ блока значений от левого края
+	var prMargin = (prWidth-prTextWidth)/2;
+	//если ширина progress-bar больше или равна отступу блоку значений, по делаем вычисления
+	if((prBarWidth !=0) && (prBarWidth>=prMargin)) {
+			//получаем разницу на сколько ширина progress-bar больше отступа от левого края, и на эту разницу закрашиваем белым цветом блок значений
+			var colorW = (prBarWidth-prMargin);
+			$('.progress-absolute span').css({'background':'linear-gradient(90deg, rgba(255,255,255,1) '+ colorW+'px,rgba(0,0,0,1) ' + colorW+'px, rgba(0,0,0,1) '+prTextWidth+'px)'});
+	}
+
+	*/
+
+// }
 
 
 //- выделить всё
