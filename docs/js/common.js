@@ -156,10 +156,13 @@ $('body').on('click', '.format-btn-js', function (e) {
 			}
 
 			$(drop_block).show();
+			setTimeout(function() {
+				$(drop_block).hide();
+			}, 3000);			
 		}
-		else {
-			$(drop_block).hide();
-		}
+		// else {
+		// 	$(drop_block).hide();
+		// }
 	}
 });
 
