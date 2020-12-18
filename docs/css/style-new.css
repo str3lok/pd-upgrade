@@ -162,7 +162,8 @@ table.fixed th:nth-of-type(8) {
   width: 150px; }
 
 table.fixed th:nth-of-type(9) {
-  width: 150px; }
+  width: 150px;
+  max-width: 150px !important; }
 
 table.fixed th:nth-of-type(10) {
   width: 60px; }
@@ -257,6 +258,13 @@ table.fixed th:nth-of-type(16) {
 
 .link-pg-blue--lite {
   color: rgba(45, 92, 170, 0.7) !important; }
+
+.text--dote {
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  max-width: 100%; }
 
 .pg-text--dote {
   white-space: nowrap;
@@ -628,7 +636,8 @@ body:not(.mobile) .pg-artist-tooltip:hover {
     min-width: 45px;
     max-width: 45px; }
   table.fixed th:nth-of-type(9) {
-    width: 120px; }
+    width: 120px;
+    max-width: 120px !important; }
   table.fixed td:nth-of-type(9) {
     width: 120px;
     min-width: 120px;
