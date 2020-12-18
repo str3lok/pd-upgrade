@@ -159,3 +159,32 @@
 
 .mr-5 {
   margin-right: 5px !important; }
+
+.like__btn {
+  height: 30px;
+  width: 14px;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  text-decoration: none;
+  position: relative;
+  opacity: 1;
+  overflow: hidden;
+  display: inline-block; }
+  .like__btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 7px;
+    display: block;
+    width: 12px;
+    height: 11px;
+    background: url("../images/like.png") no-repeat center;
+    -webkit-background-size: 25px 48px !important;
+       -moz-background-size: 25px 48px !important;
+            background-size: 25px 48px !important; }
+  .like__btn.like__btn--plus::before {
+    background-position: 0 0; }
+  .like__btn.like__btn--minus::before {
+    background-position: -14px 0;
+    top: 9px; }
