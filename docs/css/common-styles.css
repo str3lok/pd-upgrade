@@ -179,18 +179,18 @@
     content: "";
     position: absolute;
     left: 0;
-    top: 9px;
+    top: 7px;
     display: block;
-    width: 12px;
-    height: 11px;
+    width: 14px;
+    height: 14px;
     background: url("../images/like.png") no-repeat center;
-    -webkit-background-size: 25px 48px !important;
-       -moz-background-size: 25px 48px !important;
-            background-size: 25px 48px !important; }
+    -webkit-background-size: 31px 59px !important;
+       -moz-background-size: 31px 59px !important;
+            background-size: 31px 59px !important; }
   .like__btn.like__btn--plus::before {
     background-position: 0 0; }
   .like__btn.like__btn--minus::before {
-    background-position: -14px 0;
+    background-position: -17px 0;
     top: 11px; }
 
 .mr-3 {
