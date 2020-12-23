@@ -1407,7 +1407,7 @@ ol, ul {
 body {
   line-height: 1; }
 
-a {
+.popup__content a {
   color: #222; }
 
 .popup-content-pg .popup__close,
