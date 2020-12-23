@@ -232,6 +232,18 @@
 .pg__tr-color__blue--two {
   background: #d2e2f2 !important; }
 
+.color-yellow-1 {
+  background: #fcf2cf !important; }
+
+.color-yellow-2 {
+  background: #fdfaeb !important; }
+
+.color-blue-1 {
+  background: #ecf3fb !important; }
+
+.color-blue-2 {
+  background: #d2e2f2 !important; }
+
 .pg__checkbox-style {
   display: none; }
   .pg__checkbox-style:checked + .pg__label-style::before {
