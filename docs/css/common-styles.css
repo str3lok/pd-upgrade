@@ -179,7 +179,7 @@
     content: "";
     position: absolute;
     left: 0;
-    top: 7px;
+    top: 6px;
     display: block;
     width: 14px;
     height: 14px;
@@ -191,7 +191,7 @@
     background-position: 0 0; }
   .like__btn.like__btn--minus::before {
     background-position: -17px 0;
-    top: 11px; }
+    top: 10px; }
 
 .mr-3 {
   margin-right: 3px !important; }
