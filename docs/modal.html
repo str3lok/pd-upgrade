@@ -80,6 +80,103 @@
 								</div>
 							</div>
 							<div class="modal__test--body">
+								<div class="modal__test-body--weight">
+									<div class="pg__modal-test--weight" id="modalTestWeight">
+										<div class="pg__modal-weight--content">
+											<div class="pg__modal-weight--close"></div>
+											<div class="pg__modal-weight--body">
+												<ul class="popup-pg-list d-flex pg-list-weight--style">
+													<li><a class="popup-pg-btn" href="#">Save</a></li>
+													<li><a class="popup-pg-btn pr-0 pl-0 weight-close-js" href="#">Cancel</a></li>
+												</ul>
+												<form class="popup-pg-form" action="#" method="post">
+													<div class="popup-pg-control d-flex pg-control-weight--style">
+														<div class="d-flex flex-direction-column">
+															<label class="popup-pg-label">Current</label>
+															<input class="popup-pg-input input" type="text" value="1">
+														</div>
+														<div class="d-flex flex-direction-column">
+															<label class="popup-pg-label">Previous</label>
+															<input class="popup-pg-input input" type="text" disabled value="0.9">
+														</div>
+													</div>
+													<div class="popup-pg-control d-flex pg-control-weight--style">
+														<div class="d-flex flex-direction-column">
+															<input class="popup-pg-input input" type="text" value="0.9">
+														</div>
+														<div class="d-flex flex-direction-column">
+															<input class="popup-pg-input input" type="text" disabled value="0">
+														</div>
+													</div>
+													<div class="popup-pg-control d-flex pg-control-weight--style">
+														<div class="d-flex flex-direction-column">
+															<input class="popup-pg-input input" type="text" value="0.8">
+														</div>
+														<div class="d-flex flex-direction-column">
+															<input class="popup-pg-input input" type="text" disabled value="0.1">
+														</div>
+													</div>
+													<div class="popup-pg-control d-flex pg-control-weight--style">
+														<div class="d-flex flex-direction-column">
+															<input class="popup-pg-input input" type="text" value="0.7">
+														</div>
+														<div class="d-flex flex-direction-column">
+															<input class="popup-pg-input input" type="text" disabled value="0.2">
+														</div>
+													</div>
+													<div class="popup-pg-control d-flex pg-control-weight--style">
+														<div class="d-flex flex-direction-column">
+															<input class="popup-pg-input input" type="text" value="0.6">
+														</div>
+														<div class="d-flex flex-direction-column">
+															<input class="popup-pg-input input" type="text" disabled value="0.3">
+														</div>
+													</div>
+													<div class="popup-pg-control d-flex pg-control-weight--style">
+														<div class="d-flex flex-direction-column">
+															<input class="popup-pg-input input" type="text" value="0.5">
+														</div>
+														<div class="d-flex flex-direction-column">
+															<input class="popup-pg-input input" type="text" disabled value="0.4">
+														</div>
+													</div>
+													<div class="popup-pg-control d-flex pg-control-weight--style">
+														<div class="d-flex flex-direction-column">
+															<input class="popup-pg-input input" type="text" value="0.4">
+														</div>
+														<div class="d-flex flex-direction-column">
+															<input class="popup-pg-input input" type="text" disabled value="0.5">
+														</div>
+													</div>
+													<div class="popup-pg-control d-flex pg-control-weight--style">
+														<div class="d-flex flex-direction-column">
+															<input class="popup-pg-input input" type="text" value="0.3">
+														</div>
+														<div class="d-flex flex-direction-column">
+															<input class="popup-pg-input input" type="text" disabled value="0.6">
+														</div>
+													</div>
+													<div class="popup-pg-control d-flex pg-control-weight--style">
+														<div class="d-flex flex-direction-column">
+															<input class="popup-pg-input input" type="text" value="0.2">
+														</div>
+														<div class="d-flex flex-direction-column">
+															<input class="popup-pg-input input" type="text" disabled value="0.7">
+														</div>
+													</div>
+													<div class="popup-pg-control d-flex pg-control-weight--style">
+														<div class="d-flex flex-direction-column">
+															<input class="popup-pg-input input" type="text" value="0.1">
+														</div>
+														<div class="d-flex flex-direction-column">
+															<input class="popup-pg-input input" type="text" disabled value="0.8">
+														</div>
+													</div>
+												</form>
+											</div>
+										</div>
+									</div>
+								</div>
 								<ul class="modal__test--table">
 									<li class="modal__test-table--th">
 										<div class="td_w-30 flex-justify-center">
@@ -90,7 +187,7 @@
 										<div class="td_w-120 font-size--12">Factor/Add New</div>
 										<div class="td_w-150 font-size--12">Formula/Add New</div>
 										<div class="td_w-75 font-size--12">Points</div>
-										<div class="td_w-75 font-size--12 td-state-js" href="#modalTestWeight">Weight</div>
+										<div class="td_w-75 font-size--12 td-weight-js" data-modal="#modalTestWeight">Weight</div>
 										<div class="td_w-60 table-color--orange2 font-size--14">9.677</div>
 									</li>
 									<li class="modal__test-table--td">
@@ -102,7 +199,7 @@
 										<div class="td_w-120 font-size--12">Curator Vote</div>
 										<div class="td_w-150 pr-0 pl-0 font-size--10 pg-text-nowrap">—</div>
 										<div class="td_w-75 table-color--blue">0</div>
-										<div class="td_w-75 td-state-js" href="#modalTestWeight">1</div>
+										<div class="td_w-75 td-weight-js" data-modal="#modalTestWeight">1</div>
 										<div class="td_w-60 table-color--blue">0</div>
 									</li>
 									<li class="modal__test-table--td">
@@ -117,7 +214,7 @@
 										<div class="td_w-120 font-size--12">Radio Votes</div>
 										<div class="td_w-150 pr-0 pl-0 font-size--10 pg-text-nowrap">V₁ = 5*(P – n₁… – n𝐦)/Q +5</div>
 										<div class="td_w-75 table-color--orange2">7.1</div>
-										<div class="td_w-75 td-state-js" href="#modalTestWeight">0.9</div>
+										<div class="td_w-75 td-weight-js" data-modal="#modalTestWeight">0.9</div>
 										<div class="td_w-60 table-color--orange2">6.39</div>
 									</li>
 									<li class="modal__test-table--td">
@@ -131,7 +228,7 @@
 										<div class="td_w-120 font-size--12">Radio Airs</div>
 										<div class="td_w-150 pr-0 pl-0 font-size--10 pg-text-nowrap">F₂ = lg(Radio Airs)</div>
 										<div class="td_w-75 table-color--orange2">6.47</div>
-										<div class="td_w-75 td-state-js" href="#modalTestWeight">0.4</div>
+										<div class="td_w-75 td-weight-js" data-modal="#modalTestWeight">0.4</div>
 										<div class="td_w-60 table-color--orange2">2.588</div>
 									</li>
 									<li class="modal__test-table--td">
@@ -145,7 +242,7 @@
 										<div class="td_w-120 font-size--12">YT Streams</div>
 										<div class="td_w-150 pr-0 pl-0 font-size--10 pg-text-nowrap">F₂ = lg(YT Streams)</div>
 										<div class="td_w-75 table-color--blue">0</div>
-										<div class="td_w-75 td-state-js" href="#modalTestWeight">0.2</div>
+										<div class="td_w-75 td-weight-js" data-modal="#modalTestWeight">0.2</div>
 										<div class="td_w-60 table-color--blue">0</div>
 									</li>
 									<li class="modal__test-table--td">
@@ -159,7 +256,7 @@
 										<div class="td_w-120 font-size--12">TopHit Votes</div>
 										<div class="td_w-150 pr-0 pl-0 font-size--10 pg-text-nowrap">V₂ = 5*(P – N)/Q +5</div>
 										<div class="td_w-75 table-color--blue">0</div>
-										<div class="td_w-75 td-state-js" href="#modalTestWeight">0.2</div>
+										<div class="td_w-75 td-weight-js" data-modal="#modalTestWeight">0.2</div>
 										<div class="td_w-60 table-color--blue">0</div>
 									</li>
 									<li class="modal__test-table--td">
@@ -173,7 +270,7 @@
 										<div class="td_w-120 font-size--12">TopHit Streams</div>
 										<div class="td_w-150 pr-0 pl-0 font-size--10 pg-text-nowrap">F₁ = ln(TopHit Streams)</div>
 										<div class="td_w-75 table-color--blue">0</div>
-										<div class="td_w-75 td-state-js" href="#modalTestWeight">0.1</div>
+										<div class="td_w-75 td-weight-js" data-modal="#modalTestWeight">0.1</div>
 										<div class="td_w-60 table-color--blue">0</div>
 									</li>
 									<li class="modal__test-table--td">
@@ -187,7 +284,7 @@
 										<div class="td_w-120 font-size--12">Radio Downlds</div>
 										<div class="td_w-150 pr-0 pl-0 font-size--10 pg-text-nowrap">F₁ = ln(Radio Downloads)</div>
 										<div class="td_w-75 table-color--orange2">4.99</div>
-										<div class="td_w-75 td-state-js" href="#modalTestWeight">0.1</div>
+										<div class="td_w-75 td-weight-js" data-modal="#modalTestWeight">0.1</div>
 										<div class="td_w-60 table-color--orange2">0.499</div>
 									</li>
 									<li class="modal__test-table--td">
@@ -202,7 +299,7 @@
 										<div class="td_w-120 font-size--12">Label Votes</div>
 										<div class="td_w-150 pr-0 pl-0 font-size--10 pg-text-nowrap">V₂ = 5*(P – N)/Q +5</div>
 										<div class="td_w-75 table-color--orange2">4</div>
-										<div class="td_w-75 td-state-js" href="#modalTestWeight">0.05</div>
+										<div class="td_w-75 td-weight-js" data-modal="#modalTestWeight">0.05</div>
 										<div class="td_w-60 table-color--orange2">0.2</div>
 									</li>
 									<li class="modal__test-table--td">
@@ -216,7 +313,7 @@
 										<div class="td_w-120 font-size--12">Fan Votes</div>
 										<div class="td_w-150 pr-0 pl-0 font-size--10 pg-text-nowrap">V₂ = 5*(P – N)/Q +5</div>
 										<div class="td_w-75 table-color--blue">0</div>
-										<div class="td_w-75 td-state-js" href="#modalTestWeight">0.05</div>
+										<div class="td_w-75 td-weight-js" data-modal="#modalTestWeight">0.05</div>
 										<div class="td_w-60 table-color--blue">0</div>
 									</li>
 									<li class="modal__test-table--td">
@@ -230,7 +327,7 @@
 										<div class="td_w-120 font-size--12">Donates</div>
 										<div class="td_w-150 pr-0 pl-0 font-size--10 pg-text-nowrap">F₁ = ln(Donates)</div>
 										<div class="td_w-75 table-color--blue">0</div>
-										<div class="td_w-75 td-state-js" href="#modalTestWeight">0.1</div>
+										<div class="td_w-75 td-weight-js" data-modal="#modalTestWeight">0.1</div>
 										<div class="td_w-60 table-color--blue">0</div>
 									</li>
 								</ul>
@@ -628,122 +725,6 @@
 					</div>
 				</div>
 			</div>
-			<div class="popup__container popup__container-second popup-container-pg pg__modal-test--weight" id="modalTestWeight">
-				<div class="popup__overflow">
-					<div class="popup__overflow-close-second"></div>
-					<div class="popup__content pb-0 popup-content-pg" tabindex="1">
-						<div class="popup__close-second"></div>
-						<div class="modal__test--content mb-0">
-							<ul class="popup-pg-list d-flex pg-list-weight--style">
-								<li><a class="popup-pg-btn" href="#">Save</a></li>
-								<li><a class="popup-pg-btn" href="#">Cancel</a></li>
-							</ul>
-							<form class="popup-pg-form" action="#" method="post">
-								<div class="popup-pg-control d-flex pg-control-weight--style">
-									<div class="d-flex flex-direction-column">
-										<label class="popup-pg-label">Current</label>
-										<input class="popup-pg-input input" type="text" value="1">
-									</div>
-									<div class="d-flex flex-direction-column">
-										<label class="popup-pg-label">Previous</label>
-										<input class="popup-pg-input input" type="text" disabled value="0.9">
-									</div>
-								</div>
-								<div class="popup-pg-control d-flex pg-control-weight--style">
-									<div class="d-flex flex-direction-column">
-										<label class="popup-pg-label">Current</label>
-										<input class="popup-pg-input input" type="text" value="0.9">
-									</div>
-									<div class="d-flex flex-direction-column">
-										<label class="popup-pg-label">Previous</label>
-										<input class="popup-pg-input input" type="text" disabled value="0">
-									</div>
-								</div>
-								<div class="popup-pg-control d-flex pg-control-weight--style">
-									<div class="d-flex flex-direction-column">
-										<label class="popup-pg-label">Current</label>
-										<input class="popup-pg-input input" type="text" value="0.8">
-									</div>
-									<div class="d-flex flex-direction-column">
-										<label class="popup-pg-label">Previous</label>
-										<input class="popup-pg-input input" type="text" disabled value="0.1">
-									</div>
-								</div>
-								<div class="popup-pg-control d-flex pg-control-weight--style">
-									<div class="d-flex flex-direction-column">
-										<label class="popup-pg-label">Current</label>
-										<input class="popup-pg-input input" type="text" value="0.7">
-									</div>
-									<div class="d-flex flex-direction-column">
-										<label class="popup-pg-label">Previous</label>
-										<input class="popup-pg-input input" type="text" disabled value="0.2">
-									</div>
-								</div>
-								<div class="popup-pg-control d-flex pg-control-weight--style">
-									<div class="d-flex flex-direction-column">
-										<label class="popup-pg-label">Current</label>
-										<input class="popup-pg-input input" type="text" value="0.6">
-									</div>
-									<div class="d-flex flex-direction-column">
-										<label class="popup-pg-label">Previous</label>
-										<input class="popup-pg-input input" type="text" disabled value="0.3">
-									</div>
-								</div>
-								<div class="popup-pg-control d-flex pg-control-weight--style">
-									<div class="d-flex flex-direction-column">
-										<label class="popup-pg-label">Current</label>
-										<input class="popup-pg-input input" type="text" value="0.5">
-									</div>
-									<div class="d-flex flex-direction-column">
-										<label class="popup-pg-label">Previous</label>
-										<input class="popup-pg-input input" type="text" disabled value="0.4">
-									</div>
-								</div>
-								<div class="popup-pg-control d-flex pg-control-weight--style">
-									<div class="d-flex flex-direction-column">
-										<label class="popup-pg-label">Current</label>
-										<input class="popup-pg-input input" type="text" value="0.4">
-									</div>
-									<div class="d-flex flex-direction-column">
-										<label class="popup-pg-label">Previous</label>
-										<input class="popup-pg-input input" type="text" disabled value="0.5">
-									</div>
-								</div>
-								<div class="popup-pg-control d-flex pg-control-weight--style">
-									<div class="d-flex flex-direction-column">
-										<label class="popup-pg-label">Current</label>
-										<input class="popup-pg-input input" type="text" value="0.3">
-									</div>
-									<div class="d-flex flex-direction-column">
-										<label class="popup-pg-label">Previous</label>
-										<input class="popup-pg-input input" type="text" disabled value="0.6">
-									</div>
-								</div>
-								<div class="popup-pg-control d-flex pg-control-weight--style">
-									<div class="d-flex flex-direction-column">
-										<label class="popup-pg-label">Current</label>
-										<input class="popup-pg-input input" type="text" value="0.2">
-									</div>
-									<div class="d-flex flex-direction-column">
-										<label class="popup-pg-label">Previous</label>
-										<input class="popup-pg-input input" type="text" disabled value="0.7">
-									</div>
-								</div>
-								<div class="popup-pg-control d-flex pg-control-weight--style">
-									<div class="d-flex flex-direction-column">
-										<label class="popup-pg-label">Current</label>
-										<input class="popup-pg-input input" type="text" value="0.1">
-									</div>
-									<div class="d-flex flex-direction-column">
-										<label class="popup-pg-label">Previous</label>
-										<input class="popup-pg-input input" type="text" disabled value="0.8">
-									</div>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
 		</div>
 		<script src="assets/build_new/ru.playground_js-a97e9869a33174daf055.js"></script>
 		<script type="text/javascript" src="assets/build_new/inputmask/jquery.inputmask.bundle.min.js"></script>
@@ -778,10 +759,18 @@
 					$('body').removeClass('bodyFix');
 				});
 			});
-				// закрыть 2 модалку
-				$('body').on('click', '.popup__close-second, .popup__overflow-close-second', function (e) {
+				// открыть weight модалку
+			$('body').on('click', '.td-weight-js', function (e) {
+				e.preventDefault();
+				var modalId = $(this).attr('data-modal');
+				$(modalId).fadeIn();
+			});		
+			
+			
+				// закрыть weight модалку
+				$('body').on('click', '.pg__modal-weight--close, .weight-close-js', function (e) {
 					e.preventDefault();
-					$('.popup__container-second').fadeOut();
+					$('.pg__modal-test--weight').fadeOut();
 				});
 			}); //jQuery end
 		</script>

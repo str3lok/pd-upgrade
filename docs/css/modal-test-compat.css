@@ -1407,6 +1407,9 @@ ol, ul {
 body {
   line-height: 1; }
 
+.position-relative {
+  position: relative !important; }
+
 .popup__content a {
   color: #222; }
 
