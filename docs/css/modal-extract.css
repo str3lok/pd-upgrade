@@ -518,8 +518,8 @@ table.fixed th {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
-  height: 50px !important;
-  max-height: 50px !important;
+  height: 35px !important;
+  max-height: 35px !important;
   text-align: left;
   overflow: hidden;
   padding: 0;
