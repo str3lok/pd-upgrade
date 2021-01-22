@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="description" content="Админская">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://playground.tophit.ru/">
+		<meta property="og:locale" content="ru_RU">
+		<meta property="og:title" content="Админская">
+		<meta property="og:description" content="Админская">
+		<meta property="og:image" content="">
+		<meta property="og:image:type" content="image/png">
+		<meta property="og:image:width" content="1080">
+		<meta property="og:image:height" content="1080">
+		<meta property="og:image:alt" content="Админская">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="Админская">
+		<meta name="twitter:description" content="Админская">
+		<meta name="twitter:image" content="">
+		<title>Админская</title>
+		<link rel="stylesheet" type="text/css" href="assets/build_new/playground_styles.css">
+		<link rel="stylesheet" type="text/css" href="assets/build_new/custom_styles.css">
+		<link rel="stylesheet" type="text/css" href="css/modal-accrual.css">
+		<link rel="shortcut icon" href="tophit.ico">
+		<link rel="stylesheet" href="css/jquery.fancybox.min.css">
+		<style type="text/css">
+			.icon_flag {
+				background-image: url(assets/build_new/ae33acae404631e997ef8d91dae08ccd.png);
+			}
+		</style>
+	</head>
+	<body class="page pg__upgrade--page">
+		<div class="users_section_area wrapper__upgrade">
+			<div style="width: 100%; text-align: center;"><br><a class="td-state-js" href="#modalAccrual">Попап Начисление</a></div>
+			<div class="popup__container popup-container-pg pg__modal-accrual" id="modalAccrual">
+				<div class="popup__overflow">
+					<div class="popup__overflow-close"></div>
+					<div class="popup__content pb-0 popup-content-pg" tabindex="1">
+						<div class="popup__close"></div>
+						<form class="modal__accrual--content" action="#" method="post">
+							<div class="modal__accrual--header d-flex flex-justify-space-between">
+								<div class="popup-pg-control control-accrual-120 d-flex flex-direction-column">
+									<label class="popup-pg-label flex-grow flex-align-end d-flex font-size--12"> Лейбл / Артист</label>
+									<input class="popup-pg-input input" type="text">
+								</div>
+								<div class="popup-pg-control control-accrual-90 d-flex flex-direction-column">
+									<label class="popup-pg-label flex-grow flex-align-end d-flex font-size--12"> Balance</label>
+									<input class="popup-pg-input input text-center" type="text">
+								</div>
+							</div>
+							<div class="modal__accrual--header d-flex flex-justify-space-between">
+								<div class="popup-pg-control control-accrual-90 d-flex d-flex flex-direction-column">
+									<label class="popup-pg-label flex-grow font-size--12"></label><a class="popup-pg-btn" href="#">Начислить</a>
+								</div>
+								<div class="popup-pg-control control-accrual-90 d-flex flex-direction-column">
+									<label class="popup-pg-label flex-grow font-size--12"></label><a class="popup-pg-btn" href="#">Cancel</a>
+								</div>
+							</div>
+							<div class="modal__accrual--header d-flex flex-justify-space-between">
+								<div class="popup-pg-control control-accrual-60 d-flex flex-direction-column">
+									<label class="popup-pg-label flex-grow flex-align-end d-flex font-size--12 flex-justify-end"> Amount</label>
+									<input class="popup-pg-input input text-right" type="text">
+								</div>
+								<div class="popup-pg-control control-accrual-90 d-flex flex-direction-column">
+									<label class="popup-pg-label flex-grow flex-align-end d-flex font-size--12"></label>
+									<select class="filter_form_select popup-pg-select" name="filter[Payment]">
+										<option value="Bank Trsf">Bank Trsf</option>
+										<option value="Cash">Cash</option>
+										<option value="Donate">Donate</option>
+									</select>
+								</div>
+								<div class="popup-pg-control control-accrual-60 d-flex flex-direction-column">
+									<label class="popup-pg-label flex-grow flex-align-end d-flex font-size--12"> Admin</label>
+									<input class="popup-pg-input input text-center" type="text">
+								</div>
+							</div>
+							<div class="modal__accrual--header d-flex">
+								<div class="popup-pg-control flex-grow d-flex flex-direction-column mb-0">
+									<label class="popup-pg-label flex-grow flex-align-end d-flex font-size--12"> Comment</label>
+									<textarea class="popup-pg-input input accrual-comment"></textarea>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="assets/build_new/ru.playground_js-a97e9869a33174daf055.js"></script>
+		<script type="text/javascript" src="assets/build_new/inputmask/jquery.inputmask.bundle.min.js"></script>
+		<script type="text/javascript" src="assets/build_new/inputmask/jquery.inputmask-multi.min.js"></script>
+		<script type="text/javascript" src="assets/build_new/clipboard.js?v2"></script>
+		<script type="text/javascript" src="assets/build_new/jquery.scrollTo.js"></script>
+		<script type="text/javascript" src="assets/build_new/fileinput/js/fileinput.min.js"></script>
+		<script type="text/javascript" src="assets/build_new/select2.min.js"></script>
+		<script type="text/javascript">
+			var countriesList = { "WW": "220", "AU": "218", "AT": "217", "AZ": "216", "AI": "215", "AR": "214", "AM": "213", "BY": "212", "BZ": "211", "BE": "210", "BM": "209", "BG": "208", "BR": "207", "GB": "206", "HU": "205", "VN": "204", "HT": "203", "GP": "202", "DE": "201", "NL": "200", "GR": "199", "GE": "198", "DK": "197", "EG": "196", "IL": "195", "IN": "194", "IR": "193", "IE": "192", "ES": "191", "IT": "190", "KZ": "189", "CM": "188", "CA": "187", "CY": "186", "KG": "185", "CN": "184", "CR": "183", "KW": "182", "LV": "181", "LT": "179", "LU": "178", "MX": "177", "MD": "176", "MC": "175", "NZ": "174", "NO": "173", "PL": "172", "PT": "171", "RE": "170", "RU": "169", "SV": "168", "SK": "167", "SI": "166", "SR": "165", "US": "164", "TJ": "163", "TM": "162", "TC": "161", "TR": "160", "UG": "159", "UZ": "158", "UA": "157", "FI": "156", "FR": "155", "CZ": "154", "CH": "153", "SE": "152", "EE": "151", "JP": "149", "HR": "148", "RO": "147", "HK": "146", "ID": "145", "JO": "144", "MY": "143", "SG": "142", "TW": "141", "BA": "140", "BS": "139", "CL": "138", "CO": "137", "IS": "136", "KR": "135", "MK": "134", "MT": "133", "PK": "132", "PG": "131", "PE": "130", "PH": "129", "SA": "128", "TH": "127", "AE": "126", "GL": "125", "VE": "124", "ZW": "123", "KE": "122", "DZ": "121", "LB": "120", "BW": "119", "TZ": "118", "NA": "117", "EC": "116", "MA": "115", "GH": "114", "SY": "113", "NP": "112", "MR": "111", "SC": "110", "PY": "109", "UY": "108", "CU": "106", "AL": "105", "NG": "104", "ZM": "103", "MZ": "102", "AO": "101", "LK": "100", "ET": "99", "TN": "98", "BO": "97", "PA": "96", "MW": "95", "LI": "94", "BH": "93", "BB": "92", "TD": "91", "IM": "90", "JM": "89", "ML": "88", "MG": "87", "SN": "86", "TG": "85", "HN": "84", "DO": "83", "MN": "82", "IQ": "81", "ZA": "80", "GI": "78", "AF": "77", "AD": "76", "AG": "75", "BD": "74", "BJ": "73", "BT": "72", "VG": "71", "BN": "70", "BF": "69", "BI": "68", "KH": "67", "CV": "66", "KM": "65", "CK": "63", "CI": "62", "GQ": "59", "ER": "58", "FJ": "56", "GF": "55", "PF": "54", "GA": "53", "GM": "52", "GD": "51", "GT": "50", "GG": "49", "GN": "48", "GW": "47", "GY": "46", "JE": "45", "KI": "44", "LA": "43", "LS": "42", "LR": "41", "MV": "40", "MQ": "39", "MU": "38", "MM": "37", "AN": "35", "NC": "34", "NI": "33", "NE": "32", "OM": "30", "PN": "29", "QA": "28", "RW": "27", "SH": "26", "KN": "25", "LC": "24", "PM": "23", "VC": "22", "WS": "21", "SM": "20", "ST": "19", "RS": "18", "SL": "17", "SB": "16", "SO": "15", "SD": "14", "SZ": "13", "TK": "12", "TT": "10", "TV": "9", "VU": "8", "WF": "7", "YE": "5", "PR": "4", "ME": "3" },
+			fileGateHost = 'https://f.tophit.ru/';
+		</script>
+		<script src="assets/build_new/custom.js?1600378719"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function ($) {
+			function isMobile() {
+				try { document.createEvent("TouchEvent"); return true; }
+				catch (e) { return false; }
+			}
+			//- открыть модалку
+			$('body').on('click', '.td-state-js', function (e) {
+			e.preventDefault();
+			var modalId = $(this).attr('href');
+			$(modalId).fadeIn();
+			$('body').addClass('bodyFix');
+			return false;
+			});
+			// закрыть модалку
+			$('body').on('click', '.popup__close, .popup__overflow-close', function (e) {
+				e.preventDefault();
+				$('.popup__container').fadeOut('slow', function () {
+					$('body').removeClass('bodyFix');
+				});
+			});
+			$('.accrual-comment').on('input', function(e) {
+				this.style.height = '1px';
+				this.style.height = (this.scrollHeight + 2) + 'px'; 
+			});
+			
+			}); //jQuery end
+		</script>
+	</body>
+</html>
