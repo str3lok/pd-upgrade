@@ -22,7 +22,7 @@
 		<title>Админская</title>
 		<link rel="stylesheet" type="text/css" href="assets/build_new/playground_styles.css">
 		<link rel="stylesheet" type="text/css" href="assets/build_new/custom_styles.css">
-		<link rel="stylesheet" type="text/css" href="css/modal-accrual.css">
+		<link rel="stylesheet" type="text/css" href="css/modal-write-off.css">
 		<link rel="shortcut icon" href="tophit.ico">
 		<link rel="stylesheet" href="css/jquery.fancybox.min.css">
 		<style type="text/css">
@@ -33,53 +33,45 @@
 	</head>
 	<body class="page pg__upgrade--page">
 		<div class="users_section_area wrapper__upgrade">
-			<div style="width: 100%; text-align: center;"><br><a class="td-state-js" href="#modalAccrual">Попап Начисление</a></div>
-			<div class="popup__container popup-container-pg pg__modal-accrual" id="modalAccrual">
+			<div style="width: 100%; text-align: center;"><br><a class="td-state-js" href="#modalWriteOff">Попап Списание</a></div>
+			<div class="popup__container popup-container-pg pg__modal-write-off" id="modalWriteOff">
 				<div class="popup__overflow">
 					<div class="popup__overflow-close"></div>
 					<div class="popup__content pb-0 popup-content-pg" tabindex="1">
 						<div class="popup__close"></div>
-						<form class="modal__accrual--content" action="#" method="post">
-							<div class="modal__accrual--header d-flex flex-justify-space-between">
-								<div class="popup-pg-control control-accrual-120 d-flex flex-direction-column">
+						<form class="modal__write-off--content" action="#" method="post">
+							<div class="modal__write-off--header d-flex flex-justify-space-between">
+								<div class="popup-pg-control control-write-off-120 d-flex flex-direction-column">
 									<label class="popup-pg-label flex-grow flex-align-end d-flex font-size--12"> Лейбл / Артист</label>
 									<input class="popup-pg-input input" type="text">
 								</div>
-								<div class="popup-pg-control control-accrual-90 d-flex flex-direction-column">
+								<div class="popup-pg-control control-write-off-90 d-flex flex-direction-column">
 									<label class="popup-pg-label flex-grow flex-align-end d-flex font-size--12"> Balance</label>
 									<input class="popup-pg-input input text-center" type="text">
 								</div>
 							</div>
-							<div class="modal__accrual--header d-flex flex-justify-space-between">
-								<div class="popup-pg-control control-accrual-90 d-flex d-flex flex-direction-column">
-									<label class="popup-pg-label flex-grow font-size--12"></label><a class="popup-pg-btn" href="#">Начислить</a>
+							<div class="modal__write-off--header d-flex flex-justify-space-between">
+								<div class="popup-pg-control control-write-off-90 d-flex d-flex flex-direction-column">
+									<label class="popup-pg-label flex-grow font-size--12"></label><a class="popup-pg-btn" href="#">Списать</a>
 								</div>
-								<div class="popup-pg-control control-accrual-90 d-flex flex-direction-column">
+								<div class="popup-pg-control control-write-off-90 d-flex flex-direction-column">
 									<label class="popup-pg-label flex-grow font-size--12"></label><a class="popup-pg-btn" href="#">Cancel</a>
 								</div>
 							</div>
-							<div class="modal__accrual--header d-flex flex-justify-space-between">
-								<div class="popup-pg-control control-accrual-60 d-flex flex-direction-column">
+							<div class="modal__write-off--header d-flex flex-justify-space-between">
+								<div class="popup-pg-control control-write-off-90 d-flex flex-direction-column">
 									<label class="popup-pg-label flex-grow flex-align-end d-flex font-size--12"> Amount</label>
 									<input class="popup-pg-input input text-right" type="text">
 								</div>
-								<div class="popup-pg-control control-accrual-90 d-flex flex-direction-column">
-									<label class="popup-pg-label flex-grow flex-align-end d-flex font-size--12"></label>
-									<select class="filter_form_select popup-pg-select" name="filter[Payment]">
-										<option value="Bank Trsf">Bank Trsf</option>
-										<option value="Cash">Cash</option>
-										<option value="Donate">Donate</option>
-									</select>
-								</div>
-								<div class="popup-pg-control control-accrual-60 d-flex flex-direction-column">
+								<div class="popup-pg-control control-write-off-60 d-flex flex-direction-column">
 									<label class="popup-pg-label flex-grow flex-align-end d-flex font-size--12"> Admin</label>
 									<input class="popup-pg-input input text-center" type="text">
 								</div>
 							</div>
-							<div class="modal__accrual--header d-flex">
+							<div class="modal__write-off--header d-flex">
 								<div class="popup-pg-control flex-grow d-flex flex-direction-column mb-0">
 									<label class="popup-pg-label flex-grow flex-align-end d-flex font-size--12"> Comment</label>
-									<textarea class="popup-pg-input input accrual-comment font-size--10"></textarea>
+									<textarea class="popup-pg-input input write-off-comment font-size--10"></textarea>
 								</div>
 							</div>
 						</form>
@@ -120,7 +112,7 @@
 					$('body').removeClass('bodyFix');
 				});
 			});
-			$('.accrual-comment').on('input', function(e) {
+			$('.write-off-comment').on('input', function(e) {
 				this.style.height = '1px';
 				this.style.height = (this.scrollHeight + 2) + 'px'; 
 			});
