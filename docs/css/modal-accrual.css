@@ -273,7 +273,8 @@ table.fixed th {
 	*/ }
   .pg__modal-accrual .popup__content {
     width: 240px;
-    min-width: 240px; }
+    min-width: 240px;
+    max-width: 240px; }
   .pg__modal-accrual .modal__accrual-track--left {
     width: auto; }
   @media (max-width: 339px) {
