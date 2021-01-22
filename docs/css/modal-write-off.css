@@ -250,7 +250,7 @@ table.fixed th {
 .pg-weight-bold {
   font-family: "ConsolasBold" !important; }
 
-.pg__modal-accrual {
+.pg__modal-write-off {
   /*
 		@media (max-width: 669px) {
 			.popup__content {
@@ -263,22 +263,22 @@ table.fixed th {
 				max-width: 100% !important;
 		}	
 
-		.modal__accrual--content {
+		.modal__write-off--content {
 			overflow-x: auto;
 		}		
-		.modal__accrual--body {
+		.modal__write-off--body {
 			width: 630px;
 		}
 	}	
 	*/ }
-  .pg__modal-accrual .popup__content {
+  .pg__modal-write-off .popup__content {
     width: 240px;
     min-width: 240px;
     max-width: 240px; }
-  .pg__modal-accrual .modal__accrual-track--left {
+  .pg__modal-write-off .modal__write-off-track--left {
     width: auto; }
   @media (max-width: 339px) {
-    .pg__modal-accrual .popup__content {
+    .pg__modal-write-off .popup__content {
       position: fixed;
       top: 0;
       left: 0;
@@ -286,12 +286,12 @@ table.fixed th {
       margin-left: 0 !important;
       min-width: 1px;
       max-width: 100% !important; }
-    .pg__modal-accrual .modal__accrual--content {
+    .pg__modal-write-off .modal__write-off--content {
       overflow-x: auto; }
-    .pg__modal-accrual .modal__accrual--body {
+    .pg__modal-write-off .modal__write-off--body {
       width: 300px; } }
 
-.modal__accrual-body--weight {
+.modal__write-off-body--weight {
   display: block;
   width: 100%;
   position: relative;
@@ -299,19 +299,19 @@ table.fixed th {
      -moz-box-sizing: border-box;
           box-sizing: border-box; }
 
-.pg__modal-accrual--weight {
+.pg__modal-write-off--weight {
   display: none;
   top: -40px;
   left: 495px;
   z-index: 15;
   position: absolute; }
-  .pg__modal-accrual--weight div, .pg__modal-accrual--weight ul, .pg__modal-accrual--weight li, .pg__modal-accrual--weight span, .pg__modal-accrual--weight a {
+  .pg__modal-write-off--weight div, .pg__modal-write-off--weight ul, .pg__modal-write-off--weight li, .pg__modal-write-off--weight span, .pg__modal-write-off--weight a {
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box; }
-  .pg__modal-accrual--weight .popup-pg-control {
+  .pg__modal-write-off--weight .popup-pg-control {
     margin-bottom: 5px; }
-  .pg__modal-accrual--weight .popup-pg-form {
+  .pg__modal-write-off--weight .popup-pg-form {
     margin-bottom: 0; }
 
 .pg__modal-weight--content {
@@ -389,19 +389,19 @@ table.fixed th {
 .text-right {
   text-align: right !important; }
 
-.control-accrual-60 {
+.control-write-off-60 {
   -webkit-flex-shrink: 0;
       -ms-flex-negative: 0;
           flex-shrink: 0;
   width: 60px; }
 
-.control-accrual-90 {
+.control-write-off-90 {
   -webkit-flex-shrink: 0;
       -ms-flex-negative: 0;
           flex-shrink: 0;
   width: 90px; }
 
-.control-accrual-120 {
+.control-write-off-120 {
   -webkit-flex-shrink: 0;
       -ms-flex-negative: 0;
           flex-shrink: 0;
@@ -424,22 +424,22 @@ textarea.popup-pg-input {
   .pg-control-weight--style > div:first-child {
     margin-right: 10px; }
 
-.pg__modal-accrual .popup__content {
+.pg__modal-write-off .popup__content {
   padding-right: 10px;
   padding-left: 10px; }
 
-.pg__modal-accrual div, .pg__modal-accrual ul, .pg__modal-accrual li, .pg__modal-accrual span, .pg__modal-accrual a {
+.pg__modal-write-off div, .pg__modal-write-off ul, .pg__modal-write-off li, .pg__modal-write-off span, .pg__modal-write-off a {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box; }
 
-.modal__accrual--content {
+.modal__write-off--content {
   display: block;
   width: 100%;
   float: left;
   margin-bottom: 20px; }
 
-.modal__accrual-track--left {
+.modal__write-off-track--left {
   width: 120px;
   -webkit-flex-shrink: 0;
       -ms-flex-negative: 0;
