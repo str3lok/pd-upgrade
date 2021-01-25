@@ -168,7 +168,14 @@
   margin-right: 5px !important; }
 
 .input_height--20 {
-  height: 20px; }
+  height: 20px;
+  line-height: 20px; }
+
+.input {
+  font-family: 'Consolas'; }
+
+.pr-1 {
+  padding-right: 1px !important; }
 
 .mr-3 {
   margin-right: 3px !important; }
