@@ -497,6 +497,9 @@ table.fixed th {
             flex-shrink: 0;
     width: 340px; }
 
+.td_bg--white {
+  background: #fff !important; }
+
 .modal__extract-table--th {
   font-family: "ConsolasBold";
   -webkit-box-sizing: border-box;
