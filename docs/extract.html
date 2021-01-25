@@ -45,19 +45,27 @@
 									<label class="popup-pg-label flex-grow flex-align-end d-flex font-size--12"> Лейбл / Артист</label>
 									<input class="popup-pg-input input" type="text">
 								</div>
-								<div class="popup-pg-control control-extract-90 d-flex flex-direction-column">
-									<label class="popup-pg-label flex-grow flex-align-end d-flex font-size--12"> Balance</label>
-									<input class="popup-pg-input input text-center pg-input-balance" type="text">
-								</div>
-								<div class="popup-pg-control control-extract-60 d-flex flex-direction-column">
-									<label class="popup-pg-label flex-grow flex-align-end d-flex font-size--12"> Admin</label>
-									<input class="popup-pg-input input text-center flex-direction-column" type="text">
-								</div>
 								<div class="popup-pg-control control-extract-90 d-flex d-flex flex-direction-column">
 									<label class="popup-pg-label flex-grow font-size--12"></label><a class="popup-pg-btn" href="#">Списать</a>
 								</div>
 								<div class="popup-pg-control control-extract-90 d-flex flex-direction-column">
 									<label class="popup-pg-label flex-grow font-size--12"></label><a class="popup-pg-btn" href="#">Начислить</a>
+								</div>
+								<div class="popup-pg-control control-extract-90 d-flex flex-direction-column">
+									<label class="popup-pg-label flex-grow flex-align-end d-flex font-size--12">Transaction</label>
+									<select class="filter_form_select popup-pg-select" name="filter[transaction]">
+										<option value="all">All</option>
+										<option value="Deposit">Deposit</option>
+										<option value="Charge">Charge</option>
+									</select>
+								</div>
+								<div class="popup-pg-control control-extract-90 d-flex flex-direction-column">
+									<label class="popup-pg-label flex-grow flex-align-end d-flex font-size--12">Payment Kind</label>
+									<select class="filter_form_select popup-pg-select" name="filter[payment_kind]">
+										<option value="all">All</option>
+										<option value="Deposit">Bank Trsf</option>
+										<option value="Charge">Cash</option>
+									</select>
 								</div>
 							</div>
 							<div class="modal__extract--body">
@@ -65,7 +73,7 @@
 									<li class="modal__extract-table--th">
 										<div class="td_w-60 flex-justify-center font-size--12">ID</div>
 										<div class="td_w-60 flex-justify-center font-size--12">Date</div>
-										<div class="td_w-60 flex-justify-end font-size--12 pr-2">Amount</div>
+										<div class="td_w-60 flex-justify-end font-size--12 pr-2 td_bg--white table-color--green">294 007</div>
 										<div class="td_w-60 flex-justify-center font-size--12">Admin</div>
 										<div class="flex-grow font-size--12">Description</div>
 									</li>
