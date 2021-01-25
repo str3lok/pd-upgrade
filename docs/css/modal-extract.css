@@ -51,6 +51,9 @@
 .table-color--green {
   color: #6aa84f !important; }
 
+.table-color--green-ext2 {
+  color: #52f00d !important; }
+
 .table-color--red {
   color: #cc0000 !important; }
 
@@ -250,45 +253,26 @@ table.fixed th {
 .pg-weight-bold {
   font-family: "ConsolasBold" !important; }
 
-.pg__modal-extract {
-  /*
-		@media (max-width: 669px) {
-			.popup__content {
-				position: fixed;
-				top: 0;
-				left: 0;
-				z-index: 10;
-				margin-left: 0 !important;
-				min-width: 1px;
-				max-width: 100% !important;
-		}	
+.pg__modal-extract .popup__content {
+  width: 600px;
+  min-width: 600px; }
 
-		.modal__extract--content {
-			overflow-x: auto;
-		}		
-		.modal__extract--body {
-			width: 630px;
-		}
-	}	
-	*/ }
+.pg__modal-extract .modal__extract-track--left {
+  width: auto; }
+
+@media (max-width: 339px) {
   .pg__modal-extract .popup__content {
-    width: 600px;
-    min-width: 600px; }
-  .pg__modal-extract .modal__extract-track--left {
-    width: auto; }
-  @media (max-width: 339px) {
-    .pg__modal-extract .popup__content {
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 10;
-      margin-left: 0 !important;
-      min-width: 1px;
-      max-width: 100% !important; }
-    .pg__modal-extract .modal__extract--content {
-      overflow-x: auto; }
-    .pg__modal-extract .modal__extract--body {
-      width: 300px; } }
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    margin-left: 0 !important;
+    min-width: 1px;
+    max-width: 100% !important; }
+  .pg__modal-extract .modal__extract--content {
+    overflow-x: auto; }
+  .pg__modal-extract .modal__extract--body {
+    width: 300px; } }
 
 .modal__extract-body--weight {
   display: block;
